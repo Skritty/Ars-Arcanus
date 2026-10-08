@@ -5,7 +5,7 @@ using UnityEngine;
 /// A type of rune that acts as a container for other runes.
 /// These are usually some combination of an enclosed geometric shape.
 /// </summary>
-public class Rune_Container : Rune
+public abstract class Rune_Container : Rune
 {
     /// <summary>
     /// The focus is the rune at the center of the diffuse.
@@ -15,24 +15,11 @@ public class Rune_Container : Rune
 
     /// <summary>
     /// The parameters are other diffuse runes bound to this one.
-    /// Mana will be sent to these before the focus rune.
     /// If parameters are added, additional markings will be placed to accompany them.
     /// </summary>
     public List<Rune_Container> parameters;
 
-    public override void Effect(Mana mana)
-    {
-        foreach (Rune rune in parameters)
-        {
-            rune.Effect(mana);
-        }
-        focus.Effect(mana);
-    }
-
-    public override void Draw(Mana mana)
-    {
-        base.Draw(mana);
-    }
+    public override Mana ImbuedMana => focus.ImbuedMana;
 
     public override void Imbue(Mana mana)
     {
@@ -41,12 +28,7 @@ public class Rune_Container : Rune
 
     public override Mana Extract()
     {
-        Mana mana = focus.Extract();
-        foreach (Rune rune in parameters)
-        {
-            rune.Effect(mana);
-        }
-        return mana;
+        return focus.Extract();
     }
 
     public bool TryAddRune(Rune newRune)
