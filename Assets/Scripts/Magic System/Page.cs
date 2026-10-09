@@ -1,17 +1,82 @@
 using System.Collections.Generic;
+using Shapes;
 using UnityEngine;
 
 /// <summary>
 /// Stores runes and renders Symbols within its bounds.
 /// It handles the moving of mana.
 /// </summary>
-public class Page : MonoBehaviour
+[ExecuteAlways]
+public class Page : ImmediateModeShapeDrawer
 {
+    public bool accessible = true;
+    [SerializeReference]
+    public List<Rune> allRunes;
     /// <summary>
     /// List of outermost runes. Nested runes are contained by these.
     /// </summary>
     public List<Rune> runes;
 
+    public override void DrawShapes(Camera cam)
+    {
+
+        using (Draw.Command(cam))
+        {
+
+            // set up static parameters. these are used for all following Draw.Line calls
+            Draw.LineGeometry = LineGeometry.Volumetric3D;
+            Draw.ThicknessSpace = ThicknessSpace.Pixels;
+            Draw.Thickness = 4; // 4px wide
+
+            // set static parameter to draw in the local space of this object
+            Draw.Matrix = transform.localToWorldMatrix;
+
+            // draw lines
+            Draw.Line(Vector3.zero, Vector3.right, Color.red);
+            Draw.Line(Vector3.zero, Vector3.up, Color.green);
+            Draw.Line(Vector3.zero, Vector3.forward, Color.blue);
+        }
+
+    }
+    /*public override void DrawShapes(Camera cam)
+    {
+
+        using (Draw.Command(cam))
+        {
+            using (var p = new PolylinePath())
+            {
+                p.AddPoint(-1, -1);
+                p.AddPoint(-1, 1);
+                p.AddPoint(1, 1);
+                p.AddPoint(1, -1);
+                Draw.Polyline(p, closed: true, thickness: 0.1f, Color.red); // Drawing happens here
+            } // Disposing of mesh data happens here
+        }
+
+        *//*using (Draw.Command(cam))
+        {
+            Draw.LineGeometry = LineGeometry.Flat2D;
+            Draw.ThicknessSpace = ThicknessSpace.Meters;
+            Draw.Thickness = 0.1f;
+            Debug.Log("Test");
+            using (var p = new PolylinePath())
+            {
+                p.AddPoint(-1, -1);
+                p.AddPoint(-1, 1);
+                p.AddPoint(1, 1);
+                p.AddPoint(1, -1);
+                Draw.Polyline(p, closed: true, thickness: 0.1f, Color.red); // Drawing happens here
+            }
+            foreach (Rune rune in allRunes)
+            {
+                using (var p = new PolylinePath())
+                {
+                    p.AddPoints(rune.associatedSymbol.GetPoints());
+                    Draw.Polyline(p, closed: true, Color.black); // Drawing happens here
+                } // Disposing of mesh data happens here
+            }
+        }*//*
+    }*/
     public void AddRune(Rune newRune)
     {
         // Steps to creating and adding a new [drawn] rune:

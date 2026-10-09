@@ -17,7 +17,7 @@ public abstract class Rune_Container : Rune
     /// The parameters are other diffuse runes bound to this one.
     /// If parameters are added, additional markings will be placed to accompany them.
     /// </summary>
-    public List<Rune_Container> parameters;
+    public List<Rune_Container> parameters = new();
 
     public override Mana ImbuedMana => focus.ImbuedMana;
 

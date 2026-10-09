@@ -1,9 +1,8 @@
 using UnityEngine;
 
 [System.Serializable]
-public abstract class Rune
+public abstract class Rune : MonoBehaviour
 {
-    public string name;
     public enum TriggerType { None, Tick, ManaRecieved }
     public TriggerType triggerType;
     public Rune sourceRune; // Used for imbuing
@@ -18,7 +17,6 @@ public abstract class Rune
             {
                 _storedMana.elementalAlignment = _storedMana.elementalAlignment.normalized * maximumPower;
             }
-            Draw();
         }
     }
     public virtual Mana ImbuedMana => sourceRune.StoredMana;
@@ -29,14 +27,14 @@ public abstract class Rune
     {
         if (triggerType == TriggerType.Tick)
         {
-            MagicManager.Instance.tickGameState += Effect;
+            Spellbook.Instance.tickGameState += Effect;
         }
-        MagicManager.Instance.runeManaDecay += _storedMana.Decay;
+        Spellbook.Instance.runeManaDecay += _storedMana.Decay;
     }
 
     public void Destroy()
     {
-        MagicManager.Instance.runeManaDecay -= _storedMana.Decay;
+        Spellbook.Instance.runeManaDecay -= _storedMana.Decay;
     }
 
     public abstract void Effect();
@@ -53,7 +51,6 @@ public abstract class Rune
     /// Removes the stored mana from a non-preset rune.
     /// </summary>
     public abstract Mana Extract();
-    public virtual void Draw() { }
     public virtual void SuccessVisual() { }
     public virtual void FailureVisual() { }
 }
