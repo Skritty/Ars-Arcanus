@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7993403028567267633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6681200844675325342}
+  - component: {fileID: 1708758386382944356}
+  m_Layer: 0
+  m_Name: Spellbook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6681200844675325342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993403028567267633}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.7687, z: -0.088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1708758386382944356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993403028567267633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5bb851f21e3e741b72fb778bbc9d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spellbook
+  turnPageAction:
+    m_Name: Turn Page
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d2367cf4-99e4-491a-8c5d-e56fd4f7a1c4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: c48e8873-7744-46ff-84d9-455e8bac6baf
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Page
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 7ff7b61c-e01c-4ca4-a7c0-5ece4153b299
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Page
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 4527aa27-b70a-427d-a098-c8663c394a9c
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Page
+      m_Flags: 8
+    - m_Name: 1D Axis
+      m_Id: bae671e1-cd4e-4994-9793-0144bb21744c
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Page
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 1e8b8e3d-0f72-4624-bb97-a4b52d676251
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Page
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 616c13d9-bbfe-4393-b02b-c99ecfdc5299
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn Page
+      m_Flags: 8
+    m_Flags: 0
+    m_Priority: 0
+  timeToPage: 0.4
+  pageGap: 0.006
+  pageAngle: 170
+  pageOffset: {x: 0.133, y: 0, z: 0}
+  runeElementalDecayAmount: 0.01
+  pages:
+  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  - {fileID: 770210102271220690, guid: e4f78eb3e04be2d41bb0f04d0888901f, type: 3}
+  - {fileID: 770210102271220690, guid: ca914d0293f5a1d4c8bfa0983328d0fb, type: 3}
+  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  bindings: []

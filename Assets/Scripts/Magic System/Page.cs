@@ -17,10 +17,18 @@ public class Page : ImmediateModeShapeDrawer
     /// </summary>
     public List<Rune> runes;
 
+    private void Start()
+    {
+        foreach(Rune rune in allRunes)
+        {
+            rune.Initialize();
+        }
+    }
+
     public override void DrawShapes(Camera cam)
     {
 
-        using (Draw.Command(cam))
+        /*using (Draw.Command(cam))
         {
 
             // set up static parameters. these are used for all following Draw.Line calls
@@ -35,7 +43,7 @@ public class Page : ImmediateModeShapeDrawer
             Draw.Line(Vector3.zero, Vector3.right, Color.red);
             Draw.Line(Vector3.zero, Vector3.up, Color.green);
             Draw.Line(Vector3.zero, Vector3.forward, Color.blue);
-        }
+        }*/
 
     }
     /*public override void DrawShapes(Camera cam)

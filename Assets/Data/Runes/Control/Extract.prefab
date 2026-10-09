@@ -46,8 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14bd94292a0fe904cbd7960d68f9132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rune_Container_Extract
-  triggerType: 0
+  triggerType: 1
   sourceRune: {fileID: 38356508959479989}
+  _storedMana:
+    elementalAlignment: {x: 0, y: 0, z: 0}
+    voidAlignment: {x: 0, y: 0, z: 0}
+  maximumPower: 1
   associatedSymbol:
     polyline: {fileID: 2780908425394484047}
     vertexPairs: []
@@ -82,13 +86,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2213531823019869445}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.0001, z: 0}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8167438419263596251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &8727980356067083944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,8 +106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShapesRuntime::Shapes.Disc
   blendMode: 1
-  scaleMode: 0
-  color: {r: 1, g: 1, b: 1, a: 1}
+  scaleMode: 1
+  color: {r: 0.101960786, g: 0.101960786, b: 0.101960786, a: 1}
   detailLevel: 2
   culling: 0
   boundsPadding: 0
@@ -128,7 +132,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 1
   radiusSpace: 0
-  thickness: 0.1
+  thickness: 0.02
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1
@@ -195,7 +199,7 @@ MeshRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3140400428201557187
@@ -225,13 +229,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3140400428201557187}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.0001, z: 0}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8167438419263596251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &2780908425394484047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,8 +249,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShapesRuntime::Shapes.Polyline
   blendMode: 1
-  scaleMode: 0
-  color: {r: 1, g: 1, b: 1, a: 1}
+  scaleMode: 1
+  color: {r: 0.101960786, g: 0.101960786, b: 0.101960786, a: 1}
   detailLevel: 2
   culling: 0
   boundsPadding: 0
@@ -276,7 +280,7 @@ MonoBehaviour:
   geometry: 0
   joins: 3
   closed: 1
-  thickness: 0.1
+  thickness: 0.02
   thicknessSpace: 0
 --- !u!33 &3473379492960489782
 MeshFilter:

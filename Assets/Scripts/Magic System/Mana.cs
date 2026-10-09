@@ -44,6 +44,61 @@ public struct Mana
         //this.rules = rules;
     }
 
+    public Color GetManaColor()
+    {
+        // Fire = Red (0)|(1,0,0), Earth = Green (120)|(0,-1,0), Water = Blue (240)|(-1,0,0)
+        // Light = Yellow (60)|(0,0,1), Air = Cyan (180)|(0,1,0), Dark = Magenta (300)|(0,0,-1)
+        // Power = Value
+        // Power = Saturation
+        float r = 0;
+        float g = 0;
+        float b = 0;
+
+        // Add fire/water axis
+        float exists = Vector3.Project(elementalAlignment, Vector3.right).x;
+        if (exists < 0)
+        {
+            b += exists;
+        }
+        if (exists > 0)
+        {
+            r += exists;
+        }
+
+        // Add earth/air axis
+        exists = Vector3.Project(elementalAlignment, Vector3.up).y;
+        if (exists > 0)
+        {
+            g += exists;
+        }
+        if (exists < 0)
+        {
+            g += exists * 0.707f;
+            b += exists * 0.707f;
+        }
+
+        // Add light/dark axis
+        exists = Vector3.Project(elementalAlignment, Vector3.forward).z;
+        if (exists > 0)
+        {
+            r += exists * 0.707f;
+            g += exists * 0.707f;
+        }
+        if (exists < 0)
+        {
+            r += exists * 0.707f;
+            b += exists * 0.707f;
+        }
+        
+        float total = r + b + g;
+        r /= total;
+        g /= total;
+        b /= total;
+
+        Color.RGBToHSV(new Color(r, g, b), out float H, out _, out _);
+        return Color.HSVToRGB(H, Mathf.Log10(Mathf.Abs(Power * 5) + 1) + 0.2f, Mathf.Log10(Mathf.Abs(Power * 5) + 1) + 0.2f);
+    }
+
     public void Decay(float decayAmount)
     {
         elementalAlignment -= elementalAlignment.normalized * decayAmount;
@@ -101,7 +156,7 @@ public struct Mana
                 if (!mergedMana.rules.Contains(rule)) mergedMana.rules.Add(rule);
             }*/
         }
-        if(Mathf.Abs(mergedMana.Power) > maxPower)
+        if(Mathf.Abs(mergedMana.elementalAlignment.magnitude) > maxPower)
         {
             mergedMana.elementalAlignment = mergedMana.elementalAlignment.normalized * maxPower;
         }

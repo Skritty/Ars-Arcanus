@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
@@ -6,6 +7,7 @@ public abstract class Rune : MonoBehaviour
     public enum TriggerType { None, Tick, ManaRecieved }
     public TriggerType triggerType;
     public Rune sourceRune; // Used for imbuing
+    [SerializeField]
     private Mana _storedMana;
     public Mana StoredMana
     {
@@ -13,14 +15,14 @@ public abstract class Rune : MonoBehaviour
         set
         {
             _storedMana = value;
-            if (_storedMana.Power > maximumPower)
+            if (_storedMana.elementalAlignment.magnitude > maximumPower)
             {
                 _storedMana.elementalAlignment = _storedMana.elementalAlignment.normalized * maximumPower;
             }
         }
     }
     public virtual Mana ImbuedMana => sourceRune.StoredMana;
-    protected float maximumPower; // Currently this just prevents the elemental alignment from going beyond this amount, but it could cause an effect once it exceeds it
+    public float maximumPower = 10f; // Currently this just prevents the elemental alignment from going beyond this amount, but it could cause an effect once it exceeds it
     public Symbol associatedSymbol;
 
     public void Initialize()
@@ -29,12 +31,18 @@ public abstract class Rune : MonoBehaviour
         {
             Spellbook.Instance.tickGameState += Effect;
         }
-        Spellbook.Instance.runeManaDecay += _storedMana.Decay;
+        Spellbook.Instance.runeElementalDecay += _storedMana.Decay;
+        Spellbook.Instance.tickDrawUpdate += UpdateColor;
     }
 
     public void Destroy()
     {
-        Spellbook.Instance.runeManaDecay -= _storedMana.Decay;
+        if (triggerType == TriggerType.Tick)
+        {
+            Spellbook.Instance.tickGameState -= Effect;
+        }
+        Spellbook.Instance.runeElementalDecay -= _storedMana.Decay;
+        Spellbook.Instance.tickDrawUpdate -= UpdateColor;
     }
 
     public abstract void Effect();
@@ -51,6 +59,10 @@ public abstract class Rune : MonoBehaviour
     /// Removes the stored mana from a non-preset rune.
     /// </summary>
     public abstract Mana Extract();
+    public void UpdateColor()
+    {
+        associatedSymbol.polyline.Color = StoredMana.GetManaColor();
+    }
     public virtual void SuccessVisual() { }
     public virtual void FailureVisual() { }
 }
