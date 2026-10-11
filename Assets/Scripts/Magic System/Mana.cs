@@ -1,5 +1,24 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+
+[Flags]
+public enum Alignments
+{
+    None = 0,
+    Fire = 1,
+    Water = 1 << 1,
+    Air = 1 << 2,
+    Earth = 1 << 3,
+    Light = 1 << 4,
+    Dark = 1 << 5,
+    Energy = 1 << 6,
+    Material = 1 << 7,
+    Divine = 1 << 8,
+    Chaos = 1 << 9,
+    Order = 1 << 10,
+    Nature = 1 << 11
+}
 
 /// <summary>
 /// The magic system's information container class.
@@ -35,13 +54,45 @@ public struct Mana
             //return elementalAlignment.magnitude;
         }
     }
-    //public List<(float percent, Rune rule)> rules; // Rules from preset runes can be imbued into non-preset runes to give them functionality
 
-    public Mana(Vector3 elementalAlignment)//, List<Rune> rules)
+    public Mana(Vector3 elementalAlignment)
     {
         this.elementalAlignment = elementalAlignment;
         this.voidAlignment = Vector3.zero;
-        //this.rules = rules;
+    }
+
+    /// <summary>
+    /// Find if the mana is aligned to all enabled flags
+    /// </summary>
+    public bool IsAligned(Alignments alignment)
+    {
+        if (alignment.HasFlag(Alignments.None))
+            if (elementalAlignment.magnitude != 0) return false;
+        if (alignment.HasFlag(Alignments.Fire))
+            if (elementalAlignment.x <= 0) return false;
+        if (alignment.HasFlag(Alignments.Water))
+            if (elementalAlignment.x >= 0) return false;
+        if (alignment.HasFlag(Alignments.Air))
+            if (elementalAlignment.y <= 0) return false;
+        if (alignment.HasFlag(Alignments.Earth))
+            if (elementalAlignment.y >= 0) return false;
+        if (alignment.HasFlag(Alignments.Light))
+            if (elementalAlignment.z <= 0) return false;
+        if (alignment.HasFlag(Alignments.Dark))
+            if (elementalAlignment.z >= 0) return false;
+        if (alignment.HasFlag(Alignments.Energy))
+            if (elementalAlignment.x != 0) return false;
+        if (alignment.HasFlag(Alignments.Material))
+            if (elementalAlignment.y != 0) return false;
+        if (alignment.HasFlag(Alignments.Divine))
+            if (elementalAlignment.z != 0) return false;
+        if (alignment.HasFlag(Alignments.Chaos))
+            if (Power <= 0) return false;
+        if (alignment.HasFlag(Alignments.Order))
+            if (Power >= 0) return false;
+        if (alignment.HasFlag(Alignments.Nature))
+            if (elementalAlignment.x == 0 && elementalAlignment.y == 0) return false;
+        return true;
     }
 
     public Color GetManaColor()

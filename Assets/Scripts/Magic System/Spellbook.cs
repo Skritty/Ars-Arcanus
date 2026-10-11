@@ -15,19 +15,19 @@ public class Spellbook : MonoBehaviour
     public Action<float> runeElementalDecay;
 
     public InputAction turnPageAction;
-    public float timeToPage = 0.4f;
-    public float pageGap = 0.1f;
-    public float pageAngle = 160f;
-    public Vector3 pageOffset = Vector3.zero;
+    public float timeToPage;
+    public float pageGap;
+    public float pageAngle;
+    public Vector3 pageOffset;
 
-    public float runeElementalDecayAmount = 0.01f;
+    public float runeElementalDecayAmount;
 
     public List<Page> pages = new();
     public List<Transform> bindings = new();
-    private int _bindingIndex;
+    private int _RHSBindingIndex;
     public int CurrentRHSBindingIndex
     {
-        get => _bindingIndex;
+        get => _RHSBindingIndex;
         set
         {
             StartCoroutine(GoToPage(value));
@@ -53,12 +53,21 @@ public class Spellbook : MonoBehaviour
         TickMagic();
     }
 
+    public Page GetPageFromContainedRune(Rune rune)
+    {
+        foreach(Page p in pages)
+        {
+            if (p.allRunes.Contains(rune)) return p;
+        }
+        return null;
+    }
+
     public void UpdatePageAccess(Page page, bool accessable)
     {
-        page.accessible = accessable;
         int i = pages.IndexOf(page);
-        if(pages.Count > i) pages[i+1].accessible = accessable;
-        BindBook();
+        if (i % 2 == 0) i--;
+        if(i > 0) pages[i].accessible = accessable;
+        if (pages.Count > i) pages[i+1].accessible = accessable;
     }
 
     private void BindBook()
@@ -100,7 +109,7 @@ public class Spellbook : MonoBehaviour
         CurrentRHSBindingIndex += context.ReadValue<float>() > 1 ? 1 : -1;
     }
     [Button]
-    public void TurnForward() => CurrentRHSBindingIndex ++;
+    public void TurnForward() => CurrentRHSBindingIndex++;
     [Button]
     public void TurnBack() => CurrentRHSBindingIndex--;
 
@@ -109,35 +118,95 @@ public class Spellbook : MonoBehaviour
         if (!turning)
         {
             turning = true;
-            int direction = (int)Mathf.Sign(targetBindingIndex - _bindingIndex);
-            while (_bindingIndex != targetBindingIndex)
+
+            int direction = (int)Mathf.Sign(targetBindingIndex - _RHSBindingIndex);
+            float flipTimePerPage = timeToPage / Mathf.Abs(targetBindingIndex - _RHSBindingIndex); // Take the initial expected time to flip
+            Action<float> doPageAnimations = null;
+
+            while (true)
             {
-                if ((direction < 0 && _bindingIndex == 0) || (direction > 0 && _bindingIndex == bindings.Count)) break;
-                float flipTime = timeToPage / Mathf.Abs(targetBindingIndex - _bindingIndex);
-                float elapsedTime = 0;
-                int bindingIndex = direction > 0 ? _bindingIndex : _bindingIndex - 1;
-                Transform binding = bindings[bindingIndex];
-                Quaternion startRotation = binding.rotation;
-                Quaternion endRotation = binding.rotation * Quaternion.Euler(0, 0, pageAngle * direction);
-                float bookThickness = pages.Count / 2f * pageGap;
-                float startGap = bookThickness - pageGap * bindingIndex;
-                float endGap = pageGap * (bindingIndex + 1);
+                // If we are at the target index, the leftmost page, or the rightmost page, stop
+                if (_RHSBindingIndex == targetBindingIndex || (direction < 0 && _RHSBindingIndex <= 0) || (direction > 0 && _RHSBindingIndex >= bindings.Count)) break;
 
-                while (elapsedTime < flipTime)
+                int updatedIndex = _RHSBindingIndex;
+                if (direction > 0)
                 {
-                    if(direction > 0) binding.transform.localPosition = new Vector3(0, Mathf.Lerp(startGap, endGap, elapsedTime / flipTime), 0);
-                    else binding.transform.localPosition = new Vector3(0, Mathf.Lerp(endGap, startGap, elapsedTime / flipTime), 0);
-
-                    binding.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedTime / flipTime);
-                    yield return null;
-                    elapsedTime += Time.deltaTime;
+                    while (updatedIndex <= bindings.Count)
+                    {
+                        if (pages[updatedIndex * 2 + 1].accessible)
+                        {
+                            // Increment to the next accessible page
+                            doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
+                            updatedIndex++;
+                            break;
+                        }
+                        else
+                        {
+                            // Skip the page if it is inaccessable (we still have to animate it)
+                            doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
+                            updatedIndex++;
+                            targetBindingIndex++;
+                        }
+                    }
                 }
-                binding.transform.localPosition = new Vector3(0, direction > 0 ? endGap : startGap, 0);
-                binding.rotation = endRotation;
-                _bindingIndex += direction;
+                else
+                {
+                    while (updatedIndex > 0)
+                    {
+                        if (pages[updatedIndex * 2 - 2].accessible)
+                        {
+                            // Increment to the next accessible page
+                            updatedIndex--;
+                            doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
+                            break;
+                        }
+                        else
+                        {
+                            // Skip the page if it is inaccessable (we still have to animate it)
+                            updatedIndex--;
+                            targetBindingIndex--;
+                            doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
+                        }
+                    }
+                }
+
+                // Did we skip pages to either end of the book and not find a page to turn to? Stay here
+                if (updatedIndex > bindings.Count || updatedIndex < 0)
+                {
+                    doPageAnimations = null;
+                    break;
+                }
+                _RHSBindingIndex = updatedIndex;
+
+                // Animate page flips
+                float elapsedTime = 0;
+                while (elapsedTime < flipTimePerPage)
+                {
+                    elapsedTime += Time.deltaTime;
+                    doPageAnimations?.Invoke(elapsedTime);
+                    yield return new WaitForEndOfFrame();
+                }
+                doPageAnimations = null;
             }
             turning = false;
         }
+    }
+
+    private Action<float> FlipPageAnimation(int index, int direction, float flipTime)
+    {
+        Transform binding = bindings[index];
+        Quaternion startRotation = binding.rotation;
+        Quaternion endRotation = binding.rotation * Quaternion.Euler(0, 0, pageAngle * direction);
+        float bookThickness = pages.Count / 2f * pageGap;
+        float startGap = bookThickness - pageGap * index;
+        float endGap = pageGap * (index + 1);
+
+        return (float elapsedTime) =>
+        {
+            if (direction > 0) binding.transform.localPosition = new Vector3(0, Mathf.Lerp(startGap, endGap, elapsedTime / flipTime), 0);
+            else binding.transform.localPosition = new Vector3(0, Mathf.Lerp(endGap, startGap, elapsedTime / flipTime), 0);
+            binding.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedTime / flipTime);
+        };
     }
 
     private void TickMagic()
