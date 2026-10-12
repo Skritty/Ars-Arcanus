@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Shapes;
 
 [System.Serializable]
 public abstract class Rune : MonoBehaviour
@@ -32,7 +33,7 @@ public abstract class Rune : MonoBehaviour
             Spellbook.Instance.tickGameState += Effect;
         }
         Spellbook.Instance.runeElementalDecay += _storedMana.Decay;
-        Spellbook.Instance.tickDrawUpdate += UpdateColor;
+        //Spellbook.Instance.tickDrawUpdate += UpdateColor;
     }
 
     public void Destroy()
@@ -42,7 +43,7 @@ public abstract class Rune : MonoBehaviour
             Spellbook.Instance.tickGameState -= Effect;
         }
         Spellbook.Instance.runeElementalDecay -= _storedMana.Decay;
-        Spellbook.Instance.tickDrawUpdate -= UpdateColor;
+        //Spellbook.Instance.tickDrawUpdate -= UpdateColor;
     }
 
     public abstract void Effect();
@@ -59,10 +60,19 @@ public abstract class Rune : MonoBehaviour
     /// Removes the stored mana from a non-preset rune.
     /// </summary>
     public abstract Mana Extract();
-    public void UpdateColor()
+
+    public void DrawRune()
     {
-        associatedSymbol.polyline.Color = StoredMana.GetManaColor();
+        Draw.Matrix = Matrix4x4.TRS(transform.position - transform.up * 0.0001f, transform.rotation * Quaternion.AngleAxis(90, Vector3.right), transform.lossyScale * 0.004f);
+        Color symbolColor = StoredMana.GetManaColor();
+        foreach (Symbol.VertexPair line in associatedSymbol.vertexPairs)
+        {
+            Draw.Line(line.A, line.B, symbolColor);
+        }
+        
+        //associatedSymbol.polyline.Color = StoredMana.GetManaColor();
     }
+
     public virtual void SuccessVisual() { }
     public virtual void FailureVisual() { }
 }

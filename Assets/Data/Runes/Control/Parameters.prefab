@@ -63,7 +63,6 @@ MonoBehaviour:
     voidAlignment: {x: 0, y: 0, z: 0}
   maximumPower: 10
   associatedSymbol:
-    polyline: {fileID: 3089076393383609243}
     vertexPairs: []
     UID: 0
     rotation: 0

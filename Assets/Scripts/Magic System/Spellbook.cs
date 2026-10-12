@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Sirenix.OdinInspector;
+using Shapes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -20,6 +20,8 @@ public class Spellbook : MonoBehaviour
     public float pageAngle;
     public Vector3 bindingOffset;
     public Vector3 pageOffset;
+
+    public float runeLineThickness;
 
     public GameObject frontCover, backCover, spine;
 
@@ -41,6 +43,11 @@ public class Spellbook : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        Draw.ScaleMode = Shapes.ScaleMode.Coordinate;
+        Draw.LineGeometry = LineGeometry.Flat2D;
+        Draw.ThicknessSpace = ThicknessSpace.Meters;
+        
+
         BindBook();
         turnPageAction.performed += TurnPage;
         turnPageAction.Enable();
@@ -48,6 +55,7 @@ public class Spellbook : MonoBehaviour
 
     private void Update()
     {
+        Draw.Thickness = runeLineThickness; // MOVE THIS BACK TO AWAKE
         tickDrawUpdate?.Invoke();
     }
 
@@ -130,10 +138,6 @@ public class Spellbook : MonoBehaviour
     {
         CurrentRHSBindingIndex += context.ReadValue<float>() > 1 ? 1 : -1;
     }
-    [Button]
-    public void TurnForward() => CurrentRHSBindingIndex++;
-    [Button]
-    public void TurnBack() => CurrentRHSBindingIndex--;
 
     private IEnumerator GoToPage(int targetBindingIndex)
     {

@@ -1017,6 +1017,10 @@ PrefabInstance:
       propertyPath: pageAngle
       value: 179.99
       objectReference: {fileID: 0}
+    - target: {fileID: 1708758386382944356, guid: 47d298098dffb0441a6db02de08745af, type: 3}
+      propertyPath: runeLineThickness
+      value: 0.004
+      objectReference: {fileID: 0}
     - target: {fileID: 6681200844675325342, guid: 47d298098dffb0441a6db02de08745af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

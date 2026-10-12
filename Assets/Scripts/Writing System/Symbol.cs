@@ -9,7 +9,6 @@ using UnityEngine;
 [System.Serializable]
 public class Symbol
 {
-    public Polyline polyline;
     [System.Serializable]
     public struct VertexPair
     {
@@ -20,24 +19,13 @@ public class Symbol
             this.B = B;
         }
     };
-    [SerializeField]
-    private List<VertexPair> vertexPairs;
+    public List<VertexPair> vertexPairs;
     public int UID;
     public float rotation;
     public void AddVertexPair(Vector2 A, Vector2 B)
     {
         vertexPairs.Add(new VertexPair(A, B));
         UpdateUID();
-    }
-    public HashSet<Vector3> GetPoints()
-    {
-        HashSet<Vector3> points = new();
-        foreach (var pair in vertexPairs)
-        {
-            points.Add(pair.A);
-            points.Add(pair.B);
-        }
-        return points;
     }
     public void UpdateUID()
     {
