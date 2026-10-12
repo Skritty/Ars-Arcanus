@@ -16,9 +16,12 @@ public class Spellbook : MonoBehaviour
 
     public InputAction turnPageAction;
     public float timeToPage;
-    public float pageGap;
+    public float bookThickness;
     public float pageAngle;
+    public Vector3 bindingOffset;
     public Vector3 pageOffset;
+
+    public GameObject frontCover, backCover, spine;
 
     public float runeElementalDecayAmount;
 
@@ -78,15 +81,22 @@ public class Spellbook : MonoBehaviour
             pageInstances.Add(Instantiate(page));
         }
         pages = pageInstances;
-        for(int i = 0; i < pages.Count; i += 2)
+
+        GameObject binding = new GameObject("Front Cover Binding");
+        binding.transform.parent = transform;
+        //Instantiate(frontCover, binding.transform);
+        frontCover.transform.parent = binding.transform;
+        frontCover.transform.position = Vector3.zero;
+        binding.transform.rotation = Quaternion.Euler(0, 0, 90 - pageAngle / 2);
+        bindings.Add(binding.transform);
+
+        for (int i = 0; i < pages.Count; i += 2)
         {
-            GameObject binding = new GameObject("binding");
+            binding = new GameObject($"Pages {i}-{i+1} Binding");
             binding.transform.parent = transform;
-            binding.transform.localPosition = Vector3.zero;
 
             Page rhs = pages[i];
             rhs.transform.parent = binding.transform;
-            rhs.transform.localPosition = pageOffset;
 
             Page lhs = pages[i + 1];
             lhs.transform.parent = binding.transform;
@@ -97,11 +107,23 @@ public class Spellbook : MonoBehaviour
             bindings.Add(binding.transform);
         }
 
-        float bookThickness = bindings.Count * pageGap;
+        binding = new GameObject("Back Cover Binding");
+        binding.transform.parent = transform;
+        //Instantiate(backCover, binding.transform);
+        backCover.transform.parent = binding.transform;
+        backCover.transform.position = Vector3.zero;
+        binding.transform.rotation = Quaternion.Euler(0, 0, 90 - pageAngle / 2);
+        bindings.Add(binding.transform);
+
+        float pageGap = bookThickness / (bindings.Count - 1); // The 0th binding is on top
         for (int i = 0; i < bindings.Count; i++)
         {
-            bindings[i].transform.localPosition = new Vector3(0, bookThickness - pageGap * i, 0);
+            bindings[i].transform.localPosition = new Vector3(0, bookThickness - pageGap * i, 0) + bindingOffset;
         }
+
+        //spine = Instantiate(spine, transform);
+        spine.transform.localPosition = (bindings[0].localPosition + bindings[bindings.Count - 1].localPosition) / 2;
+        spine.transform.rotation = Quaternion.FromToRotation(Vector3.up, bindings[0].position - bindings[bindings.Count - 1].position);
     }
 
     private void TurnPage(InputAction.CallbackContext context)
@@ -133,7 +155,7 @@ public class Spellbook : MonoBehaviour
                 {
                     while (updatedIndex <= bindings.Count)
                     {
-                        if (pages[updatedIndex * 2 + 1].accessible)
+                        if (updatedIndex == 0 || updatedIndex == bindings.Count - 1 || pages[(updatedIndex - 1) * 2 + 1].accessible)
                         {
                             // Increment to the next accessible page
                             doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
@@ -153,7 +175,7 @@ public class Spellbook : MonoBehaviour
                 {
                     while (updatedIndex > 0)
                     {
-                        if (pages[updatedIndex * 2 - 2].accessible)
+                        if (updatedIndex == 1 || updatedIndex == bindings.Count || pages[(updatedIndex - 1) * 2 - 1].accessible)
                         {
                             // Increment to the next accessible page
                             updatedIndex--;
@@ -184,6 +206,8 @@ public class Spellbook : MonoBehaviour
                 {
                     elapsedTime += Time.deltaTime;
                     doPageAnimations?.Invoke(elapsedTime);
+                    spine.transform.localPosition = (bindings[0].localPosition + bindings[bindings.Count - 1].localPosition) / 2;
+                    spine.transform.rotation = Quaternion.FromToRotation(Vector3.up, bindings[0].position - bindings[bindings.Count - 1].position);
                     yield return new WaitForEndOfFrame();
                 }
                 doPageAnimations = null;
@@ -197,14 +221,14 @@ public class Spellbook : MonoBehaviour
         Transform binding = bindings[index];
         Quaternion startRotation = binding.rotation;
         Quaternion endRotation = binding.rotation * Quaternion.Euler(0, 0, pageAngle * direction);
-        float bookThickness = pages.Count / 2f * pageGap;
+        float pageGap = bookThickness / (bindings.Count - 1);
         float startGap = bookThickness - pageGap * index;
-        float endGap = pageGap * (index + 1);
+        float endGap = pageGap * index;
 
         return (float elapsedTime) =>
         {
             if (direction > 0) binding.transform.localPosition = new Vector3(0, Mathf.Lerp(startGap, endGap, elapsedTime / flipTime), 0);
-            else binding.transform.localPosition = new Vector3(0, Mathf.Lerp(endGap, startGap, elapsedTime / flipTime), 0);
+            else binding.transform.localPosition = new Vector3(0, Mathf.Lerp(endGap, startGap, elapsedTime / flipTime), 0) + bindingOffset;
             binding.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedTime / flipTime);
         };
     }

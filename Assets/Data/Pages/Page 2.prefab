@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2088498050847725811, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.012
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2088498050847725811, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       propertyPath: m_LocalPosition.z
@@ -63,14 +63,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2088498050847725811, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 6445501747663812043, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       insertIndex: -1
       addedObject: {fileID: 339916974583513635}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
---- !u!4 &1891978195045373956 stripped
+--- !u!4 &6902180382322472252 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2088498050847725811, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6445501747663812043, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
   m_PrefabInstance: {fileID: 484838231945838839}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4576780776118886897
@@ -79,7 +79,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1891978195045373956}
+    m_TransformParent: {fileID: 6902180382322472252}
     m_Modifications:
     - target: {fileID: 154153716836998104, guid: 801577fb76cb79548978b503221efefc, type: 3}
       propertyPath: m_Name
@@ -87,7 +87,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: 801577fb76cb79548978b503221efefc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0057
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: 801577fb76cb79548978b503221efefc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -95,7 +95,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: 801577fb76cb79548978b503221efefc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0016
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: 801577fb76cb79548978b503221efefc, type: 3}
       propertyPath: m_LocalRotation.w
