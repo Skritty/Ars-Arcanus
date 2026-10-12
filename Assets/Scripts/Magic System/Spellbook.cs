@@ -136,7 +136,7 @@ public class Spellbook : MonoBehaviour
 
     private void TurnPage(InputAction.CallbackContext context)
     {
-        CurrentRHSBindingIndex += context.ReadValue<float>() > 1 ? 1 : -1;
+        CurrentRHSBindingIndex += context.ReadValue<float>() > 0 ? -1 : 1;
     }
 
     private IEnumerator GoToPage(int targetBindingIndex)
@@ -179,7 +179,7 @@ public class Spellbook : MonoBehaviour
                 {
                     while (updatedIndex > 0)
                     {
-                        if (updatedIndex == 1 || updatedIndex == bindings.Count || pages[(updatedIndex - 1) * 2 - 1].accessible)
+                        if (updatedIndex == 1 || updatedIndex == bindings.Count || pages[(updatedIndex - 1) * 2 - 2].accessible)
                         {
                             // Increment to the next accessible page
                             updatedIndex--;

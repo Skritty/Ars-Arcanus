@@ -6,7 +6,6 @@ using UnityEngine;
 /// Stores runes and renders Symbols within its bounds.
 /// It handles the moving of mana.
 /// </summary>
-[ExecuteAlways]
 public class Page : ImmediateModeShapeDrawer
 {
     public bool accessible = true;

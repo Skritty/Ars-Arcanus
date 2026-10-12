@@ -1021,13 +1021,17 @@ PrefabInstance:
       propertyPath: runeLineThickness
       value: 0.004
       objectReference: {fileID: 0}
+    - target: {fileID: 1708758386382944356, guid: 47d298098dffb0441a6db02de08745af, type: 3}
+      propertyPath: turnPageAction.m_ExpectedControlType
+      value: Axis
+      objectReference: {fileID: 0}
     - target: {fileID: 6681200844675325342, guid: 47d298098dffb0441a6db02de08745af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6681200844675325342, guid: 47d298098dffb0441a6db02de08745af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.771
+      value: 0.7777
       objectReference: {fileID: 0}
     - target: {fileID: 6681200844675325342, guid: 47d298098dffb0441a6db02de08745af, type: 3}
       propertyPath: m_LocalPosition.z
