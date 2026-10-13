@@ -11,7 +11,6 @@ public class Spellbook : MonoBehaviour
     public static Spellbook Instance;
 
     public Action tickGameState;
-    public Action tickDrawUpdate;
     public Action<float> runeElementalDecay;
 
     public InputAction turnPageAction;
@@ -43,20 +42,16 @@ public class Spellbook : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        Rune._imbuedMana.Clear();
+
         Draw.ScaleMode = Shapes.ScaleMode.Coordinate;
         Draw.LineGeometry = LineGeometry.Flat2D;
         Draw.ThicknessSpace = ThicknessSpace.Meters;
-        
+        Draw.Thickness = runeLineThickness;
 
         BindBook();
         turnPageAction.performed += TurnPage;
         turnPageAction.Enable();
-    }
-
-    private void Update()
-    {
-        Draw.Thickness = runeLineThickness; // MOVE THIS BACK TO AWAKE
-        tickDrawUpdate?.Invoke();
     }
 
     private void FixedUpdate()
@@ -68,7 +63,7 @@ public class Spellbook : MonoBehaviour
     {
         foreach(Page p in pages)
         {
-            if (p.allRunes.Contains(rune)) return p;
+            if (p.ContainsRune(rune)) return p;
         }
         return null;
     }

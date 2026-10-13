@@ -6,33 +6,31 @@ using UnityEngine;
 /// Stores runes and renders Symbols within its bounds.
 /// It handles the moving of mana.
 /// </summary>
-public class Page : ImmediateModeShapeDrawer
+[ExecuteAlways]
+public class Page : MonoBehaviour
 {
     public bool accessible = true;
-    [SerializeReference]
-    public List<Rune> allRunes;
-    /// <summary>
-    /// List of outermost runes. Nested runes are contained by these.
-    /// </summary>
-    public List<Rune> runes;
+    public Transform runeParent;
 
-    private void Start()
+    /*public override void DrawShapes(Camera cam)
     {
-        foreach(Rune rune in allRunes)
-        {
-            rune.Initialize();
-        }
-    }
-
-    public override void DrawShapes(Camera cam)
-    {
+        if (!accessible) return;
         using (Draw.Command(cam))
         {
-            foreach (Rune rune in allRunes)
+            foreach (Rune rune in runes)
             {
                 rune.DrawRune();
             }
         }
+    }*/
+
+    public bool ContainsRune(Rune rune)
+    {
+        foreach (Transform r in runeParent)
+        {
+            if (r == rune.transform) return true;
+        }
+        return false;
     }
 
     public void AddRune(Rune newRune)
@@ -46,12 +44,12 @@ public class Page : ImmediateModeShapeDrawer
         // 5. If it isn't a nested rune, it is added to the root runes list of the page.
         // 6. A null mana effect update is given to the new rune, which may produce an effect.
 
-        foreach(Rune rune in runes)
+        /*foreach(Rune rune in runes)
         {
             if(rune is Rune_Container)
             {
                 (rune as Rune_Container).TryAddRune(newRune);
             }
-        }
+        }*/
     }
 }

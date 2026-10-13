@@ -19,7 +19,8 @@ public class Symbol
             this.B = B;
         }
     };
-    public List<VertexPair> vertexPairs;
+    public List<VertexPair> vertexPairs = new();
+    public List<ShapeRenderer> extraShapes = new();
     public int UID;
     public float rotation;
     public void AddVertexPair(Vector2 A, Vector2 B)

@@ -4,7 +4,7 @@ public class Rune_Element : Rune
 {
     public override void Effect()
     {
-        
+        // No Effect
     }
 
     public override Mana Extract()

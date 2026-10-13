@@ -45,15 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aacc53a014b8def4db4bbce58c29524c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rune_Container_Diffuse
+  useCullingMasks: 0
   triggerType: 1
-  sourceRune: {fileID: 7312403984855251692}
   _storedMana:
+    elementalAlignment: {x: 1, y: 2.05, z: 0}
+    voidAlignment: {x: 0, y: 0, z: 0}
+  imbuedDebugReader:
     elementalAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
   maximumPower: 10
   associatedSymbol:
     vertexPairs: []
-    UID: 0
+    extraShapes:
+    - {fileID: 2239664991983309834}
+    UID: 1002
     rotation: 0
   focus: {fileID: 0}
   parameters: []
@@ -105,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ShapesRuntime::Shapes.Disc
   blendMode: 1
   scaleMode: 1
-  color: {r: 0.10062885, g: 0.10062885, b: 0.10062885, a: 1}
+  color: {r: 0, g: 0, b: 0, a: 1}
   detailLevel: 2
   culling: 0
   boundsPadding: 0
@@ -121,16 +126,16 @@ MonoBehaviour:
   stencilWriteMask: 255
   type: 2
   colorMode: 0
-  colorOuterStart: {r: 1, g: 1, b: 1, a: 1}
-  colorInnerEnd: {r: 1, g: 1, b: 1, a: 1}
-  colorOuterEnd: {r: 1, g: 1, b: 1, a: 1}
+  colorOuterStart: {r: 0, g: 0, b: 0, a: 1}
+  colorInnerEnd: {r: 0, g: 0, b: 0, a: 1}
+  colorOuterEnd: {r: 0, g: 0, b: 0, a: 1}
   geometry: 0
   angUnitInput: 1
   angRadiansStart: 0
   angRadiansEnd: 2.3561945
   radius: 1
   radiusSpace: 0
-  thickness: 0.02
+  thickness: 0.002
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1

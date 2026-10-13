@@ -57,14 +57,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rune_Container_Imbue
   triggerType: 1
-  sourceRune: {fileID: 1421184644633327763}
   _storedMana:
     elementalAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
   maximumPower: 10
   associatedSymbol:
     vertexPairs: []
-    UID: 0
+    UID: 1006
     rotation: 0
   focus: {fileID: 0}
   parameters: []

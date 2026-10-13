@@ -4,14 +4,7 @@ public class Rune_Seal : Rune
 {
     public override void Effect()
     {
-        if (StoredMana.IsAligned(Alignments.Dark))
-        {
-            Spellbook.Instance.UpdatePageAccess(Spellbook.Instance.GetPageFromContainedRune(this), false);
-        }
-        else
-        {
-            Spellbook.Instance.UpdatePageAccess(Spellbook.Instance.GetPageFromContainedRune(this), true);
-        }
+        //Spellbook.Instance.UpdatePageAccess(Spellbook.Instance.GetPageFromContainedRune(this), !StoredMana.IsAligned(Alignments.Dark));
     }
 
     public override Mana Extract()

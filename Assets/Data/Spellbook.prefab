@@ -50,7 +50,7 @@ MonoBehaviour:
   turnPageAction:
     m_Name: Turn Page
     m_Type: 0
-    m_ExpectedControlType: 
+    m_ExpectedControlType: Axis
     m_Id: d2367cf4-99e4-491a-8c5d-e56fd4f7a1c4
     m_Processors: 
     m_Interactions: 
@@ -110,6 +110,7 @@ MonoBehaviour:
   pageAngle: 179.99
   bindingOffset: {x: 0.0365, y: 0, z: 0}
   pageOffset: {x: 0.264, y: 0, z: 0}
+  runeLineThickness: 0.002
   frontCover: {fileID: 1880880455566943492}
   backCover: {fileID: 2823508733110393739}
   spine: {fileID: 2210460759031018186}

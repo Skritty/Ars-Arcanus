@@ -101,6 +101,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+      propertyPath: accessible
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       propertyPath: runes.Array.size
       value: 1
       objectReference: {fileID: 0}

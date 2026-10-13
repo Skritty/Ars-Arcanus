@@ -14,6 +14,7 @@ public class Rune_Container_Extract : Rune_Container
         }
 
         // Mana is extracted from the focus rune and merged into the extract rune. Excess mana is destroyed
+        if (focus == null) return;
         Mana extractedMana = focus.Extract();
         StoredMana = Mana.Merge(maximumPower, StoredMana, extractedMana);
     }

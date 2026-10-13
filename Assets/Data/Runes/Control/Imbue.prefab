@@ -46,16 +46,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc49f8fbd65f0847ba1255b1561fe47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rune_Container_Imbue
+  useCullingMasks: 0
   triggerType: 1
-  sourceRune: {fileID: 1421184644633327763}
   _storedMana:
+    elementalAlignment: {x: 0, y: 0, z: 0}
+    voidAlignment: {x: 0, y: 0, z: 0}
+  imbuedDebugReader:
     elementalAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
   maximumPower: 10
   associatedSymbol:
-    polyline: {fileID: 3089076393383609243}
     vertexPairs: []
-    UID: 0
+    extraShapes: []
+    UID: 1004
     rotation: 0
   focus: {fileID: 0}
   parameters: []
@@ -88,7 +91,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.0001, z: 0}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4266137491440542674}
@@ -132,7 +135,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 1
   radiusSpace: 0
-  thickness: 0.02
+  thickness: 0.002
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1
@@ -231,7 +234,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.0001, z: 0}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4266137491440542674}
@@ -277,7 +280,7 @@ MonoBehaviour:
   geometry: 0
   joins: 3
   closed: 1
-  thickness: 0.02
+  thickness: 0.002
   thicknessSpace: 0
 --- !u!33 &7771416984367269294
 MeshFilter:

@@ -6,8 +6,11 @@ public class Rune_Container_Imbue : Rune_Container
     public override void Effect()
     {
         // Mana is imbued into the focus
-        focus.Imbue(StoredMana);
-        StoredMana = new Mana();
+        if (focus != null)
+        {
+            focus.Imbue(StoredMana);
+            StoredMana = new Mana();
+        }
 
         // Mana flows from each parameter into 25% of the imbue's mana, which is then merged together
         Mana splitMana = StoredMana.Split(parameters.Count);

@@ -5,19 +5,19 @@ using UnityEngine;
 [Flags]
 public enum Alignments
 {
-    None = 0,
-    Fire = 1,
-    Water = 1 << 1,
-    Air = 1 << 2,
-    Earth = 1 << 3,
-    Light = 1 << 4,
-    Dark = 1 << 5,
-    Energy = 1 << 6,
-    Material = 1 << 7,
-    Divine = 1 << 8,
-    Chaos = 1 << 9,
-    Order = 1 << 10,
-    Nature = 1 << 11
+    None = 1,
+    Fire = 1 << 1,
+    Water = 1 << 2,
+    Air = 1 << 3,
+    Earth = 1 << 4,
+    Light = 1 << 5,
+    Dark = 1 << 6,
+    Energy = 1 <<7,
+    Material = 1 << 8,
+    Divine = 1 << 9,
+    Chaos = 1 << 10,
+    Order = 1 << 11,
+    Nature = 1 << 12
 }
 
 /// <summary>
@@ -107,26 +107,26 @@ public struct Mana
 
         // Add fire/water axis
         float exists = Vector3.Project(elementalAlignment, Vector3.right).x;
-        if (exists < 0)
-        {
-            b += exists;
-        }
         if (exists > 0)
         {
             r += exists;
         }
-
+        if (exists < 0)
+        {
+            b += -exists;
+        }
+        
         // Add earth/air axis
         exists = Vector3.Project(elementalAlignment, Vector3.up).y;
         if (exists > 0)
         {
-            g += exists;
-        }
-        if (exists < 0)
-        {
             g += exists * 0.707f;
             b += exists * 0.707f;
         }
+        if (exists < 0)
+        {
+            g += -exists;
+         }
 
         // Add light/dark axis
         exists = Vector3.Project(elementalAlignment, Vector3.forward).z;
@@ -137,8 +137,8 @@ public struct Mana
         }
         if (exists < 0)
         {
-            r += exists * 0.707f;
-            b += exists * 0.707f;
+            r += -exists * 0.707f;
+            b += -exists * 0.707f;
         }
         
         float total = r + b + g;
@@ -146,14 +146,8 @@ public struct Mana
         g /= total;
         b /= total;
 
-        Color.RGBToHSV(new Color(r, g, b), out float H, out _, out _);
-        return Color.HSVToRGB(H, Mathf.Log10(Mathf.Abs(Power * 5) + 1) + 0.2f, Mathf.Log10(Mathf.Abs(Power * 5) + 1) + 0.2f);
-    }
-
-    public void Decay(float decayAmount)
-    {
-        elementalAlignment -= elementalAlignment.normalized * decayAmount;
-        voidAlignment = Vector3.zero;
+        Color.RGBToHSV(new Color(r, g, b), out float H, out _, out _); // TODO: what the heck unity??
+        return Color.HSVToRGB(H, elementalAlignment.magnitude + 0.5f, elementalAlignment.magnitude + 0.5f);// Mathf.Log10(Mathf.Abs(Power * 5) + 1) + 0.2f, Mathf.Log10(Mathf.Abs(Power * 5) + 1) + 0.2f);
     }
 
     public Mana Split(int count)
@@ -217,12 +211,18 @@ public struct Mana
     public static Mana operator +(Mana lhs, Mana rhs)
     {
         lhs.elementalAlignment += rhs.elementalAlignment;
+        if (Mathf.Abs(lhs.elementalAlignment.x) < 0.00001f) lhs.elementalAlignment.x = 0;
+        if (Mathf.Abs(lhs.elementalAlignment.y) < 0.00001f) lhs.elementalAlignment.y = 0;
+        if (Mathf.Abs(lhs.elementalAlignment.z) < 0.00001f) lhs.elementalAlignment.z = 0;
         return lhs;
     }
 
     public static Mana operator -(Mana lhs, Mana rhs)
     {
         lhs.elementalAlignment -= rhs.elementalAlignment;
+        if (Mathf.Abs(lhs.elementalAlignment.x) < 0.00001f) lhs.elementalAlignment.x = 0;
+        if (Mathf.Abs(lhs.elementalAlignment.y) < 0.00001f) lhs.elementalAlignment.y = 0;
+        if (Mathf.Abs(lhs.elementalAlignment.z) < 0.00001f) lhs.elementalAlignment.z = 0;
         return lhs;
     }
 
