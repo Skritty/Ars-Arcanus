@@ -47,12 +47,12 @@ MonoBehaviour:
   useCullingMasks: 0
   triggerType: 0
   _storedMana:
-    elementalAlignment: {x: -0.1, y: 0, z: 0}
+    elementalAlignment: {x: -8, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
   imbuedDebugReader:
     elementalAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
-  maximumPower: 10
+  maximumPower: 8
   associatedSymbol:
     vertexPairs:
     - A: {x: 0.2, y: 0.2}

@@ -9,17 +9,14 @@ public abstract class Rune : ImmediateModeShapeDrawer
     public enum TriggerType { None, Tick, ManaRecieved }
     public TriggerType triggerType;
     [SerializeField]
-    private Mana _storedMana;
-    public Mana StoredMana
+    protected Mana _storedMana;
+    public virtual Mana StoredMana
     {
         get => _storedMana;
         set
         {
             _storedMana = value;
-            if (_storedMana.elementalAlignment.magnitude > maximumPower)
-            {
-                _storedMana.elementalAlignment = _storedMana.elementalAlignment.normalized * maximumPower;
-            }
+            _storedMana = _storedMana.Limit(maximumPower);
         }
     }
 
@@ -28,20 +25,21 @@ public abstract class Rune : ImmediateModeShapeDrawer
     {
         get
         {
-            if (!_imbuedMana.ContainsKey(associatedSymbol.UID)) return new Mana();
+            if (!_imbuedMana.ContainsKey(associatedSymbol.UID)) return new Mana(true);
             return _imbuedMana[associatedSymbol.UID];
         }
     }
     public Mana imbuedDebugReader;
-    public float maximumPower = 10f; // Currently this just prevents the elemental alignment from going beyond this amount, but it could cause an effect once it exceeds it
+    public float maximumPower = 8f; // Currently this just prevents the elemental alignment from going beyond this amount, but it could cause an effect once it exceeds it
     public Symbol associatedSymbol;
+    public Page page;
+    public Rune parent;
 
-    private void Start()
+    public virtual void Initialize()
     {
-        if (!Application.isPlaying) return;
         if (triggerType == TriggerType.Tick)
         {
-            Spellbook.Instance.tickGameState += Effect;
+            GameTick.Subscribe(Effect);
         }
         Spellbook.Instance.runeElementalDecay += ManaDecay;
         if (!_imbuedMana.ContainsKey(associatedSymbol.UID))
@@ -52,15 +50,30 @@ public abstract class Rune : ImmediateModeShapeDrawer
     {
         if (triggerType == TriggerType.Tick)
         {
-            Spellbook.Instance.tickGameState -= Effect;
+            GameTick.Unsubscribe(Effect);
         }
         Spellbook.Instance.runeElementalDecay -= ManaDecay;
     }
 
-    private void ManaDecay(float decayAmount)
+    protected virtual void ManaDecay(float decayAmount)
     {
-        _storedMana.elementalAlignment -= _storedMana.elementalAlignment.normalized * Mathf.Clamp(decayAmount, 0, _storedMana.elementalAlignment.magnitude);
+        if (_storedMana.elementalAlignment == Vector3.zero) return;
+
+        if (_storedMana.deltaAlignment.x == 0)
+        {
+            _storedMana.elementalAlignment.x -= _storedMana.elementalAlignment.x * decayAmount;
+        }
+        if (_storedMana.deltaAlignment.y == 0)
+        {
+            _storedMana.elementalAlignment.y -= _storedMana.elementalAlignment.y * decayAmount;
+        }
+        if (_storedMana.deltaAlignment.z == 0)
+        {
+            _storedMana.elementalAlignment.z -= _storedMana.elementalAlignment.z * decayAmount;
+        }
+
         _storedMana.voidAlignment = Vector3.zero;
+        _storedMana.deltaAlignment = Vector3.zero;
     }
 
     public abstract void Effect();
@@ -76,7 +89,7 @@ public abstract class Rune : ImmediateModeShapeDrawer
     /// This mana can contain elemental alignments, rules, etc.
     /// Removes the stored mana from a non-preset rune.
     /// </summary>
-    public abstract Mana Extract();
+    public abstract Mana Extract(float amountExtracted);
 
     public override void DrawShapes(Camera cam)
     {
@@ -86,17 +99,29 @@ public abstract class Rune : ImmediateModeShapeDrawer
         }
     }
 
-    public void DrawRune()
+    public virtual void DrawRune()
     {
-        Draw.Matrix = Matrix4x4.TRS(transform.position + transform.up * transform.lossyScale.y * 0.0001f, transform.rotation * Quaternion.AngleAxis(90, Vector3.right), new Vector3(transform.lossyScale.x, transform.lossyScale.z, transform.lossyScale.y));
         Color symbolColor = StoredMana.GetManaColor();
+        Draw.Color = Color.black;
         foreach(ShapeRenderer shape in associatedSymbol.extraShapes)
         {
             shape.Color = symbolColor;
         }
         foreach (Symbol.VertexPair line in associatedSymbol.vertexPairs)
         {
-            Draw.Line(line.A, line.B, symbolColor);
+            // Note: this is probably horribly laggy
+            // Glowy line underneath
+            if(symbolColor != Color.black)
+            {
+                Draw.Matrix = Matrix4x4.TRS(transform.position + transform.up * transform.lossyScale.y * 0.001f, transform.rotation * Quaternion.AngleAxis(90, Vector3.right), new Vector3(transform.lossyScale.x, transform.lossyScale.z, transform.lossyScale.y));
+                Draw.Line(line.A, line.B, Draw.Thickness * 1.2f, symbolColor);
+            }
+        }
+        foreach (Symbol.VertexPair line in associatedSymbol.vertexPairs)
+        {
+            // Normal ink above
+            Draw.Matrix = Matrix4x4.TRS(transform.position + transform.up * transform.lossyScale.y * 0.0011f, transform.rotation * Quaternion.AngleAxis(90, Vector3.right), new Vector3(transform.lossyScale.x, transform.lossyScale.z, transform.lossyScale.y));
+            Draw.Line(line.A, line.B);
         }
     }
 

@@ -12,20 +12,26 @@ public class Rune_Flow : Rune
         {
             // Flow mana to the rune in front
             Mana toMana = StoredMana.FlowAmountTo(to.StoredMana);
-            to.StoredMana += toMana;
-            StoredMana -= toMana;
+            GameTick.Delay(() =>
+            {
+                to.StoredMana += toMana;
+                StoredMana -= toMana;
+            });
         }
 
         if (from != null)
         {
             // Flow mana from the rune behind
             Mana fromMana = from.StoredMana.FlowAmountTo(StoredMana);
-            StoredMana += fromMana;
-            from.StoredMana -= fromMana;
+            GameTick.Delay(() =>
+            {
+                StoredMana += fromMana;
+                from.StoredMana -= fromMana;
+            });
         }
     }
 
-    public override Mana Extract()
+    public override Mana Extract(float amountExtracted)
     {
         return new Mana();
     }

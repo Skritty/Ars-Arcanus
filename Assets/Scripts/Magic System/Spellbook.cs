@@ -4,13 +4,11 @@ using System.Collections.Generic;
 using Shapes;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class Spellbook : MonoBehaviour
 {
     public static Spellbook Instance;
 
-    public Action tickGameState;
     public Action<float> runeElementalDecay;
 
     public InputAction turnPageAction;
@@ -50,13 +48,25 @@ public class Spellbook : MonoBehaviour
         Draw.Thickness = runeLineThickness;
 
         BindBook();
-        turnPageAction.performed += TurnPage;
-        turnPageAction.Enable();
     }
 
-    private void FixedUpdate()
+    private void OnEnable()
     {
-        TickMagic();
+        turnPageAction.performed += TurnPage;
+        turnPageAction.Enable();
+        GameTick.Subscribe(ManaDecay, 101);
+    }
+
+    private void OnDisable()
+    {
+        turnPageAction.performed -= TurnPage;
+        turnPageAction.Disable();
+        GameTick.Unsubscribe(ManaDecay, 101);
+    }
+
+    private void ManaDecay()
+    {
+        runeElementalDecay?.Invoke(runeElementalDecayAmount);
     }
 
     public Page GetPageFromContainedRune(Rune rune)
@@ -230,11 +240,5 @@ public class Spellbook : MonoBehaviour
             else binding.transform.localPosition = new Vector3(0, Mathf.Lerp(endGap, startGap, elapsedTime / flipTime), 0) + bindingOffset;
             binding.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedTime / flipTime);
         };
-    }
-
-    private void TickMagic()
-    {
-        runeElementalDecay?.Invoke(runeElementalDecayAmount);
-        tickGameState?.Invoke();
     }
 }

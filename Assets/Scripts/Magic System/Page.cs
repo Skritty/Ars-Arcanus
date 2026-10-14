@@ -11,6 +11,7 @@ public class Page : MonoBehaviour
 {
     public bool accessible = true;
     public Transform runeParent;
+    public List<Rune> runes = new();
 
     /*public override void DrawShapes(Camera cam)
     {
@@ -24,11 +25,27 @@ public class Page : MonoBehaviour
         }
     }*/
 
+    private void Start()
+    {
+        if (!Application.isPlaying) return;
+
+        runes.Clear();
+        foreach (Transform runeTransform in runeParent)
+        {
+            runes.Add(runeTransform.GetComponent<Rune>());
+        }
+        foreach(Rune rune in runes.ToArray())
+        {
+            rune.page = this;
+            rune.Initialize();
+        }
+    }
+
     public bool ContainsRune(Rune rune)
     {
-        foreach (Transform r in runeParent)
+        foreach (Rune r in runes)
         {
-            if (r == rune.transform) return true;
+            if (r == rune) return true;
         }
         return false;
     }
@@ -51,5 +68,8 @@ public class Page : MonoBehaviour
                 (rune as Rune_Container).TryAddRune(newRune);
             }
         }*/
+        runes.Add(newRune);
+        newRune.page = this;
+        newRune.Initialize();
     }
 }

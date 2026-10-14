@@ -37,6 +37,11 @@ public struct Mana
     public Vector3 elementalAlignment;
 
     /// <summary>
+    /// Used to know what axes should have mana decay applied
+    /// </summary>
+    public Vector3 deltaAlignment;
+
+    /// <summary>
     /// X = Energy
     /// Y = Material
     /// Z = Divine
@@ -55,9 +60,17 @@ public struct Mana
         }
     }
 
+    public Mana(bool startWithDelta = true)
+    {
+        this.elementalAlignment = Vector3.zero;
+        this.voidAlignment = Vector3.zero;
+        this.deltaAlignment = Vector3.one * (startWithDelta ? 1 : 0);
+    }
+
     public Mana(Vector3 elementalAlignment)
     {
         this.elementalAlignment = elementalAlignment;
+        this.deltaAlignment = Vector3.zero;
         this.voidAlignment = Vector3.zero;
     }
 
@@ -97,6 +110,8 @@ public struct Mana
 
     public Color GetManaColor()
     {
+        if (elementalAlignment.magnitude == 0) return Color.black;
+
         // Fire = Red (0)|(1,0,0), Earth = Green (120)|(0,-1,0), Water = Blue (240)|(-1,0,0)
         // Light = Yellow (60)|(0,0,1), Air = Cyan (180)|(0,1,0), Dark = Magenta (300)|(0,0,-1)
         // Power = Value
@@ -141,18 +156,35 @@ public struct Mana
             b += -exists * 0.707f;
         }
         
-        float total = r + b + g;
+        /*float total = r + b + g;
         r /= total;
         g /= total;
-        b /= total;
+        b /= total;*/
 
-        Color.RGBToHSV(new Color(r, g, b), out float H, out _, out _); // TODO: what the heck unity??
-        return Color.HSVToRGB(H, elementalAlignment.magnitude + 0.5f, elementalAlignment.magnitude + 0.5f);// Mathf.Log10(Mathf.Abs(Power * 5) + 1) + 0.2f, Mathf.Log10(Mathf.Abs(Power * 5) + 1) + 0.2f);
+        float brightnessMultiplier = Mathf.Log(Mathf.Abs(elementalAlignment.magnitude) + 1, 2);
+        return new Color(
+            r / elementalAlignment.magnitude * brightnessMultiplier, 
+            g / elementalAlignment.magnitude * brightnessMultiplier, 
+            b / elementalAlignment.magnitude * brightnessMultiplier);
+        //Color.RGBToHSV(new Color(r, g, b), out float H, out _, out _); // TODO: what the heck unity??
+        //return Color.HSVToRGB(H, elementalAlignment.magnitude + 0.5f, elementalAlignment.magnitude + 0.5f);// Mathf.Log10(Mathf.Abs(Power * 5) + 1) + 0.2f, Mathf.Log10(Mathf.Abs(Power * 5) + 1) + 0.2f);
     }
 
     public Mana Split(int count)
     {
         elementalAlignment /= count;
+        return this;
+    }
+
+    public Mana Limit(float maxMagnitude)
+    {
+        if (Mathf.Abs(elementalAlignment.x) > maxMagnitude) elementalAlignment.x = Mathf.Sign(elementalAlignment.x) * maxMagnitude;
+        if (Mathf.Abs(elementalAlignment.y) > maxMagnitude) elementalAlignment.y = Mathf.Sign(elementalAlignment.y) * maxMagnitude;
+        if (Mathf.Abs(elementalAlignment.z) > maxMagnitude) elementalAlignment.z = Mathf.Sign(elementalAlignment.z) * maxMagnitude;
+        /*if (elementalAlignment.magnitude > maxMagnitude)
+        {
+            elementalAlignment = elementalAlignment.normalized * maxMagnitude;
+        }*/
         return this;
     }
 
@@ -177,7 +209,9 @@ public struct Mana
     /// </summary>
     public Mana FlowAmountTo(Mana next)
     {
-        return (this - next) / 2f;
+        elementalAlignment = (elementalAlignment + next.elementalAlignment) / 2f;
+        deltaAlignment = elementalAlignment;
+        return this;
     }
 
     public void CalculateVoidAlignment(Mana other)
@@ -192,37 +226,39 @@ public struct Mana
     public static Mana Merge(float maxPower, params Mana[] recieving)
     {
         Mana mergedMana = new Mana();
-        mergedMana.elementalAlignment = Vector3.zero;
         foreach (Mana mana in recieving)
         {
             mergedMana.elementalAlignment += mana.elementalAlignment;
-            /*foreach(Rune rule in rules)
-            {
-                if (!mergedMana.rules.Contains(rule)) mergedMana.rules.Add(rule);
-            }*/
+            //mergedMana.deltaAlignment += mana.elementalAlignment;
         }
-        if(Mathf.Abs(mergedMana.elementalAlignment.magnitude) > maxPower)
-        {
-            mergedMana.elementalAlignment = mergedMana.elementalAlignment.normalized * maxPower;
-        }
+        mergedMana = mergedMana.Limit(maxPower);
+        mergedMana.elementalAlignment.x = ((int)(mergedMana.elementalAlignment.x * 100)) / 100f;
+        mergedMana.elementalAlignment.y = ((int)(mergedMana.elementalAlignment.y * 100)) / 100f;
+        mergedMana.elementalAlignment.z = ((int)(mergedMana.elementalAlignment.z * 100)) / 100f;
         return mergedMana;
     }
 
     public static Mana operator +(Mana lhs, Mana rhs)
     {
-        lhs.elementalAlignment += rhs.elementalAlignment;
-        if (Mathf.Abs(lhs.elementalAlignment.x) < 0.00001f) lhs.elementalAlignment.x = 0;
-        if (Mathf.Abs(lhs.elementalAlignment.y) < 0.00001f) lhs.elementalAlignment.y = 0;
-        if (Mathf.Abs(lhs.elementalAlignment.z) < 0.00001f) lhs.elementalAlignment.z = 0;
+        lhs.elementalAlignment += rhs.elementalAlignment;// + rhs.elementalAlignment.normalized * 0.000001f;
+        lhs.elementalAlignment.x = ((int)(lhs.elementalAlignment.x * 100)) / 100f;
+        lhs.elementalAlignment.y = ((int)(lhs.elementalAlignment.y * 100)) / 100f;
+        lhs.elementalAlignment.z = ((int)(lhs.elementalAlignment.z * 100)) / 100f;
+        lhs.deltaAlignment.x += Mathf.Abs(rhs.elementalAlignment.x);
+        lhs.deltaAlignment.y += Mathf.Abs(rhs.elementalAlignment.y);
+        lhs.deltaAlignment.z += Mathf.Abs(rhs.elementalAlignment.z);
         return lhs;
     }
 
     public static Mana operator -(Mana lhs, Mana rhs)
     {
-        lhs.elementalAlignment -= rhs.elementalAlignment;
-        if (Mathf.Abs(lhs.elementalAlignment.x) < 0.00001f) lhs.elementalAlignment.x = 0;
-        if (Mathf.Abs(lhs.elementalAlignment.y) < 0.00001f) lhs.elementalAlignment.y = 0;
-        if (Mathf.Abs(lhs.elementalAlignment.z) < 0.00001f) lhs.elementalAlignment.z = 0;
+        lhs.elementalAlignment -= rhs.elementalAlignment;// + rhs.elementalAlignment.normalized * 0.000001f;
+        lhs.elementalAlignment.x = ((int)(lhs.elementalAlignment.x * 100)) / 100f;
+        lhs.elementalAlignment.y = ((int)(lhs.elementalAlignment.y * 100)) / 100f;
+        lhs.elementalAlignment.z = ((int)(lhs.elementalAlignment.z * 100)) / 100f;
+        lhs.deltaAlignment.x += Mathf.Abs(rhs.elementalAlignment.x);
+        lhs.deltaAlignment.y += Mathf.Abs(rhs.elementalAlignment.y);
+        lhs.deltaAlignment.z += Mathf.Abs(rhs.elementalAlignment.z);
         return lhs;
     }
 

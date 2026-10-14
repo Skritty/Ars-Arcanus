@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: focus
       value: 
       objectReference: {fileID: 8442091521305982194}
+    - target: {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
+      propertyPath: maximumPower
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
+      propertyPath: extractionRate
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 569100766503888026, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
       propertyPath: m_Name
       value: Extract
@@ -563,6 +571,14 @@ PrefabInstance:
       propertyPath: focus
       value: 
       objectReference: {fileID: 4683002983593139171}
+    - target: {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
+      propertyPath: maximumPower
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
+      propertyPath: extractionRate
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 569100766503888026, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
       propertyPath: m_Name
       value: Extract (1)
