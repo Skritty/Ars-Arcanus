@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6053037838666956004}
   - component: {fileID: 4704188487205810552}
   m_Layer: 0
-  m_Name: Variable Rune 1
+  m_Name: Variable Rune
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

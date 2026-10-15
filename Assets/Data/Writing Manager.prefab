@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1922304868250797649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3032575788893763196}
+  - component: {fileID: 3033788818500567175}
+  m_Layer: 0
+  m_Name: Writing Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3032575788893763196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922304868250797649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3033788818500567175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922304868250797649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccd2dd0c7ff61348ad33c8e3948f911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WritingManager
+  useCullingMasks: 0
+  drawAction:
+    m_Name: Draw
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a0251d49-1d7d-496b-b86c-404c538470a9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 8ab7a7b1-584e-4255-99f5-67eed4ff64b9
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Draw
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
+  finishAction:
+    m_Name: Finish
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d5493606-82cd-469b-94b0-1419a65d57a2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 9a95efc5-9ca9-46e9-becb-813c1fb74a23
+      m_Path: <Mouse>/rightButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Finish
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
+  defaultVariableRune: {fileID: 4704188487205810552, guid: e2600a98ee359e84dbe39c815c6ffbb7, type: 3}
+  runes:
+  - key: 1002
+    value: {fileID: 7312403984855251692, guid: 8b01512f2a84d2244a1ae72d14275411, type: 3}
+  - key: 1003
+    value: {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
+  - key: 1001
+    value: {fileID: 8726811730358869363, guid: 72170aa202e3f0b47afd1b7e98cd98cf, type: 3}
+  - key: 1004
+    value: {fileID: 1421184644633327763, guid: 6aff739e124dec74abd1df94ce4ae419, type: 3}
+  - key: 3003
+    value: {fileID: 8022440639626252793, guid: 313fa13e8f4da434b9ab4910dbc4715c, type: 3}
+  - key: 3006
+    value: {fileID: 8022440639626252793, guid: dc7268ccd1b763f49b09552ca06180f3, type: 3}
+  - key: 3004
+    value: {fileID: 8022440639626252793, guid: 136f0124aa695994c9fd0e8b3bec26d9, type: 3}
+  - key: 3001
+    value: {fileID: 8022440639626252793, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+  - key: 3005
+    value: {fileID: 8022440639626252793, guid: e288127e11ac07a4d951fab6aac51cbf, type: 3}
+  - key: 3002
+    value: {fileID: 8022440639626252793, guid: 1eef62ef582a8b64ba41b98ef34cc925, type: 3}
+  - key: 5001
+    value: {fileID: 1707050006078072855, guid: e34c7c5af48b77e43b4b37626be98a90, type: 3}

@@ -70,6 +70,7 @@ public class Page : MonoBehaviour
         }*/
         runes.Add(newRune);
         newRune.page = this;
+        newRune.transform.parent = runeParent; // figure out where this belongs
         newRune.Initialize();
     }
 }
