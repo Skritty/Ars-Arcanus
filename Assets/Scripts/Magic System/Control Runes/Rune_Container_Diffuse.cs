@@ -7,25 +7,28 @@ public class Rune_Container_Diffuse : Rune_Container
     {
         // Parameter mana is first merged and sent to the focus (skipping the diffuse rune's stored mana)
         // With no parameters, the mana is sent directly to the focus rune
-        if(parameters.Count > 0)
+        if(focus != null)
         {
-            Mana mergedMana = Mana.Merge(maximumPower, parameters.Select(x => x.StoredMana).ToArray());
-            GameTick.Delay(() =>
+            if (parameters.Count > 0)
             {
-                focus.StoredMana += mergedMana;
-                foreach (Rune rune in parameters)
+                Mana mergedMana = Mana.Merge(maximumPower, parameters.Select(x => x.StoredMana).ToArray());
+                GameTick.Delay(() =>
                 {
-                    rune.StoredMana = new Mana(true);
-                }
-            });
-        }
-        else
-        {
-            GameTick.Delay(() =>
+                    focus.StoredMana += mergedMana;
+                    foreach (Rune rune in parameters)
+                    {
+                        rune.StoredMana = new Mana(true);
+                    }
+                });
+            }
+            else
             {
-                focus.StoredMana += StoredMana;
-                StoredMana = new Mana(true);
-            });
+                GameTick.Delay(() =>
+                {
+                    focus.StoredMana += StoredMana;
+                    StoredMana = new Mana(true);
+                });
+            }
         }
 
         // Mana is then split and flows evenly to all parameters (% varies)

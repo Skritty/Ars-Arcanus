@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Shapes;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -50,27 +51,29 @@ public class Page : MonoBehaviour
         return false;
     }
 
+    public Rune GetRuneAtPosition(Vector3 pos)
+    {
+        foreach(Rune rune in runes)
+        {
+            if (rune.PositionInBounds(pos)) return rune;
+        }
+        return null;
+    }
+
     public void AddRune(Rune newRune)
     {
-        // Steps to creating and adding a new [drawn] rune:
-        // 1. Symbol drawer tool sends updates to the Magic Manager until a valid UID is found
-        // 2. When this happens, a copy of the matching rune is linked to the drawn symbol and is added to the Page it was drawn on
-        // 3. The page tries adding the new rune to any root diffuse runes it already has
-        // 4. Those diffuse runes check to see if any of their children contain it, etc.
-        //    If one is valid, it adds it as the focus rune there and no where else.
-        // 5. If it isn't a nested rune, it is added to the root runes list of the page.
-        // 6. A null mana effect update is given to the new rune, which may produce an effect.
-
-        /*foreach(Rune rune in runes)
-        {
-            if(rune is Rune_Container)
-            {
-                (rune as Rune_Container).TryAddRune(newRune);
-            }
-        }*/
         runes.Add(newRune);
+        newRune.transform.parent = runeParent;
+        newRune.transform.localScale = Vector3.one;
         newRune.page = this;
-        newRune.transform.parent = runeParent; // figure out where this belongs
+        Rune_Container container = GetRuneAtPosition(newRune.transform.position) as Rune_Container;
+        if(container) container.TryAddRune(newRune);
         newRune.Initialize();
+    }
+
+    public void RemoveRune(Rune rune)
+    {
+        if (rune.parent != null) rune.parent.focus = null;
+        runes.Remove(rune);
     }
 }

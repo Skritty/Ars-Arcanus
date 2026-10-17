@@ -62,17 +62,44 @@ MonoBehaviour:
     vertexPairs:
     - A: {x: 0, y: 1}
       B: {x: 1, y: 0}
+      angle: 0
     - A: {x: 1, y: 0}
       B: {x: 0, y: -1}
+      angle: 0
     - A: {x: 0, y: -1}
       B: {x: -1, y: 0}
+      angle: 0
     - A: {x: -1, y: 0}
       B: {x: 0, y: 1}
+      angle: 0
     extraShapes:
     - {fileID: 8727980356067083944}
     - {fileID: 4018696326093481366}
-    UID: 1003
-    rotation: 0
+    comparisonPairs:
+    - A: {x: 0, y: 1}
+      B: {x: 0, y: -1}
+      angle: 0
+    - A: {x: 0, y: 1}
+      B: {x: 1, y: 0}
+      angle: 0.70710677
+    - A: {x: 0, y: 1}
+      B: {x: -1, y: 0}
+      angle: 0.70710677
+    - A: {x: 1, y: 0}
+      B: {x: 0, y: -1}
+      angle: 0.70710677
+    - A: {x: 0, y: -1}
+      B: {x: -1, y: 0}
+      angle: 0.70710677
+    - A: {x: 1, y: 0}
+      B: {x: -1, y: 0}
+      angle: 1
+    offsetForced: {x: 0, y: 0}
+    bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 1, y: 0.1, z: 1}
+    updateComparer: 0
+    sourceRuneUID: 564740870
   page: {fileID: 0}
   parent: {fileID: 0}
   focus: {fileID: 0}

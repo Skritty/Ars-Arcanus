@@ -60,8 +60,13 @@ MonoBehaviour:
   associatedSymbol:
     vertexPairs: []
     extraShapes: []
-    UID: 0
-    rotation: 0
+    comparisonPairs: []
+    offsetForced: {x: 0, y: 0}
+    bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    updateComparer: 0
+    sourceRuneUID: 0
   page: {fileID: 0}
   parent: {fileID: 0}
   focus: {fileID: 0}

@@ -48,19 +48,75 @@ MonoBehaviour:
   triggerType: 0
   _storedMana:
     elementalAlignment: {x: 0, y: 0, z: 8}
+    deltaAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
   imbuedDebugReader:
     elementalAlignment: {x: 0, y: 0, z: 0}
+    deltaAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
   maximumPower: 8
   associatedSymbol:
     vertexPairs:
     - A: {x: 0, y: 0.5}
       B: {x: 0, y: -0.5}
+      angle: 0
     - A: {x: -0.5, y: 0.25}
       B: {x: 0.5, y: -0.25}
+      angle: 0
     - A: {x: -0.5, y: -0.25}
       B: {x: 0.5, y: 0.25}
+      angle: 0
     extraShapes: []
-    UID: 3005
-    rotation: 0
+    comparisonPairs:
+    - A: {x: 0, y: 0.5}
+      B: {x: 0, y: -0.5}
+      angle: 0
+    - A: {x: -0.5, y: 0.25}
+      B: {x: -0.5, y: -0.25}
+      angle: 0
+    - A: {x: 0.5, y: -0.25}
+      B: {x: 0.5, y: 0.25}
+      angle: 0.00000008742278
+    - A: {x: 0, y: 0.5}
+      B: {x: 0.5, y: -0.25}
+      angle: 0.5547002
+    - A: {x: 0, y: 0.5}
+      B: {x: -0.5, y: -0.25}
+      angle: 0.5547002
+    - A: {x: 0, y: -0.5}
+      B: {x: -0.5, y: 0.25}
+      angle: 0.5547002
+    - A: {x: 0, y: -0.5}
+      B: {x: 0.5, y: 0.25}
+      angle: 0.5547002
+    - A: {x: 0, y: 0.5}
+      B: {x: -0.5, y: 0.25}
+      angle: 0.89442724
+    - A: {x: 0, y: 0.5}
+      B: {x: 0.5, y: 0.25}
+      angle: 0.89442724
+    - A: {x: 0, y: -0.5}
+      B: {x: 0.5, y: -0.25}
+      angle: 0.89442724
+    - A: {x: 0, y: -0.5}
+      B: {x: -0.5, y: -0.25}
+      angle: 0.89442724
+    - A: {x: -0.5, y: 0.25}
+      B: {x: 0.5, y: -0.25}
+      angle: 0.89442724
+    - A: {x: -0.5, y: -0.25}
+      B: {x: 0.5, y: 0.25}
+      angle: 0.89442724
+    - A: {x: -0.5, y: 0.25}
+      B: {x: 0.5, y: 0.25}
+      angle: 1
+    - A: {x: 0.5, y: -0.25}
+      B: {x: -0.5, y: -0.25}
+      angle: 1
+    bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.01, z: 0.5}
+    updateComparer: 0
+    sourceRuneUID: -1151326208
+  page: {fileID: 0}
+  parent: {fileID: 0}

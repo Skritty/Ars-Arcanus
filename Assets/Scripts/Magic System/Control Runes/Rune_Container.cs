@@ -41,27 +41,26 @@ public abstract class Rune_Container : Rune
 
     public override void Imbue(Mana mana)
     {
+        if (focus == null) return;
         focus.Imbue(mana);
     }
 
     public override Mana Extract(float amountExtracted)
     {
+        if (focus == null) return new Mana();
         return focus.Extract(amountExtracted);
     }
 
     public bool TryAddRune(Rune newRune)
     {
-        if(ContainedInFocusBounds(newRune))
+        if (newRune == this) return false;
+        if(focus == null && PositionInBounds(newRune.transform.position))
         {
             focus = newRune;
+            newRune.transform.parent = transform;
+            newRune.parent = this;
             return true;
         }
-
-        foreach (Rune_Container rune in parameters)
-        {
-            if (rune.TryAddRune(newRune)) return true;
-        }
-
         return false;
     }
 
@@ -93,10 +92,10 @@ public abstract class Rune_Container : Rune
         }
     }
 
-    protected virtual bool ContainedInFocusBounds(Rune other)
+    public override bool PositionInBounds(Vector3 position)
     {
-        // TODO: check and see if it contains the rune in its bounds
-        return false;
+        if (focus != null) return false;
+        return base.PositionInBounds(position);
     }
 
     public override void DrawRune()

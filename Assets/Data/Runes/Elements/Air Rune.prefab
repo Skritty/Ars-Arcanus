@@ -48,21 +48,96 @@ MonoBehaviour:
   triggerType: 0
   _storedMana:
     elementalAlignment: {x: 0, y: 8, z: 0}
+    deltaAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
   imbuedDebugReader:
     elementalAlignment: {x: 0, y: 0, z: 0}
+    deltaAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
   maximumPower: 8
   associatedSymbol:
     vertexPairs:
     - A: {x: 0.4, y: 0.5}
       B: {x: -0.4, y: 0.5}
+      angle: 0
     - A: {x: 0.2, y: 0.5}
       B: {x: -0.2, y: 0}
+      angle: 0
     - A: {x: -0.2, y: 0}
       B: {x: 0.2, y: -0.5}
+      angle: 0
     - A: {x: 0.4, y: -0.5}
       B: {x: -0.4, y: -0.5}
+      angle: 0
     extraShapes: []
-    UID: 3003
-    rotation: 0
+    comparisonPairs:
+    - A: {x: -0.4, y: 0.5}
+      B: {x: -0.4, y: -0.5}
+      angle: 0
+    - A: {x: 0.4, y: 0.5}
+      B: {x: 0.4, y: -0.5}
+      angle: 0
+    - A: {x: 0.2, y: 0.5}
+      B: {x: 0.2, y: -0.5}
+      angle: 0
+    - A: {x: 0.4, y: 0.5}
+      B: {x: 0.2, y: -0.5}
+      angle: 0.19611609
+    - A: {x: 0.2, y: 0.5}
+      B: {x: 0.4, y: -0.5}
+      angle: 0.19611609
+    - A: {x: -0.2, y: 0}
+      B: {x: -0.4, y: -0.5}
+      angle: 0.37139052
+    - A: {x: -0.4, y: 0.5}
+      B: {x: -0.2, y: 0}
+      angle: 0.37139052
+    - A: {x: -0.4, y: 0.5}
+      B: {x: 0.2, y: -0.5}
+      angle: 0.5144958
+    - A: {x: 0.2, y: 0.5}
+      B: {x: -0.4, y: -0.5}
+      angle: 0.5144958
+    - A: {x: 0.4, y: 0.5}
+      B: {x: -0.4, y: -0.5}
+      angle: 0.6246951
+    - A: {x: -0.4, y: 0.5}
+      B: {x: 0.4, y: -0.5}
+      angle: 0.6246951
+    - A: {x: 0.2, y: 0.5}
+      B: {x: -0.2, y: 0}
+      angle: 0.6246951
+    - A: {x: -0.2, y: 0}
+      B: {x: 0.2, y: -0.5}
+      angle: 0.6246951
+    - A: {x: 0.4, y: 0.5}
+      B: {x: -0.2, y: 0}
+      angle: 0.76822126
+    - A: {x: -0.2, y: 0}
+      B: {x: 0.4, y: -0.5}
+      angle: 0.76822126
+    - A: {x: 0.2, y: -0.5}
+      B: {x: 0.4, y: -0.5}
+      angle: 1
+    - A: {x: 0.4, y: 0.5}
+      B: {x: -0.4, y: 0.5}
+      angle: 1
+    - A: {x: -0.4, y: 0.5}
+      B: {x: 0.2, y: 0.5}
+      angle: 1
+    - A: {x: 0.4, y: 0.5}
+      B: {x: 0.2, y: 0.5}
+      angle: 1
+    - A: {x: 0.2, y: -0.5}
+      B: {x: -0.4, y: -0.5}
+      angle: 1
+    - A: {x: 0.4, y: -0.5}
+      B: {x: -0.4, y: -0.5}
+      angle: 1
+    bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.4, y: 0.01, z: 0.5}
+    updateComparer: 0
+    sourceRuneUID: -2065564878
+  page: {fileID: 0}
+  parent: {fileID: 0}

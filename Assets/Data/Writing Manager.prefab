@@ -83,25 +83,16 @@ MonoBehaviour:
     m_Priority: 0
   defaultVariableRune: {fileID: 4704188487205810552, guid: e2600a98ee359e84dbe39c815c6ffbb7, type: 3}
   runes:
-  - key: 1002
-    value: {fileID: 7312403984855251692, guid: 8b01512f2a84d2244a1ae72d14275411, type: 3}
-  - key: 1003
-    value: {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
-  - key: 1001
-    value: {fileID: 8726811730358869363, guid: 72170aa202e3f0b47afd1b7e98cd98cf, type: 3}
-  - key: 1004
-    value: {fileID: 1421184644633327763, guid: 6aff739e124dec74abd1df94ce4ae419, type: 3}
-  - key: 3003
-    value: {fileID: 8022440639626252793, guid: 313fa13e8f4da434b9ab4910dbc4715c, type: 3}
-  - key: 3006
-    value: {fileID: 8022440639626252793, guid: dc7268ccd1b763f49b09552ca06180f3, type: 3}
-  - key: 3004
-    value: {fileID: 8022440639626252793, guid: 136f0124aa695994c9fd0e8b3bec26d9, type: 3}
-  - key: 3001
-    value: {fileID: 8022440639626252793, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
-  - key: 3005
-    value: {fileID: 8022440639626252793, guid: e288127e11ac07a4d951fab6aac51cbf, type: 3}
-  - key: 3002
-    value: {fileID: 8022440639626252793, guid: 1eef62ef582a8b64ba41b98ef34cc925, type: 3}
-  - key: 5001
-    value: {fileID: 1707050006078072855, guid: e34c7c5af48b77e43b4b37626be98a90, type: 3}
+  - {fileID: 7312403984855251692, guid: 8b01512f2a84d2244a1ae72d14275411, type: 3}
+  - {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
+  - {fileID: 8726811730358869363, guid: 72170aa202e3f0b47afd1b7e98cd98cf, type: 3}
+  - {fileID: 1421184644633327763, guid: 6aff739e124dec74abd1df94ce4ae419, type: 3}
+  - {fileID: 7265662870645210158, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
+  - {fileID: 8022440639626252793, guid: 313fa13e8f4da434b9ab4910dbc4715c, type: 3}
+  - {fileID: 8022440639626252793, guid: dc7268ccd1b763f49b09552ca06180f3, type: 3}
+  - {fileID: 8022440639626252793, guid: 136f0124aa695994c9fd0e8b3bec26d9, type: 3}
+  - {fileID: 8022440639626252793, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+  - {fileID: 8022440639626252793, guid: e288127e11ac07a4d951fab6aac51cbf, type: 3}
+  - {fileID: 8022440639626252793, guid: 22f722dcc7ffb14439d20ee4adacf86e, type: 3}
+  - {fileID: 1707050006078072855, guid: e34c7c5af48b77e43b4b37626be98a90, type: 3}
+  angleComparisonLeeway: 0.2

@@ -2,11 +2,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using Shapes;
 using System.ComponentModel;
+using System;
 
 [System.Serializable, ExecuteAlways]
 public abstract class Rune : ImmediateModeShapeDrawer
 {
-    public enum TriggerType { None, Tick, ManaRecieved }
+    [Flags]
+    public enum TriggerType 
+    { 
+        None = 0, 
+        Tick = 0 << 1, 
+        ManaRecieved = 0 << 2, 
+        Created = 0 << 3
+    }
     public TriggerType triggerType;
     [SerializeField]
     protected Mana _storedMana;
@@ -25,30 +33,35 @@ public abstract class Rune : ImmediateModeShapeDrawer
     {
         get
         {
-            if (!_imbuedMana.ContainsKey(associatedSymbol.UID)) return new Mana(true);
-            return _imbuedMana[associatedSymbol.UID];
+            if (!_imbuedMana.ContainsKey(associatedSymbol.sourceRuneUID)) return new Mana(true);
+            return _imbuedMana[associatedSymbol.sourceRuneUID];
         }
     }
     public Mana imbuedDebugReader;
     public float maximumPower = 8f; // Currently this just prevents the elemental alignment from going beyond this amount, but it could cause an effect once it exceeds it
     public Symbol associatedSymbol;
     public Page page;
-    public Rune parent;
+    public Rune_Container parent;
 
     public virtual void Initialize()
     {
-        if (triggerType == TriggerType.Tick)
+        if (triggerType.HasFlag(TriggerType.Tick))
         {
             GameTick.Subscribe(Effect);
         }
         Spellbook.Instance.runeElementalDecay += ManaDecay;
-        if (!_imbuedMana.ContainsKey(associatedSymbol.UID))
-            _imbuedMana.Add(associatedSymbol.UID, StoredMana);
+        if (!_imbuedMana.ContainsKey(associatedSymbol.sourceRuneUID))
+            _imbuedMana.Add(associatedSymbol.sourceRuneUID, StoredMana);
+        //associatedSymbol.UpdateBounds(transform.position, transform.lossyScale);
+        if (triggerType.HasFlag(TriggerType.Created))
+        {
+            Effect();
+        }
     }
 
     public void Destroy()
     {
-        if (triggerType == TriggerType.Tick)
+        if (triggerType.HasFlag(TriggerType.Tick))
         {
             GameTick.Unsubscribe(Effect);
         }
@@ -91,6 +104,12 @@ public abstract class Rune : ImmediateModeShapeDrawer
     /// </summary>
     public abstract Mana Extract(float amountExtracted);
 
+    public virtual bool PositionInBounds(Vector3 position)
+    {
+        position = transform.InverseTransformPoint(position);
+        return associatedSymbol.bounds.Contains(position);
+    }
+
     public override void DrawShapes(Camera cam)
     {
         using (Draw.Command(cam))
@@ -101,28 +120,40 @@ public abstract class Rune : ImmediateModeShapeDrawer
 
     public virtual void DrawRune()
     {
+        /*Draw.Matrix = Matrix4x4.TRS(transform.position, Quaternion.identity, new Vector3(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z));
+        Draw.Color = new Color(1f, 0, 0, .2f);
+        Draw.Cuboid(associatedSymbol.bounds.center, associatedSymbol.bounds.size);*/
         Color symbolColor = StoredMana.GetManaColor();
         Draw.Color = Color.black;
+
         foreach(ShapeRenderer shape in associatedSymbol.extraShapes)
         {
             shape.Color = symbolColor;
         }
+
+        Draw.Matrix = Matrix4x4.TRS(transform.position + transform.up * transform.lossyScale.y * 0.001f, transform.rotation * Quaternion.AngleAxis(90, Vector3.right), new Vector3(transform.lossyScale.x, transform.lossyScale.z, transform.lossyScale.y));
         foreach (Symbol.VertexPair line in associatedSymbol.vertexPairs)
         {
             // Note: this is probably horribly laggy
             // Glowy line underneath
             if(symbolColor != Color.black)
             {
-                Draw.Matrix = Matrix4x4.TRS(transform.position + transform.up * transform.lossyScale.y * 0.001f, transform.rotation * Quaternion.AngleAxis(90, Vector3.right), new Vector3(transform.lossyScale.x, transform.lossyScale.z, transform.lossyScale.y));
+                
                 Draw.Line(line.A, line.B, Draw.Thickness * 1.2f, symbolColor);
             }
         }
+
+        Draw.Matrix = Matrix4x4.TRS(transform.position + transform.up * transform.lossyScale.y * 0.0011f, transform.rotation * Quaternion.AngleAxis(90, Vector3.right), new Vector3(transform.lossyScale.x, transform.lossyScale.z, transform.lossyScale.y));
         foreach (Symbol.VertexPair line in associatedSymbol.vertexPairs)
         {
             // Normal ink above
-            Draw.Matrix = Matrix4x4.TRS(transform.position + transform.up * transform.lossyScale.y * 0.0011f, transform.rotation * Quaternion.AngleAxis(90, Vector3.right), new Vector3(transform.lossyScale.x, transform.lossyScale.z, transform.lossyScale.y));
             Draw.Line(line.A, line.B);
         }
+    }
+
+    private void OnValidate()
+    {
+        if (associatedSymbol.updateComparer) associatedSymbol.UpdateComparer();
     }
 
     public virtual void SuccessVisual() { }

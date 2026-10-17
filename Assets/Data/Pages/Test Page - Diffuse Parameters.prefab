@@ -411,6 +411,10 @@ PrefabInstance:
       propertyPath: 'parameters.Array.data[1]'
       value: 
       objectReference: {fileID: 6101896574085047790}
+    - target: {fileID: 7312403984855251692, guid: 8b01512f2a84d2244a1ae72d14275411, type: 3}
+      propertyPath: associatedSymbol.bounds.m_Extent.y
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
