@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 7993403028567267633}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7687, z: -0.088}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -106,7 +106,7 @@ MonoBehaviour:
     m_Flags: 0
     m_Priority: 0
   timeToPage: 0.2
-  bookThickness: 0.0361
+  bookThickness: 0.0306
   pageAngle: 179.99
   bindingOffset: {x: 0.0365, y: 0, z: 0}
   pageOffset: {x: 0.264, y: 0, z: 0}
@@ -116,11 +116,19 @@ MonoBehaviour:
   spine: {fileID: 2210460759031018186}
   runeElementalDecayAmount: 0.1
   pages:
+  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  - {fileID: 2131311417744140640, guid: 30ed442985bccc94c9e187d089ff6c1d, type: 3}
   - {fileID: 8776676246843780054, guid: db7c83f9a6797e440bec8341a2bee42a, type: 3}
   - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
-  - {fileID: 770210102271220690, guid: 0b02b316594432c4086341e5d443a3f2, type: 3}
-  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
   - {fileID: 770210102271220690, guid: 51c0b67112f9f0b4dbdcf39b55882df1, type: 3}
+  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  - {fileID: 2131311417744140640, guid: f0fcd3844cd680a45a8458a422aaedea, type: 3}
+  - {fileID: 2131311417744140640, guid: 89b2ddfa1dca7454b8cbf6ee7af245a9, type: 3}
+  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  - {fileID: 2131311417744140640, guid: c4fde50f3c7f58b43b3762f29cbe9240, type: 3}
+  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
   - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
   bindings: []
 --- !u!1001 &2213134886494086292
@@ -141,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3722642820804058032, guid: f2377399dacd9634dbadbe8fe20979f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0181
+      value: 0.0151
       objectReference: {fileID: 0}
     - target: {fileID: 3722642820804058032, guid: f2377399dacd9634dbadbe8fe20979f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -208,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7722378059670133672, guid: fb21200870b04274fbcefa49a518b77c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0358
+      value: 0.0306
       objectReference: {fileID: 0}
     - target: {fileID: 7722378059670133672, guid: fb21200870b04274fbcefa49a518b77c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -242,6 +250,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9105346201209765299, guid: fb21200870b04274fbcefa49a518b77c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 20376dc0cb3d8a84eb667e50f883b002, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
