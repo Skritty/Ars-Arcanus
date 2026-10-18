@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Flags]
-public enum Alignments
+public enum Alignment
 {
     None = 1,
     Fire = 1 << 1,
@@ -77,33 +77,33 @@ public struct Mana
     /// <summary>
     /// Find if the mana is aligned to all enabled flags
     /// </summary>
-    public bool IsAligned(Alignments alignment)
+    public bool IsAligned(Alignment alignment)
     {
-        if (alignment.HasFlag(Alignments.None))
+        if (alignment.HasFlag(Alignment.None))
             if (elementalAlignment.magnitude != 0) return false;
-        if (alignment.HasFlag(Alignments.Fire))
+        if (alignment.HasFlag(Alignment.Fire))
             if (elementalAlignment.x <= 0) return false;
-        if (alignment.HasFlag(Alignments.Water))
+        if (alignment.HasFlag(Alignment.Water))
             if (elementalAlignment.x >= 0) return false;
-        if (alignment.HasFlag(Alignments.Air))
+        if (alignment.HasFlag(Alignment.Air))
             if (elementalAlignment.y <= 0) return false;
-        if (alignment.HasFlag(Alignments.Earth))
+        if (alignment.HasFlag(Alignment.Earth))
             if (elementalAlignment.y >= 0) return false;
-        if (alignment.HasFlag(Alignments.Light))
+        if (alignment.HasFlag(Alignment.Light))
             if (elementalAlignment.z <= 0) return false;
-        if (alignment.HasFlag(Alignments.Dark))
+        if (alignment.HasFlag(Alignment.Dark))
             if (elementalAlignment.z >= 0) return false;
-        if (alignment.HasFlag(Alignments.Energy))
+        if (alignment.HasFlag(Alignment.Energy))
             if (elementalAlignment.x != 0) return false;
-        if (alignment.HasFlag(Alignments.Material))
+        if (alignment.HasFlag(Alignment.Material))
             if (elementalAlignment.y != 0) return false;
-        if (alignment.HasFlag(Alignments.Divine))
+        if (alignment.HasFlag(Alignment.Divine))
             if (elementalAlignment.z != 0) return false;
-        if (alignment.HasFlag(Alignments.Chaos))
+        if (alignment.HasFlag(Alignment.Chaos))
             if (Power <= 0) return false;
-        if (alignment.HasFlag(Alignments.Order))
+        if (alignment.HasFlag(Alignment.Order))
             if (Power >= 0) return false;
-        if (alignment.HasFlag(Alignments.Nature))
+        if (alignment.HasFlag(Alignment.Nature))
             if (elementalAlignment.x == 0 && elementalAlignment.y == 0) return false;
         return true;
     }

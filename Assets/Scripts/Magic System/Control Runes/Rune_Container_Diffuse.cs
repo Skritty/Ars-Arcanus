@@ -36,7 +36,7 @@ public class Rune_Container_Diffuse : Rune_Container
         Mana total = new Mana();
         foreach (Rune rune in parameters)
         {
-            Mana toParam = rune.StoredMana;//splitMana.FlowAmountTo(rune.StoredMana);
+            Mana toParam = splitMana;//splitMana.FlowAmountTo(rune.StoredMana);
             total += toParam;
             GameTick.Delay(() =>
             {

@@ -89,7 +89,14 @@ public abstract class Rune_Container : Rune
 
             }
 
-            Vector3 slotPosition = Quaternion.AngleAxis(360f / newParameterCount * i, Vector3.up) * parameterPlacementInitialDirection.normalized * parameterPlacementRadius;
+            Quaternion rotationAroundParent = Quaternion.identity;
+            float placementAngle = 360f;
+            if(parent != null)
+            {
+                rotationAroundParent = Quaternion.FromToRotation(Vector3.up, transform.localPosition);
+                placementAngle = 180f;
+            }
+            Vector3 slotPosition = rotationAroundParent * Quaternion.AngleAxis(placementAngle / newParameterCount * i, Vector3.up) * parameterPlacementInitialDirection.normalized * parameterPlacementRadius;
             parameters[i].transform.parent = transform;
             parameters[i].transform.localScale = Vector3.one * 0.8f;
             parameters[i].transform.localPosition = slotPosition;

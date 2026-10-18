@@ -123,7 +123,7 @@ MonoBehaviour:
     offsetForced: {x: 0, y: 0}
     bounds:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.46944973, y: 0.01, z: 0.2629064}
+      m_Extent: {x: 0.46944973, y: 0.1, z: 0.2629064}
     updateComparer: 0
     sourceRuneUID: -169911166
   page: {fileID: 0}

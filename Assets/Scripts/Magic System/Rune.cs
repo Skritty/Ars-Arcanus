@@ -97,14 +97,14 @@ public abstract class Rune : ImmediateModeShapeDrawer
     /// Imbues mana into the source rune of non-preset runes.
     /// This is usually just merging it, but not always.
     /// </summary>
-    public abstract void Imbue(Mana mana);
+    public virtual void Imbue(Mana mana) { }
 
     /// <summary>
     /// Extracts mana from the source rune.
     /// This mana can contain elemental alignments, rules, etc.
     /// Removes the stored mana from a non-preset rune.
     /// </summary>
-    public abstract Mana Extract(float amountExtracted);
+    public virtual Mana Extract(float amountExtracted) => new Mana();
 
     public virtual bool PositionInBounds(Vector3 position)
     {

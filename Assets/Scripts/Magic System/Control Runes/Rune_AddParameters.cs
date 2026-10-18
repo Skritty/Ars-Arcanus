@@ -11,14 +11,4 @@ public class Rune_AddParameters : Rune
         page.RemoveRune(this);
         Destroy(this);
     }
-
-    public override Mana Extract(float amountExtracted)
-    {
-        return new Mana();
-    }
-
-    public override void Imbue(Mana mana)
-    {
-        // Do Nothing
-    }
 }

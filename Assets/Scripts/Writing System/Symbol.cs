@@ -113,7 +113,7 @@ public class Symbol
             pair.B = pair.B - offset + offsetForced;
             vertexPairs[i] = pair;
         }
-        bounds = new Bounds(new Vector3(offsetForced.x, 0, offsetForced.y), new Vector3(Mathf.Abs(center.x * 2), 0.02f, Mathf.Abs(center.y * 2)));
+        bounds = new Bounds(new Vector3(offsetForced.x, 0, offsetForced.y), new Vector3(Mathf.Abs(center.x * 2), 0.2f, Mathf.Abs(center.y * 2)));
         return offset;
     }
 
