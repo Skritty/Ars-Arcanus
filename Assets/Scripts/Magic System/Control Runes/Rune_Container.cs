@@ -58,6 +58,7 @@ public abstract class Rune_Container : Rune
         {
             focus = newRune;
             newRune.transform.parent = transform;
+            newRune.transform.localScale = transform.localScale;
             newRune.parent = this;
             return true;
         }
@@ -85,10 +86,14 @@ public abstract class Rune_Container : Rune
                 parameters[i].transform.localScale = Vector3.one;*/
                 parameters[i] = slot;
                 page.AddRune(slot);
+
             }
 
-            Vector3 slotPosition = Quaternion.AngleAxis(360f / parameters.Count * i, Vector3.up) * parameterPlacementInitialDirection.normalized * parameterPlacementRadius;
+            Vector3 slotPosition = Quaternion.AngleAxis(360f / newParameterCount * i, Vector3.up) * parameterPlacementInitialDirection.normalized * parameterPlacementRadius;
+            parameters[i].transform.parent = transform;
+            parameters[i].transform.localScale = Vector3.one * 0.8f;
             parameters[i].transform.localPosition = slotPosition;
+            parameters[i].parent = this;
         }
     }
 

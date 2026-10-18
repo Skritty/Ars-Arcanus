@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6053037838666956004}
   - component: {fileID: 4704188487205810552}
   m_Layer: 0
-  m_Name: Variable Rune
+  m_Name: Default Variable Rune
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,35 +54,13 @@ MonoBehaviour:
     elementalAlignment: {x: 0, y: 0, z: 0}
     deltaAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
+  drawBounds: 0
   maximumPower: 8
   associatedSymbol:
-    vertexPairs:
-    - A: {x: 0, y: 0.4}
-      B: {x: 0, y: -0.4}
-      angle: 0
-    - A: {x: 0.4, y: 0}
-      B: {x: -0.4, y: 0}
-      angle: 0
+    vertexPairs: []
     extraShapes: []
-    comparisonPairs:
-    - A: {x: 0, y: 0.4}
-      B: {x: 0, y: -0.4}
-      angle: 0
-    - A: {x: 0, y: 0.4}
-      B: {x: 0.4, y: 0}
-      angle: 0.70710677
-    - A: {x: 0, y: 0.4}
-      B: {x: -0.4, y: 0}
-      angle: 0.70710677
-    - A: {x: 0, y: -0.4}
-      B: {x: 0.4, y: 0}
-      angle: 0.70710677
-    - A: {x: 0, y: -0.4}
-      B: {x: -0.4, y: 0}
-      angle: 0.70710677
-    - A: {x: 0.4, y: 0}
-      B: {x: -0.4, y: 0}
-      angle: 1
+    comparisonPairs: []
+    offsetForced: {x: 0, y: 0}
     bounds:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 1, y: 0.01, z: 1}

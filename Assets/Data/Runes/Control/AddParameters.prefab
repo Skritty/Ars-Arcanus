@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &154153716836998104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4266137491440542674}
+  - component: {fileID: 5109421206410116376}
+  m_Layer: 0
+  m_Name: AddParameters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4266137491440542674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154153716836998104}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalScale: {x: 0.8, y: 1, z: 0.8}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5109421206410116376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154153716836998104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866e9a2b4f1323c4cace23f0c5ff5d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rune_AddParameters
+  useCullingMasks: 0
+  triggerType: 8
+  _storedMana:
+    elementalAlignment: {x: 0, y: 0, z: 0}
+    deltaAlignment: {x: 0, y: 0, z: 0}
+    voidAlignment: {x: 0, y: 0, z: 0}
+  imbuedDebugReader:
+    elementalAlignment: {x: 0, y: 0, z: 0}
+    deltaAlignment: {x: 0, y: 0, z: 0}
+    voidAlignment: {x: 0, y: 0, z: 0}
+  drawBounds: 0
+  maximumPower: 0
+  associatedSymbol:
+    vertexPairs:
+    - A: {x: -0.21594521, y: 0.018774718}
+      B: {x: 0.21594894, y: 0.018781796}
+      angle: 0
+    - A: {x: 0.21594894, y: 0.018781796}
+      B: {x: 0.46944973, y: 0.2629064}
+      angle: 0
+    - A: {x: 0.22533742, y: 0.018782914}
+      B: {x: 0.46006235, y: -0.19716471}
+      angle: 0
+    - A: {x: -0.18777755, y: 0.009386241}
+      B: {x: -0.46944973, y: 0.26289225}
+      angle: 0
+    - A: {x: -0.18777755, y: -0.0000029802322}
+      B: {x: -0.39433745, y: -0.2629064}
+      angle: 0
+    extraShapes: []
+    comparisonPairs:
+    - A: {x: 0.46944973, y: 0.2629064}
+      B: {x: 0.46006235, y: -0.19716471}
+      angle: 0.020398932
+    - A: {x: -0.46944973, y: 0.26289225}
+      B: {x: -0.39433745, y: -0.2629064}
+      angle: 0.14141823
+    - A: {x: -0.21594521, y: 0.018774718}
+      B: {x: -0.39433745, y: -0.2629064}
+      angle: 0.5350397
+    - A: {x: 0.21594894, y: 0.018781796}
+      B: {x: 0.46944973, y: 0.2629064}
+      angle: 0.7203021
+    - A: {x: -0.21594521, y: 0.018774718}
+      B: {x: -0.46944973, y: 0.26289225}
+      angle: 0.7203173
+    - A: {x: 0.21594894, y: 0.018781796}
+      B: {x: 0.46006235, y: -0.19716471}
+      angle: 0.74899656
+    - A: {x: 0.46944973, y: 0.2629064}
+      B: {x: -0.39433745, y: -0.2629064}
+      angle: 0.8541857
+    - A: {x: 0.46006235, y: -0.19716471}
+      B: {x: -0.46944973, y: 0.26289225}
+      angle: 0.8962322
+    - A: {x: 0.21594894, y: 0.018781796}
+      B: {x: -0.39433745, y: -0.2629064}
+      angle: 0.90794945
+    - A: {x: -0.21594521, y: 0.018774718}
+      B: {x: 0.46944973, y: 0.2629064}
+      angle: 0.94202554
+    - A: {x: 0.21594894, y: 0.018781796}
+      B: {x: -0.46944973, y: 0.26289225}
+      angle: 0.9420353
+    - A: {x: -0.21594521, y: 0.018774718}
+      B: {x: 0.46006235, y: -0.19716471}
+      angle: 0.9525807
+    - A: {x: 0.46006235, y: -0.19716471}
+      B: {x: -0.39433745, y: -0.2629064}
+      angle: 0.99705285
+    - A: {x: -0.21594521, y: 0.018774718}
+      B: {x: 0.21594894, y: 0.018781796}
+      angle: 1
+    - A: {x: 0.46944973, y: 0.2629064}
+      B: {x: -0.46944973, y: 0.26289225}
+      angle: 1
+    offsetForced: {x: 0, y: 0}
+    bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.46944973, y: 0.01, z: 0.2629064}
+    updateComparer: 0
+    sourceRuneUID: -169911166
+  page: {fileID: 0}
+  parent: {fileID: 0}

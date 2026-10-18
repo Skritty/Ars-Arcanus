@@ -104,7 +104,7 @@ public class WritingManager : ImmediateModeShapeDrawer
         symbol.UpdateComparer();
 
         Rune runePrefab = GetRune(symbol, out bool isVariable);
-
+        Debug.Log(runePrefab);
         // If this is a new symbol (a variable rune) keep track of it from here on out and keep a version of the rune to copy
         int UID = symbol.sourceRuneUID;
         if (isVariable && !addedSymbols.Contains(UID))

@@ -88,7 +88,7 @@ public abstract class Rune : ImmediateModeShapeDrawer
         }
 
         _storedMana.voidAlignment = Vector3.zero;
-        //_storedMana.deltaAlignment = Vector3.zero;
+        _storedMana.deltaAlignment = Vector3.zero;
     }
 
     public abstract void Effect();
@@ -159,7 +159,7 @@ public abstract class Rune : ImmediateModeShapeDrawer
 
     private void OnValidate()
     {
-        if (associatedSymbol.updateComparer) associatedSymbol.UpdateComparer();
+        if (associatedSymbol != null && associatedSymbol.updateComparer) associatedSymbol.UpdateComparer();
     }
 
     public virtual void SuccessVisual() { }
