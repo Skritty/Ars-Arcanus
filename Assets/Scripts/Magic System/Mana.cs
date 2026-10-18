@@ -209,8 +209,8 @@ public struct Mana
     /// </summary>
     public Mana FlowAmountTo(Mana next)
     {
-        elementalAlignment = (elementalAlignment + next.elementalAlignment) / 2f;
-        deltaAlignment = elementalAlignment;
+        Vector3 average = (elementalAlignment + next.elementalAlignment) / 2f;
+        elementalAlignment -= average;
         return this;
     }
 
@@ -229,12 +229,12 @@ public struct Mana
         foreach (Mana mana in recieving)
         {
             mergedMana.elementalAlignment += mana.elementalAlignment;
-            //mergedMana.deltaAlignment += mana.elementalAlignment;
         }
         mergedMana = mergedMana.Limit(maxPower);
         mergedMana.elementalAlignment.x = ((int)(mergedMana.elementalAlignment.x * 100)) / 100f;
         mergedMana.elementalAlignment.y = ((int)(mergedMana.elementalAlignment.y * 100)) / 100f;
         mergedMana.elementalAlignment.z = ((int)(mergedMana.elementalAlignment.z * 100)) / 100f;
+        mergedMana.deltaAlignment = new Vector3(Mathf.Abs(mergedMana.elementalAlignment.x), Mathf.Abs(mergedMana.elementalAlignment.y), Mathf.Abs(mergedMana.elementalAlignment.z));
         return mergedMana;
     }
 
@@ -244,9 +244,7 @@ public struct Mana
         lhs.elementalAlignment.x = ((int)(lhs.elementalAlignment.x * 100)) / 100f;
         lhs.elementalAlignment.y = ((int)(lhs.elementalAlignment.y * 100)) / 100f;
         lhs.elementalAlignment.z = ((int)(lhs.elementalAlignment.z * 100)) / 100f;
-        lhs.deltaAlignment.x += Mathf.Abs(rhs.elementalAlignment.x);
-        lhs.deltaAlignment.y += Mathf.Abs(rhs.elementalAlignment.y);
-        lhs.deltaAlignment.z += Mathf.Abs(rhs.elementalAlignment.z);
+        lhs.deltaAlignment += new Vector3(Mathf.Abs(rhs.elementalAlignment.x), Mathf.Abs(rhs.elementalAlignment.y), Mathf.Abs(rhs.elementalAlignment.z));
         return lhs;
     }
 
@@ -256,9 +254,7 @@ public struct Mana
         lhs.elementalAlignment.x = ((int)(lhs.elementalAlignment.x * 100)) / 100f;
         lhs.elementalAlignment.y = ((int)(lhs.elementalAlignment.y * 100)) / 100f;
         lhs.elementalAlignment.z = ((int)(lhs.elementalAlignment.z * 100)) / 100f;
-        lhs.deltaAlignment.x += Mathf.Abs(rhs.elementalAlignment.x);
-        lhs.deltaAlignment.y += Mathf.Abs(rhs.elementalAlignment.y);
-        lhs.deltaAlignment.z += Mathf.Abs(rhs.elementalAlignment.z);
+        lhs.deltaAlignment += new Vector3(Mathf.Abs(rhs.elementalAlignment.x), Mathf.Abs(rhs.elementalAlignment.y), Mathf.Abs(rhs.elementalAlignment.z));
         return lhs;
     }
 

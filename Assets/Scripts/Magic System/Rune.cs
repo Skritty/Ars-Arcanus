@@ -88,7 +88,7 @@ public abstract class Rune : ImmediateModeShapeDrawer
         }
 
         _storedMana.voidAlignment = Vector3.zero;
-        _storedMana.deltaAlignment = Vector3.zero;
+        //_storedMana.deltaAlignment = Vector3.zero;
     }
 
     public abstract void Effect();
