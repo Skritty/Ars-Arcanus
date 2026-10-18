@@ -68,9 +68,7 @@ MonoBehaviour:
   m_text: 'Water is the dominant element of Order, occupying the lower pole of the Energy Axis. It is the manifestation of dynamic inertia, a computational coolant, and the foundational vector of thermodynamic mana compression.
 
 
-
     In the compilation structure, Water is responsible for:
-
 
 
     - Absorbing excess entropy and cooling overheated nodes
@@ -78,7 +76,6 @@ MonoBehaviour:
     - Dampening chaotic surges and preventing parchment burnout
 
     - Binding and calibrating fragmented energy-information streams
-
 
 
     Warning: Excess Water reduces the compilation clock rate, freezing the vector and stalling node operation.
