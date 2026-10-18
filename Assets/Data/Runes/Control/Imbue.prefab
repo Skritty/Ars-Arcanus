@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rune_Container_Imbue
   useCullingMasks: 0
-  triggerType: 1
+  triggerType: 2
   _storedMana:
     elementalAlignment: {x: 0, y: 0, z: 0}
     deltaAlignment: {x: 0, y: 0, z: 0}
@@ -57,6 +57,7 @@ MonoBehaviour:
     elementalAlignment: {x: 0, y: 0, z: 0}
     deltaAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
+  drawBounds: 0
   maximumPower: 3
   associatedSymbol:
     vertexPairs:
@@ -85,7 +86,7 @@ MonoBehaviour:
     offsetForced: {x: 0, y: 0.25}
     bounds:
       m_Center: {x: 0, y: 0, z: 0.25}
-      m_Extent: {x: 0.866025, y: 0.01, z: 0.75}
+      m_Extent: {x: 0.866025, y: 0.1, z: 0.75}
     updateComparer: 0
     sourceRuneUID: -296165216
   page: {fileID: 0}

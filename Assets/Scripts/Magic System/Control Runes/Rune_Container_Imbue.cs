@@ -35,12 +35,6 @@ public class Rune_Container_Imbue : Rune_Container
         }
     }
 
-    protected override void ManaDecay(float decayAmount)
-    {
-        if (focus == null) return;
-        base.ManaDecay(decayAmount);
-    }
-
     public override bool TryAddParameters()
     {
         if (parameters.Count > 0) return false;

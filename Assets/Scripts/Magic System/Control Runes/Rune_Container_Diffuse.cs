@@ -49,12 +49,6 @@ public class Rune_Container_Diffuse : Rune_Container
         });
     }
 
-    protected override void ManaDecay(float decayAmount)
-    {
-        if (focus == null) return;
-        base.ManaDecay(decayAmount);
-    }
-
     public override bool TryAddParameters()
     {
         if (parameters.Count >= 8) return false;

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rune_Seal
   useCullingMasks: 0
-  triggerType: 1
+  triggerType: 2
   _storedMana:
     elementalAlignment: {x: 0, y: 0, z: 0}
     deltaAlignment: {x: 0, y: 0, z: 0}
@@ -458,6 +458,7 @@ MonoBehaviour:
     - A: {x: -0.5, y: 0.4}
       B: {x: 0.5, y: 0.4}
       angle: 1
+    offsetForced: {x: 0, y: 0}
     bounds:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0.5, y: 0.01, z: 0.5}

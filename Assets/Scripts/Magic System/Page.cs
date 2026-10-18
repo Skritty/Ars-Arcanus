@@ -14,18 +14,6 @@ public class Page : MonoBehaviour
     public Transform runeParent;
     public List<Rune> runes = new();
 
-    /*public override void DrawShapes(Camera cam)
-    {
-        if (!accessible) return;
-        using (Draw.Command(cam))
-        {
-            foreach (Rune rune in runes)
-            {
-                rune.DrawRune();
-            }
-        }
-    }*/
-
     private void Start()
     {
         if (!Application.isPlaying) return;
@@ -73,7 +61,10 @@ public class Page : MonoBehaviour
 
     public void RemoveRune(Rune rune)
     {
-        if (rune.parent != null) rune.parent.focus = null;
+        if (rune.parent != null)
+        {
+            rune.parent.focus = null;
+        }
         runes.Remove(rune);
     }
 }

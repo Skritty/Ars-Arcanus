@@ -35,6 +35,7 @@ public class Spellbook : MonoBehaviour
             StartCoroutine(GoToPage(value));
         }
     }
+    private Action bufferedAction;
     private bool turning;
 
     private void Awake()
@@ -48,6 +49,15 @@ public class Spellbook : MonoBehaviour
         Draw.Thickness = runeLineThickness;
 
         BindBook();
+    }
+
+    private void Update()
+    {
+        if (!turning && bufferedAction != null)
+        {
+            bufferedAction?.Invoke();
+            bufferedAction = null;
+        }
     }
 
     private void OnEnable()
@@ -141,88 +151,93 @@ public class Spellbook : MonoBehaviour
 
     private void TurnPage(InputAction.CallbackContext context)
     {
-        CurrentRHSBindingIndex += context.ReadValue<float>() > 0 ? -1 : 1;
+        int direction = context.ReadValue<float>() > 0 ? -1 : 1;
+        if (!turning)
+        {
+            CurrentRHSBindingIndex += direction;
+        }
+        else if(bufferedAction == null)
+        {
+            bufferedAction = () => CurrentRHSBindingIndex += direction;
+        }
     }
 
     private IEnumerator GoToPage(int targetBindingIndex)
     {
-        if (!turning)
+        turning = true;
+
+        int direction = (int)Mathf.Sign(targetBindingIndex - _RHSBindingIndex);
+        float flipTimePerPage = timeToPage / Mathf.Abs(targetBindingIndex - _RHSBindingIndex); // Take the initial expected time to flip
+        Action<float> doPageAnimations = null;
+
+        while (true)
         {
-            turning = true;
+            // If we are at the target index, the leftmost page, or the rightmost page, stop
+            if (_RHSBindingIndex == targetBindingIndex || (direction < 0 && _RHSBindingIndex <= 0) || (direction > 0 && _RHSBindingIndex >= bindings.Count)) break;
 
-            int direction = (int)Mathf.Sign(targetBindingIndex - _RHSBindingIndex);
-            float flipTimePerPage = timeToPage / Mathf.Abs(targetBindingIndex - _RHSBindingIndex); // Take the initial expected time to flip
-            Action<float> doPageAnimations = null;
-
-            while (true)
+            int updatedIndex = _RHSBindingIndex;
+            if (direction > 0)
             {
-                // If we are at the target index, the leftmost page, or the rightmost page, stop
-                if (_RHSBindingIndex == targetBindingIndex || (direction < 0 && _RHSBindingIndex <= 0) || (direction > 0 && _RHSBindingIndex >= bindings.Count)) break;
-
-                int updatedIndex = _RHSBindingIndex;
-                if (direction > 0)
+                while (updatedIndex <= bindings.Count)
                 {
-                    while (updatedIndex <= bindings.Count)
+                    if (updatedIndex == 0 || updatedIndex == bindings.Count - 1 || pages[(updatedIndex - 1) * 2 + 1].accessible)
                     {
-                        if (updatedIndex == 0 || updatedIndex == bindings.Count - 1 || pages[(updatedIndex - 1) * 2 + 1].accessible)
-                        {
-                            // Increment to the next accessible page
-                            doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
-                            updatedIndex++;
-                            break;
-                        }
-                        else
-                        {
-                            // Skip the page if it is inaccessable (we still have to animate it)
-                            doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
-                            updatedIndex++;
-                            targetBindingIndex++;
-                        }
+                        // Increment to the next accessible page
+                        doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
+                        updatedIndex++;
+                        break;
+                    }
+                    else
+                    {
+                        // Skip the page if it is inaccessable (we still have to animate it)
+                        doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
+                        updatedIndex++;
+                        targetBindingIndex++;
                     }
                 }
-                else
-                {
-                    while (updatedIndex > 0)
-                    {
-                        if (updatedIndex == 1 || updatedIndex == bindings.Count || pages[(updatedIndex - 1) * 2 - 2].accessible)
-                        {
-                            // Increment to the next accessible page
-                            updatedIndex--;
-                            doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
-                            break;
-                        }
-                        else
-                        {
-                            // Skip the page if it is inaccessable (we still have to animate it)
-                            updatedIndex--;
-                            targetBindingIndex--;
-                            doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
-                        }
-                    }
-                }
-
-                // Did we skip pages to either end of the book and not find a page to turn to? Stay here
-                if (updatedIndex > bindings.Count || updatedIndex < 0)
-                {
-                    doPageAnimations = null;
-                    break;
-                }
-                _RHSBindingIndex = updatedIndex;
-
-                // Animate page flips
-                float elapsedTime = 0;
-                while (elapsedTime < flipTimePerPage)
-                {
-                    elapsedTime += Time.deltaTime;
-                    doPageAnimations?.Invoke(elapsedTime);
-                    spine.transform.localPosition = (bindings[0].localPosition + bindings[bindings.Count - 1].localPosition) / 2;
-                    spine.transform.rotation = Quaternion.FromToRotation(Vector3.up, bindings[0].position - bindings[bindings.Count - 1].position);
-                    yield return new WaitForEndOfFrame();
-                }
-                doPageAnimations = null;
             }
-            turning = false;
+            else
+            {
+                while (updatedIndex > 0)
+                {
+                    if (updatedIndex == 1 || updatedIndex == bindings.Count || pages[(updatedIndex - 1) * 2 - 2].accessible)
+                    {
+                        // Increment to the next accessible page
+                        updatedIndex--;
+                        doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
+                        break;
+                    }
+                    else
+                    {
+                        // Skip the page if it is inaccessable (we still have to animate it)
+                        updatedIndex--;
+                        targetBindingIndex--;
+                        doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
+                    }
+                }
+            }
+
+            // Did we skip pages to either end of the book and not find a page to turn to? Stay here
+            if (updatedIndex > bindings.Count || updatedIndex < 0)
+            {
+                doPageAnimations = null;
+                break;
+            }
+            _RHSBindingIndex = updatedIndex;
+
+            // Animate page flips
+            float elapsedTime = 0;
+            while (elapsedTime < flipTimePerPage)
+            {
+                elapsedTime += Time.deltaTime;
+                doPageAnimations?.Invoke(elapsedTime);
+                spine.transform.localPosition = (bindings[0].localPosition + bindings[bindings.Count - 1].localPosition) / 2;
+                spine.transform.rotation = Quaternion.FromToRotation(Vector3.up, bindings[0].position - bindings[bindings.Count - 1].position);
+                yield return new WaitForEndOfFrame();
+            }
+            doPageAnimations = null;
         }
+        turning = false;
     }
 
     private Action<float> FlipPageAnimation(int index, int direction, float flipTime)

@@ -11,9 +11,9 @@ public abstract class Rune : ImmediateModeShapeDrawer
     public enum TriggerType 
     { 
         None = 0, 
-        Tick = 0 << 1, 
-        ManaRecieved = 0 << 2, 
-        Created = 0 << 3
+        Tick = 1 << 1, 
+        ManaRecieved = 1 << 2, 
+        Created = 1 << 3
     }
     public TriggerType triggerType;
     [SerializeField]
@@ -38,6 +38,7 @@ public abstract class Rune : ImmediateModeShapeDrawer
         }
     }
     public Mana imbuedDebugReader;
+    public bool drawBounds;
     public float maximumPower = 8f; // Currently this just prevents the elemental alignment from going beyond this amount, but it could cause an effect once it exceeds it
     public Symbol associatedSymbol;
     public Page page;
@@ -59,8 +60,9 @@ public abstract class Rune : ImmediateModeShapeDrawer
         }
     }
 
-    public void Destroy()
+    private void OnDestroy()
     {
+        if (!Application.isPlaying) return;
         if (triggerType.HasFlag(TriggerType.Tick))
         {
             GameTick.Unsubscribe(Effect);
@@ -120,9 +122,13 @@ public abstract class Rune : ImmediateModeShapeDrawer
 
     public virtual void DrawRune()
     {
-        /*Draw.Matrix = Matrix4x4.TRS(transform.position, Quaternion.identity, new Vector3(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z));
-        Draw.Color = new Color(1f, 0, 0, .2f);
-        Draw.Cuboid(associatedSymbol.bounds.center, associatedSymbol.bounds.size);*/
+        if (page != null && !page.accessible) return;
+        if (drawBounds)
+        {
+            Draw.Matrix = Matrix4x4.TRS(transform.position, Quaternion.identity, new Vector3(transform.lossyScale.x, transform.lossyScale.y, transform.lossyScale.z));
+            Draw.Color = new Color(1f, 0, 0, .2f);
+            Draw.Cuboid(associatedSymbol.bounds.center, associatedSymbol.bounds.size);
+        }
         Color symbolColor = StoredMana.GetManaColor();
         Draw.Color = Color.black;
 

@@ -29,11 +29,6 @@ public class Rune_ParameterSlot : Rune_Container
         // Do nothing
     }
 
-    protected override void ManaDecay(float decayAmount)
-    {
-        // Don't
-    }
-
     public override bool TryAddParameters()
     {
         // Cannot have parameters

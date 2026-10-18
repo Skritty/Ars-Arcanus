@@ -15,6 +15,7 @@ public class WritingManager : ImmediateModeShapeDrawer
     private Vector3 start, end;
     private Page page;
     private Symbol symbol;
+    private HashSet<int> addedSymbols = new();
 
     private new void OnEnable()
     {
@@ -102,14 +103,29 @@ public class WritingManager : ImmediateModeShapeDrawer
         Vector3 offset = symbol.LocalizeAroundBoundsCenter();
         symbol.UpdateComparer();
 
-        Rune runePrefab = GetRune(symbol);
+        Rune runePrefab = GetRune(symbol, out bool isVariable);
+
+        // If this is a new symbol (a variable rune) keep track of it from here on out and keep a version of the rune to copy
+        int UID = symbol.sourceRuneUID;
+        if (isVariable && !addedSymbols.Contains(UID))
+        {
+            addedSymbols.Add(UID);
+            runePrefab = Instantiate(runePrefab);
+            runePrefab.associatedSymbol = symbol;
+            runePrefab.associatedSymbol.UpdateComparer();
+            runePrefab.gameObject.SetActive(false);
+            runes.Add(runePrefab);
+        }
+
         Rune rune = Instantiate(runePrefab,
             page.transform.position + page.transform.up * 0.001f * page.transform.localScale.y + new Vector3(offset.x, 0, offset.y),
             Quaternion.identity);
-        symbol.ScaleSymbol(new Vector3(Mathf.Sign(page.transform.lossyScale.x) * 25f, 25f, 25f));
         rune.associatedSymbol = symbol;
         rune.associatedSymbol.sourceRuneUID = runePrefab.associatedSymbol.sourceRuneUID;
+        rune.gameObject.SetActive(true);
         page.AddRune(rune);
+        
+        symbol.ScaleSymbol(new Vector3(Mathf.Sign(page.transform.lossyScale.x) * 25f, 25f, 25f));
 
         symbol = null;
         start = Vector2.zero;
@@ -117,7 +133,7 @@ public class WritingManager : ImmediateModeShapeDrawer
         page = null;
     }
 
-    private Rune GetRune(Symbol symbol)
+    private Rune GetRune(Symbol symbol, out bool variableRune)
     {
         foreach(Rune rune in runes.Where(x => x.associatedSymbol.comparisonPairs.Count == symbol.comparisonPairs.Count))
         {
@@ -135,8 +151,13 @@ public class WritingManager : ImmediateModeShapeDrawer
                     break;
                 }
             }
-            if (valid) return rune;
+            if (valid)
+            {
+                variableRune = false;
+                return rune;
+            }
         }
+        variableRune = true;
         return defaultVariableRune;
     }
 
