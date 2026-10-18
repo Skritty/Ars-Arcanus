@@ -67,11 +67,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Fire is the dominant element of Chaos, occupying the upper pole of the Energy Axis. It is the manifestation of pure dynamics, a reaction catalyst, and the foundational vector of thermodynamic mana expansion.
 
-    
+
 
     In the compilation structure, Fire is responsible for:
 
-    
+
 
     - Primary initialization of processes and rapid reaction startup
 
@@ -79,7 +79,7 @@ MonoBehaviour:
 
     - Converting low potential energy into active kinetic force
 
-    
+
 
     Warning: Without proper containment geometry, the Fire vector exponentially increases entropy, leading to node overheating and degradation of the paper structure.
 
@@ -486,6 +486,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 767df22d1959b3c4cad5d5a6f1bb3d27, type: 2}
+    - target: {fileID: 4354766759295872586, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671363999422325754, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8021193582385984142, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       propertyPath: m_IsActive
       value: 1
