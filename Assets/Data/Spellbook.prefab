@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6681200844675325342}
+  - component: {fileID: 6883177245763981974}
   - component: {fileID: 1708758386382944356}
   m_Layer: 0
   m_Name: Spellbook
@@ -35,6 +36,18 @@ Transform:
   - {fileID: 3251556703148064548}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6883177245763981974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993403028567267633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb87435a2428a014d9a07e3e93ad0999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioController
 --- !u!114 &1708758386382944356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,10 +62,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spellbook
   OnSpellbookOpened:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6883177245763981974}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: e7921ebf6a1addc49af755e27d2019ce, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AudioTrack, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnSpellbookClosed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6883177245763981974}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 866b841e935783044b6925e8489ea6ec, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AudioTrack, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   turnPageAction:
     m_Name: Turn Page
     m_Type: 0
@@ -116,6 +153,7 @@ MonoBehaviour:
   pageAngle: 179.99
   bindingOffset: {x: 0.0365, y: 0, z: 0}
   pageOffset: {x: 0.264, y: 0, z: 0}
+  turnPageSFX: {fileID: 11400000, guid: 541f6c3cff5b3ca409b9f53c63715323, type: 2}
   runeLineThickness: 0.002
   frontCover: {fileID: 1880880455566943492}
   backCover: {fileID: 2823508733110393739}

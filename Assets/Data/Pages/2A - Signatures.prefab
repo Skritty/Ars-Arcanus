@@ -990,12 +990,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8670130486384508572}
     - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1010,7 +1014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: PlaySFX
       objectReference: {fileID: 0}
     - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -1018,7 +1022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: AudioController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1033,12 +1037,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 338ee4aae95432044ae91ed98660cd3f, type: 2}
+    - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 11400000, guid: 8fe0125d2b214684eafff0ec13bff882, type: 2}
     - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: SoundEffect, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName

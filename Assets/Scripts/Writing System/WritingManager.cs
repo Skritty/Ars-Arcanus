@@ -11,6 +11,7 @@ public class WritingManager : ImmediateModeShapeDrawer
     public Rune defaultVariableRune;
     public List<Rune> runes = new();
     public float angleComparisonLeeway = 10f;
+    public SoundEffect writeSFX, runeAddedSFX;
 
     private Vector3 start, end;
     private Page page;
@@ -62,7 +63,6 @@ public class WritingManager : ImmediateModeShapeDrawer
 
     private void AddPoint()
     {
-        
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
@@ -72,19 +72,21 @@ public class WritingManager : ImmediateModeShapeDrawer
                 if (page == null) return;
                 start = hit.point - page.transform.position;
                 end = hit.point - page.transform.position;
-
+                writeSFX?.Play(hit.point);
                 //Debug.Log($"Page {page.gameObject} - Point {start}");
             }
             else if(drawAction.IsPressed())
             {
                 if (page == null) return;
-                end = hit.point - page.transform.position;
+                Vector3 updatedEnd = hit.point - page.transform.position;
+                end = updatedEnd;
             }
             else if (drawAction.WasReleasedThisFrame())
             {
                 if (page == null) return;
                 end = hit.point - page.transform.position;
                 //Debug.Log($"Page {page.gameObject} - Point {end}");
+                writeSFX?.Play(hit.point);
                 AddLineSegment();
             }
         }
@@ -124,7 +126,9 @@ public class WritingManager : ImmediateModeShapeDrawer
         rune.associatedSymbol.sourceRuneUID = runePrefab.associatedSymbol.sourceRuneUID;
         rune.gameObject.SetActive(true);
         page.AddRune(rune);
-        
+        runeAddedSFX?.Play(rune.transform.position);
+
+
         symbol.ScaleSymbol(new Vector3(Mathf.Sign(page.transform.lossyScale.x) * 25f, 25f, 25f));
 
         symbol = null;

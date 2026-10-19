@@ -20,6 +20,8 @@ public class Spellbook : MonoBehaviour
     public Vector3 bindingOffset;
     public Vector3 pageOffset;
 
+    public SoundEffect turnPageSFX;
+
     public float runeLineThickness;
 
     public GameObject frontCover, backCover, spine;
@@ -239,6 +241,17 @@ public class Spellbook : MonoBehaviour
             _RHSBindingIndex = updatedIndex;
 
             // Animate page flips
+            if (turnPageSFX != null) 
+            {
+                if(direction < 0)
+                {
+                    if(_RHSBindingIndex != 0 && _RHSBindingIndex != bindings.Count - 1) turnPageSFX.Play(transform.position);
+                }
+                else if(_RHSBindingIndex != 1 && _RHSBindingIndex != bindings.Count)
+                {
+                    turnPageSFX.Play(transform.position);
+                }
+            } 
             float elapsedTime = 0;
             while (elapsedTime < flipTimePerPage)
             {

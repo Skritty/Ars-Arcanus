@@ -99,3 +99,5 @@ MonoBehaviour:
   - {fileID: 4704188487205810552, guid: e2600a98ee359e84dbe39c815c6ffbb7, type: 3}
   - {fileID: 9002778545426968791, guid: bd7ef5f3d03935a4581af0216febf18b, type: 3}
   angleComparisonLeeway: 0.2
+  writeSFX: {fileID: 11400000, guid: 7877fa6b08dec654db249d7b35f4e0f4, type: 2}
+  runeAddedSFX: {fileID: 11400000, guid: dd496c171afb32f48872919523e9e39f, type: 2}

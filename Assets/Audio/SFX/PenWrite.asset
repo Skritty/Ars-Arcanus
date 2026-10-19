@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25bf4eed0353b0f439a588bf241c93d6, type: 3}
+  m_Name: PenWrite
+  m_EditorClassIdentifier: Assembly-CSharp::SoundEffect
+  chainSoundsInstead: 0
+  sounds:
+  - {fileID: 8300000, guid: f10148125b3dc1c418b07fa64bb0f15f, type: 3}
+  - {fileID: 8300000, guid: 261b87b49214f4543975b2508b4bc07b, type: 3}
+  - {fileID: 8300000, guid: a4c322c4f68d5444791f705bb575bd5a, type: 3}
+  - {fileID: 8300000, guid: e481f4db9304d1748b8b27bdcc3c6059, type: 3}
+  - {fileID: 8300000, guid: ca65b4696fb3ebb45ad982a3ce815068, type: 3}
+  - {fileID: 8300000, guid: d29703337e9a9894c9d5a2a28cc068bd, type: 3}
+  - {fileID: 8300000, guid: f3136c995be05da4eb4388fdeb925755, type: 3}
+  - {fileID: 8300000, guid: ea882a9485ce4b341a61e861f7ddad51, type: 3}
+  volume: 1
+  pitchVariance: {x: -0.5, y: 0.5}
+  initialDelay: 0
+  loop: 0
