@@ -119,9 +119,8 @@ public class WritingManager : ImmediateModeShapeDrawer
             runes.Add(runePrefab);
         }
 
-        Rune rune = Instantiate(runePrefab,
-            page.transform.position + page.transform.up * 0.001f * page.transform.localScale.y + new Vector3(offset.x, 0, offset.y),
-            Quaternion.identity);
+        Rune rune = Instantiate(runePrefab, page.transform.position + new Vector3(offset.x, 0, offset.y), Quaternion.identity);
+        symbol.extraShapes = rune.associatedSymbol.extraShapes;
         rune.associatedSymbol = symbol;
         rune.associatedSymbol.sourceRuneUID = runePrefab.associatedSymbol.sourceRuneUID;
         rune.cannotBeDeleted = false;
@@ -141,7 +140,7 @@ public class WritingManager : ImmediateModeShapeDrawer
 
     private Rune GetRune(Symbol symbol, out bool variableRune)
     {
-        foreach(Rune rune in runes.Where(x => x.associatedSymbol.comparisonPairs.Count == symbol.comparisonPairs.Count))
+        foreach(Rune rune in runes.Where(x => x.associatedSymbol.vertexPairs.Count == symbol.vertexPairs.Count && x.associatedSymbol.comparisonPairs.Count == symbol.comparisonPairs.Count))
         {
             bool valid = true;
             for(int i = 0; i < symbol.comparisonPairs.Count; i++)

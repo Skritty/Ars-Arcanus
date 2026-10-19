@@ -56,6 +56,7 @@ MonoBehaviour:
     voidAlignment: {x: 0, y: 0, z: 0}
   drawBounds: 0
   cannotBeDeleted: 1
+  updateTransformOnCreation: 0
   maximumPower: 8
   associatedSymbol:
     vertexPairs:
@@ -103,22 +104,22 @@ MonoBehaviour:
     - A: {x: 0, y: 0.2625}
       B: {x: 0.375, y: -0.1125}
       angle: 0.70710677
-    - A: {x: 0, y: 0.2625}
-      B: {x: -0.375, y: -0.1125}
-      angle: 0.70710677
     - A: {x: 0.375, y: -0.1125}
       B: {x: 0, y: -0.4875}
       angle: 0.70710677
-    - A: {x: 0, y: -0.4875}
+    - A: {x: -0.375, y: -0.1125}
+      B: {x: 0, y: -0.4875}
+      angle: 0.70710677
+    - A: {x: 0, y: 0.2625}
       B: {x: -0.375, y: -0.1125}
       angle: 0.70710677
+    - A: {x: -0.375, y: -0.1125}
+      B: {x: 0, y: -0.1125}
+      angle: 1
     - A: {x: 0.375, y: -0.1125}
       B: {x: -0.375, y: -0.1125}
       angle: 1
     - A: {x: 0.375, y: -0.1125}
-      B: {x: 0, y: -0.1125}
-      angle: 1
-    - A: {x: -0.375, y: -0.1125}
       B: {x: 0, y: -0.1125}
       angle: 1
     offsetForced: {x: 0, y: 0}
@@ -126,6 +127,6 @@ MonoBehaviour:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0.375, y: 0.1, z: 0.4875}
     updateComparer: 0
-    sourceRuneUID: 1333857044
+    sourceRuneUID: -1836309388
   page: {fileID: 0}
   parent: {fileID: 0}

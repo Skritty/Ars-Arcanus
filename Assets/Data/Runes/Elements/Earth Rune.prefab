@@ -56,6 +56,7 @@ MonoBehaviour:
     voidAlignment: {x: 0, y: 0, z: 0}
   drawBounds: 0
   cannotBeDeleted: 1
+  updateTransformOnCreation: 0
   maximumPower: 8
   associatedSymbol:
     vertexPairs:
@@ -93,6 +94,6 @@ MonoBehaviour:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0.375, y: 0.1, z: 0.375}
     updateComparer: 0
-    sourceRuneUID: 51015370
+    sourceRuneUID: 1917055034
   page: {fileID: 0}
   parent: {fileID: 0}

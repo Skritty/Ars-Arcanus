@@ -53,6 +53,7 @@ public class Page : MonoBehaviour
     {
         runes.Add(newRune);
         newRune.transform.parent = runeParent;
+        newRune.transform.localPosition = new Vector3(newRune.transform.localPosition.x, 0, newRune.transform.localPosition.z);
         if (newRune.updateTransformOnCreation)
         {
             newRune.transform.localScale = new Vector3(1f / Mathf.Abs(transform.lossyScale.x), 1f / Mathf.Abs(transform.lossyScale.y), 1f / Mathf.Abs(transform.lossyScale.z));

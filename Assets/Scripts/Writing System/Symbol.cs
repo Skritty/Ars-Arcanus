@@ -143,6 +143,7 @@ public class Symbol
                 }
             }
             vertexPairsTemp.Add(pairTemp);
+            comparisonPairs.Add(pairTemp);
             points.Add(pairTemp.A);
             points.Add(pairTemp.B);
         }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Shapes;
 using UnityEngine;
 
 /// <summary>
@@ -60,6 +61,13 @@ public abstract class Rune_Container : Rune
             newRune.transform.parent = transform;
             //newRune.transform.localScale = transform.localScale;
             newRune.parent = this;
+            if(newRune is Rune_Container)
+            {
+                foreach(ShapeRenderer shape in newRune.associatedSymbol.extraShapes)
+                {
+                    shape.gameObject.SetActive(false);
+                }
+            }
             return true;
         }
         return false;
