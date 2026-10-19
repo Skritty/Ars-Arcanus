@@ -231,10 +231,10 @@ public struct Mana
             mergedMana.elementalAlignment += mana.elementalAlignment;
         }
         mergedMana = mergedMana.Limit(maxPower);
-        mergedMana.elementalAlignment.x = ((int)(mergedMana.elementalAlignment.x * 100)) / 100f;
+        /*mergedMana.elementalAlignment.x = ((int)(mergedMana.elementalAlignment.x * 100)) / 100f;
         mergedMana.elementalAlignment.y = ((int)(mergedMana.elementalAlignment.y * 100)) / 100f;
         mergedMana.elementalAlignment.z = ((int)(mergedMana.elementalAlignment.z * 100)) / 100f;
-        mergedMana.deltaAlignment = new Vector3(Mathf.Abs(mergedMana.elementalAlignment.x), Mathf.Abs(mergedMana.elementalAlignment.y), Mathf.Abs(mergedMana.elementalAlignment.z));
+        mergedMana.deltaAlignment = new Vector3(Mathf.Abs(mergedMana.elementalAlignment.x), Mathf.Abs(mergedMana.elementalAlignment.y), Mathf.Abs(mergedMana.elementalAlignment.z));*/
         return mergedMana;
     }
 

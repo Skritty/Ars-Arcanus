@@ -23,7 +23,7 @@ public class Rune_Container_Extract : Rune_Container
             Mana extractedMana = focus.Extract(extractionRate);
             GameTick.Delay(() =>
             {
-                StoredMana = Mana.Merge(maximumPower, StoredMana, extractedMana);
+                StoredMana += extractedMana;
             });
         }
     }

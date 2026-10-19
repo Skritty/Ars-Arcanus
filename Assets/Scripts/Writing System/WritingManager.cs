@@ -66,29 +66,26 @@ public class WritingManager : ImmediateModeShapeDrawer
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
+            Page hitPage = hit.transform.parent.gameObject.GetComponent<Page>();
             if (drawAction.WasPressedThisFrame())
             {
-                page = hit.transform.parent.gameObject.GetComponent<Page>();
+                page = hitPage;
                 if (page == null) return;
                 start = hit.point - page.transform.position;
                 end = hit.point - page.transform.position;
                 writeSFX?.Play(hit.point);
-                //Debug.Log($"Page {page.gameObject} - Point {start}");
             }
             else if(drawAction.IsPressed())
             {
-                if (page == null) return;
+                if (page == null || page != hitPage) return;
                 Vector3 updatedEnd = hit.point - page.transform.position;
                 end = updatedEnd;
             }
-            else if (drawAction.WasReleasedThisFrame())
-            {
-                if (page == null) return;
-                end = hit.point - page.transform.position;
-                //Debug.Log($"Page {page.gameObject} - Point {end}");
-                writeSFX?.Play(hit.point);
-                AddLineSegment();
-            }
+        }
+        if (drawAction.WasReleasedThisFrame() && page != null)
+        {
+            writeSFX?.Play(hit.point);
+            AddLineSegment();
         }
     }
 
@@ -129,8 +126,7 @@ public class WritingManager : ImmediateModeShapeDrawer
         page.AddRune(rune);
         runeAddedSFX?.Play(rune.transform.position);
 
-
-        symbol.ScaleSymbol(new Vector3(Mathf.Sign(page.transform.lossyScale.x) * 25f, 25f, 25f));
+        symbol.ScaleSymbol(new Vector3(1 / page.runeParent.transform.localScale.x, 1 / page.runeParent.transform.localScale.y, 1 / page.runeParent.transform.localScale.z));
 
         symbol = null;
         start = Vector2.zero;

@@ -129,7 +129,7 @@ public class Spellbook : MonoBehaviour
             Page lhs = pages[i + 1];
             lhs.transform.parent = binding.transform;
             lhs.transform.localPosition = pageOffset;
-            lhs.transform.localScale = new Vector3(lhs.transform.localScale.x * -1, -1, lhs.transform.localScale.z);
+            lhs.transform.localRotation = Quaternion.AngleAxis(180, Vector3.forward);
 
             binding.transform.rotation = Quaternion.Euler(0, 0, 90 - pageAngle / 2);
             bindings.Add(binding.transform);
@@ -239,6 +239,9 @@ public class Spellbook : MonoBehaviour
                 doPageAnimations = null;
                 break;
             }
+
+            if (initialIndex == updatedIndex) break;
+
             _RHSBindingIndex = updatedIndex;
 
             // Animate page flips
