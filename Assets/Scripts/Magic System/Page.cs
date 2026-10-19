@@ -22,6 +22,7 @@ public class Page : MonoBehaviour
         runes.Clear();
         foreach (Transform runeTransform in runeParent)
         {
+            if (runeTransform.GetComponent<Rune>() == null) continue;
             runes.Add(runeTransform.GetComponent<Rune>());
         }
         foreach(Rune rune in runes.ToArray())

@@ -753,12 +753,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: setManaOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: anyFocusRune
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: requiredFocusAlignment
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: validOutputMana.elementalAlignment.x

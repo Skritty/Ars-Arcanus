@@ -2220,10 +2220,12 @@ MonoBehaviour:
     elementalAlignment: {x: 0, y: 0, z: 0}
     deltaAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
+  copyFocusManaInstead: 0
   requiredFocusAlignment: 0
   anyAlignment: 0
   requiredFocusRune: {fileID: 0}
   anyFocusRune: 0
+  setManaOnce: 0
   triggerOnce: 1
 --- !u!1 &4863042536836550716
 GameObject:
