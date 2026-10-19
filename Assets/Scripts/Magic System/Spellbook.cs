@@ -192,6 +192,11 @@ public class Spellbook : MonoBehaviour
                     }
                     else
                     {
+                        if (updatedIndex > 0 && updatedIndex < bindings.Count - 1 && pages[(updatedIndex - 1) * 2 + 1].block)
+                        {
+                            targetBindingIndex = updatedIndex;
+                            break;
+                        }
                         // Skip the page if it is inaccessable (we still have to animate it)
                         doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
                         updatedIndex++;
@@ -212,6 +217,11 @@ public class Spellbook : MonoBehaviour
                     }
                     else
                     {
+                        if (updatedIndex > 0 && updatedIndex < bindings.Count - 1 && pages[(updatedIndex - 1) * 2 - 2].block)
+                        {
+                            targetBindingIndex = updatedIndex;
+                            break;
+                        }
                         // Skip the page if it is inaccessable (we still have to animate it)
                         updatedIndex--;
                         targetBindingIndex--;

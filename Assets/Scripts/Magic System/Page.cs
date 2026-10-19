@@ -11,6 +11,7 @@ using UnityEngine;
 public class Page : MonoBehaviour
 {
     public bool accessible = true;
+    public bool block;
     public Transform runeParent;
     public List<Rune> runes = new();
 
@@ -52,7 +53,7 @@ public class Page : MonoBehaviour
     {
         runes.Add(newRune);
         newRune.transform.parent = runeParent;
-        newRune.transform.localScale = Vector3.one;
+        newRune.transform.localScale = new Vector3(1f / Mathf.Abs(transform.lossyScale.x), 1f / Mathf.Abs(transform.lossyScale.y), 1f / Mathf.Abs(transform.lossyScale.z));
         newRune.page = this;
         Rune_Container container = GetRuneAtPosition(newRune.transform.position) as Rune_Container;
         if(container) container.TryAddRune(newRune);

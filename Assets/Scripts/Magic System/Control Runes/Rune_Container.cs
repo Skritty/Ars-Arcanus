@@ -58,7 +58,7 @@ public abstract class Rune_Container : Rune
         {
             focus = newRune;
             newRune.transform.parent = transform;
-            newRune.transform.localScale = transform.localScale;
+            //newRune.transform.localScale = transform.localScale;
             newRune.parent = this;
             return true;
         }

@@ -47,6 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5bb851f21e3e741b72fb778bbc9d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spellbook
+  OnSpellbookOpened:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSpellbookClosed:
+    m_PersistentCalls:
+      m_Calls: []
   turnPageAction:
     m_Name: Turn Page
     m_Type: 0
@@ -117,10 +123,10 @@ MonoBehaviour:
   runeElementalDecayAmount: 0.1
   pages:
   - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
-  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
-  - {fileID: 2131311417744140640, guid: 30ed442985bccc94c9e187d089ff6c1d, type: 3}
-  - {fileID: 4143906141558906390, guid: 3d2b228581117ab4093f51bb8cfd41fb, type: 3}
   - {fileID: 2131311417744140640, guid: f0fcd3844cd680a45a8458a422aaedea, type: 3}
+  - {fileID: 2131311417744140640, guid: 30ed442985bccc94c9e187d089ff6c1d, type: 3}
+  - {fileID: 867554034484124453, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  - {fileID: 4143906141558906390, guid: 3d2b228581117ab4093f51bb8cfd41fb, type: 3}
   - {fileID: 2131311417744140640, guid: 89b2ddfa1dca7454b8cbf6ee7af245a9, type: 3}
   - {fileID: 2131311417744140640, guid: df006d8275498b24cb3e51a8384edac3, type: 3}
   - {fileID: 2131311417744140640, guid: aadb2b42a8950914787643598a4db751, type: 3}

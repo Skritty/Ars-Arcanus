@@ -46,8 +46,8 @@ public class WritingManager : ImmediateModeShapeDrawer
         {
             Draw.Matrix = Matrix4x4.TRS(
                 page.transform.position + page.transform.up * 0.001f * page.transform.localScale.y,
-                page.transform.rotation * Quaternion.AngleAxis(90, Vector3.right), 
-                new Vector3(page.transform.lossyScale.x, page.transform.lossyScale.z, page.transform.lossyScale.y));
+                Quaternion.AngleAxis(90, Vector3.right),
+                Vector3.one);// new Vector3(page.transform.lossyScale.x, page.transform.lossyScale.z, page.transform.lossyScale.y));
             Draw.Line(new Vector3(start.x, start.z, 0), new Vector3(end.x, end.z, 0));
             
             if (symbol != null)

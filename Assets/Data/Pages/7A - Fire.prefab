@@ -65,21 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire is the dominant element of Chaos, occupying the upper pole of the Energy Axis. It is the manifestation of pure dynamics, a reaction catalyst, and the foundational vector of thermodynamic mana expansion.
-
-
-    In the compilation structure, Fire is responsible for:
-
-
-    - Primary initialization of processes and rapid reaction startup
-
-    - Overcoming material inertia and breaching insulating barriers
-
-    - Converting low potential energy into active kinetic force
-
-
-    Warning: Without proper containment geometry, the Fire vector exponentially increases entropy, leading to node overheating and degradation of the paper structure.
-
+  m_text: 'Energetic and destructive, fire is the representation of power and heat. While dangerous, it is the fuel for some runes. Be warned however, in excess, fire aligned mana will manifest into heat and the degradation of the ink, burning away the runes and possibly even pages.
 
 '
   m_isRightToLeft: 0
@@ -218,7 +204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire: The Primary Vector of Expansion'
+  m_text: Fire
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
   m_sharedMaterial: {fileID: -3591927391524570855, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
@@ -635,6 +621,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6445501747663812043, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5410399558424348853}
     - targetCorrespondingSourceObject: {fileID: 3372809422913011360, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       insertIndex: -1
       addedObject: {fileID: 935065979910570161}
@@ -653,4 +642,71 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3372809422913011360, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
   m_PrefabInstance: {fileID: 1268286376902505029}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5254256066657814414 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6445501747663812043, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  m_PrefabInstance: {fileID: 1268286376902505029}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2239745195907069009
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5254256066657814414}
+    m_Modifications:
+    - target: {fileID: 3885036989043214787, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_Name
+      value: Fire Rune
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+--- !u!4 &5410399558424348853 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6053037838666956004, guid: 88b13ce1b25627a42977c9521af2368d, type: 3}
+  m_PrefabInstance: {fileID: 2239745195907069009}
   m_PrefabAsset: {fileID: 0}

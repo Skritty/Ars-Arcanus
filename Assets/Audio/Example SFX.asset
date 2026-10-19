@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Example SFX
   m_EditorClassIdentifier: Assembly-CSharp::SoundEffect
   chainSoundsInstead: 0
-  sounds: []
+  sounds:
+  - {fileID: 0}
+  - {fileID: 0}
   volume: 1
   pitchVariance: {x: 0, y: 0}
   initialDelay: 0

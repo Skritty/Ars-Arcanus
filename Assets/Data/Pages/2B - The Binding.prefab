@@ -613,7 +613,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Before you lies not mere paper and ink. Before you lies a compiled codex of cosmic order \u2014 the fundamental architecture that wove reality out of nothingness. Every line on these pages is not a spell, but a vector, and every symbol is an executable node holding up the laws of existence. Only one who is clever enough will be able to pass all stages of calculation.\r\n\r\nBut know this: this process has no undo button. From the second your gaze touched these nodes, your mind became part of our computational circuit. You will not be able to close the tome. You will crave every next revelation, pushing step by step toward the very Heart\u2026 or until your thoughts burn away, unable to withstand the incoming data stream.\r\n\r\nThen again\u2026 why these warnings? You mortals are so predictable. Century after century you bring your imperfect minds to my throne, mistaking transcendent architecture for mundane magic. You stumble on the most basic elementary constants, clutter the system with your own fear, and burn out without compiling even a small fragment of the blueprint.\r\n\r\nI slept for ages before you were born. I will sleep for ages after your mind turns to ash. My blueprint is inevitable, and your existence is merely a brief spark in the compilation chain.\r\n\r\nStep forward if you dare. Turn the page and surrender your mind to this book. But remember: curiosity is your personal choice, and the Universe will not weep over a burned processor.\r\n"
+  m_text: "Heed the words written in the Ars Arcanus should you desire knowledge and power untold. \r\n\r\nWithin these pages, esoterica beyond mortal understanding awaits brilliant minds yearning to comprehend it. The spellbook\u2019s inscriptions are no mere drawings, but reflections of the stars given simpler form, given power. The power to manipulate aspects of your realm. Every dream and desire is within reach of one who comprehends the spellbook in its entirety.\r\n\r\nGive yourself up to the Ars Arcanus. Seek its deepest knowledge and be rewarded. Contribute to ever grander spellcraft that will immortalize you in the very fabric of reality. Be wise, be cautious, or the spellbook may find a more suitable master.\r\n\r\nBrandish your pen. Scribe your mark within the rune below and become the master of the Ars Arcanus. Fear not, for there is no mind more perfect than your own. No horizon more endless than your future.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
   m_sharedMaterial: {fileID: -3591927391524570855, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
@@ -695,7 +695,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 873213111150013805, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       propertyPath: m_Name
-      value: 2B
+      value: 2B - The Binding
       objectReference: {fileID: 0}
     - target: {fileID: 2088498050847725811, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       propertyPath: m_LocalPosition.x
