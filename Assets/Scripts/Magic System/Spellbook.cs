@@ -102,12 +102,13 @@ public class Spellbook : MonoBehaviour
 
     private void BindBook()
     {
-        List<Page> pageInstances = new List<Page>();
+        //List<Page> pageInstances = new List<Page>();
         foreach(Page page in pages)
         {
-            pageInstances.Add(Instantiate(page));
+            page.transform.position = Vector3.zero;
+            //pageInstances.Add(Instantiate(page));
         }
-        pages = pageInstances;
+        //pages = pageInstances;
 
         GameObject binding = new GameObject("Front Cover Binding");
         binding.transform.parent = transform;

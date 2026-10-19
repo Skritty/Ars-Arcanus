@@ -57,6 +57,8 @@ MonoBehaviour:
     deltaAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
   drawBounds: 0
+  cannotBeDeleted: 1
+  updateTransformOnCreation: 0
   maximumPower: 8
   associatedSymbol:
     vertexPairs: []

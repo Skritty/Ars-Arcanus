@@ -39,6 +39,8 @@ public abstract class Rune : ImmediateModeShapeDrawer
     }
     public Mana imbuedDebugReader;
     public bool drawBounds;
+    public bool cannotBeDeleted = true;
+    public bool updateTransformOnCreation;
     public float maximumPower = 8f; // Currently this just prevents the elemental alignment from going beyond this amount, but it could cause an effect once it exceeds it
     public Symbol associatedSymbol;
     public Page page;

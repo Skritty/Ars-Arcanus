@@ -124,6 +124,8 @@ public class WritingManager : ImmediateModeShapeDrawer
             Quaternion.identity);
         rune.associatedSymbol = symbol;
         rune.associatedSymbol.sourceRuneUID = runePrefab.associatedSymbol.sourceRuneUID;
+        rune.cannotBeDeleted = false;
+        rune.updateTransformOnCreation = true;
         rune.gameObject.SetActive(true);
         page.AddRune(rune);
         runeAddedSFX?.Play(rune.transform.position);
@@ -174,7 +176,7 @@ public class WritingManager : ImmediateModeShapeDrawer
             Page page = hit.transform.parent.gameObject.GetComponent<Page>();
             if (page == null) return;
             Rune rune = page.GetRuneAtPosition(hit.point);
-            if (rune == null) return;
+            if (rune == null || rune.cannotBeDeleted) return;
             page.RemoveRune(rune);
             Destroy(rune.gameObject);
         }
