@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Shapes;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Spellbook : MonoBehaviour
 {
     public static Spellbook Instance;
 
+    public UnityEvent OnSpellbookOpened, OnSpellbookClosed;
     public Action<float> runeElementalDecay;
 
     public InputAction turnPageAction;
@@ -166,6 +168,7 @@ public class Spellbook : MonoBehaviour
     {
         turning = true;
 
+        int initialIndex = _RHSBindingIndex;
         int direction = (int)Mathf.Sign(targetBindingIndex - _RHSBindingIndex);
         float flipTimePerPage = timeToPage / Mathf.Abs(targetBindingIndex - _RHSBindingIndex); // Take the initial expected time to flip
         Action<float> doPageAnimations = null;
@@ -236,6 +239,8 @@ public class Spellbook : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
             doPageAnimations = null;
+            if (_RHSBindingIndex == 0 || _RHSBindingIndex == bindings.Count) OnSpellbookClosed?.Invoke();
+            if ((initialIndex == 0 || initialIndex == bindings.Count) && !(_RHSBindingIndex == 0 || _RHSBindingIndex == bindings.Count)) OnSpellbookOpened?.Invoke();
         }
         turning = false;
     }
