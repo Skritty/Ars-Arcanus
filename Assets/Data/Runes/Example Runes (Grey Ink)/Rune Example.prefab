@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SymbolRenderer
   useCullingMasks: 0
   color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
-  thickness: 0.003
+  thickness: 0.002
   symbol:
     vertexPairs:
     - A: {x: 0, y: 0.4875}

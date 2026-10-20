@@ -20,15 +20,26 @@ public class Page : MonoBehaviour
         if (!Application.isPlaying) return;
 
         runes.Clear();
-        foreach (Transform runeTransform in runeParent)
-        {
-            if (runeTransform.GetComponent<Rune>() == null) continue;
-            runes.Add(runeTransform.GetComponent<Rune>());
-        }
+        AddInitialRunes(runeParent);
         foreach(Rune rune in runes.ToArray())
         {
             rune.page = this;
             rune.Initialize();
+        }
+    }
+
+    private void AddInitialRunes(Transform scan)
+    {
+        foreach (Transform runeTransform in scan)
+        {
+            if (runeTransform.GetComponent<Rune>() == null)
+            {
+                AddInitialRunes(runeTransform);
+            }
+            else
+            {
+                runes.Add(runeTransform.GetComponent<Rune>());
+            }
         }
     }
 
@@ -41,17 +52,20 @@ public class Page : MonoBehaviour
         return false;
     }
 
-    public Rune GetRuneAtPosition(Vector3 pos)
+    public List<Rune> GetRunesAtPosition(Vector3 pos)
     {
+        List<Rune> possible = new();
         foreach(Rune rune in runes)
         {
-            if (rune.PositionInBounds(pos)) return rune;
+            if (rune.PositionInBounds(pos)) possible.Add(rune);
         }
-        return null;
+        if (possible.Count == 0) return possible;
+        return possible;
     }
 
     public void AddRune(Rune newRune)
     {
+        List<Rune> foundRunes = GetRunesAtPosition(newRune.transform.position);
         runes.Add(newRune);
         newRune.transform.parent = runeParent;
         newRune.transform.localPosition = new Vector3(newRune.transform.localPosition.x, 0, newRune.transform.localPosition.z);
@@ -60,8 +74,13 @@ public class Page : MonoBehaviour
             newRune.transform.localScale = new Vector3(1f / Mathf.Abs(transform.lossyScale.x), 1f / Mathf.Abs(transform.lossyScale.y), 1f / Mathf.Abs(transform.lossyScale.z));
         }
         newRune.page = this;
-        Rune_Container container = GetRuneAtPosition(newRune.transform.position) as Rune_Container;
-        if(container) container.TryAddRune(newRune);
+        foreach(Rune rune in foundRunes)
+        {
+            if(rune is Rune_Container)
+            {
+                if((rune as Rune_Container).TryAddRune(newRune)) break;
+            }
+        }
         newRune.Initialize();
     }
 

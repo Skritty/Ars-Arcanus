@@ -170,10 +170,13 @@ public class WritingManager : ImmediateModeShapeDrawer
         {
             Page page = hit.transform.parent.gameObject.GetComponent<Page>();
             if (page == null) return;
-            Rune rune = page.GetRuneAtPosition(hit.point);
-            if (rune == null || rune.cannotBeDeleted) return;
-            page.RemoveRune(rune);
-            Destroy(rune.gameObject);
+            foreach (Rune rune in page.GetRunesAtPosition(hit.point))
+            {
+                if (rune == null || rune.cannotBeDeleted) continue;
+                page.RemoveRune(rune);
+                Destroy(rune.gameObject);
+                break;
+            }
         }
     }
 }

@@ -202,21 +202,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Stars rule everything in this fabric of existence. The celestial vault establishes an unshakable order, which is why constellations are used as the primordial foundation for any mana manipulations. Their equivalent rune symbols are called control runes and serve as direct equivalents of executable compiler commands.
+  m_text: 'There exist a multitude of mana flow control runes that form the basis of what are known as spells inside the Ars Arcanus. The primary control runes are extract, imbue, and diffuse, but many more exist and must be utilized to their full potential to achieve the impossible. The specifics of these runes will be detailed in later chapters, but each manipulates the flow of the mana in unique ways to allow for more complex spells. Some may also be used to manipulate the contents of the mana, converting, enhancing, or blocking elements.
 
 
-
-
-    Within the compilation structure, Control Runes are responsible for:
-
-    - Directing the mana flow through strictly defined algorithmic paths
-
-    - Transformation, filtering, and logical processing of energy-information data
-
-    - Real-time execution of input-output instructions
-
-
-    Warning: An error in the geometry of the operator constellation leads to compilation failure, signal annihilation, and memory buffer overload.
+    Control runes that are capable of containing another rune within their symbol are simply known as container runes, with the central rune known as its focus. Often, these runes are capable of supporting a number of parameters that orbit the central control circle in a geometrically stable pattern. These can be inscribed by drawing the parameter rune inside the control rune. Parameters may contain any type of rune, including other control runes.
 
 '
   m_isRightToLeft: 0
@@ -324,7 +313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00008255243, y: 1540}
+  m_AnchoredPosition: {x: 0.00008255243, y: 1417}
   m_SizeDelta: {x: 2000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6182743652208868040
@@ -355,11 +344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Control Runes:
-
-    Fundamental Stars for Mana Direction
-
-'
+  m_text: Control and Parameter Runes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
   m_sharedMaterial: {fileID: -3591927391524570855, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
@@ -448,7 +433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &97930115880294456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -585,7 +570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3586159179928680928
 RectTransform:
   m_ObjectHideFlags: 0
@@ -776,6 +761,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6445501747663812043, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3880083407013840626}
+    - targetCorrespondingSourceObject: {fileID: 6445501747663812043, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5847121549346450624}
     - targetCorrespondingSourceObject: {fileID: 3372809422913011360, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       insertIndex: -1
       addedObject: {fileID: 935065979910570161}
@@ -797,4 +788,133 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3372809422913011360, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
   m_PrefabInstance: {fileID: 1268286376902505029}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5254256066657814414 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6445501747663812043, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
+  m_PrefabInstance: {fileID: 1268286376902505029}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4082220508752422744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5254256066657814414}
+    m_Modifications:
+    - target: {fileID: 6501714835553462829, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_Name
+      value: AddParameters (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.3709993
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+--- !u!4 &5847121549346450624 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7603153680792226712, guid: 20838d5bd797e4646a65fe3b159c2fc7, type: 3}
+  m_PrefabInstance: {fileID: 4082220508752422744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7094246062701770409
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5254256066657814414}
+    m_Modifications:
+    - target: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7210941090057277934, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+      propertyPath: m_Name
+      value: Diffuse
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+--- !u!4 &3880083407013840626 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6317143418006925403, guid: ac2825c8448232844b23fd97011460f6, type: 3}
+  m_PrefabInstance: {fileID: 7094246062701770409}
   m_PrefabAsset: {fileID: 0}

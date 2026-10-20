@@ -172,7 +172,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 2
   radiusSpace: 0
-  thickness: 0.002
+  thickness: 0.0015
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1
@@ -239,7 +239,7 @@ MeshRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1611721180276067957
@@ -316,7 +316,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 1
   radiusSpace: 0
-  thickness: 0.002
+  thickness: 0.0017
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1
@@ -383,7 +383,7 @@ MeshRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1889412680926360211
@@ -459,7 +459,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 1
   radiusSpace: 0
-  thickness: 0.0024
+  thickness: 0.0015
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1
@@ -526,7 +526,7 @@ MeshRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2044200234145779578
@@ -603,7 +603,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 2
   radiusSpace: 0
-  thickness: 0.0022
+  thickness: 0.0017
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1
@@ -670,6 +670,6 @@ MeshRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}

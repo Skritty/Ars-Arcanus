@@ -51,6 +51,7 @@ public class Spellbook : MonoBehaviour
         Draw.LineGeometry = LineGeometry.Flat2D;
         Draw.ThicknessSpace = ThicknessSpace.Meters;
         Draw.Thickness = runeLineThickness;
+        Draw.BlendMode = ShapesBlendMode.Opaque;
 
         BindBook();
     }

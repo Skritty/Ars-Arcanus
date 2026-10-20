@@ -294,7 +294,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 1
   radiusSpace: 0
-  thickness: 0.002
+  thickness: 0.0008
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1

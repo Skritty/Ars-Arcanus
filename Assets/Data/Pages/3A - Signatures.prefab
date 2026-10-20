@@ -633,7 +633,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 873213111150013805, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       propertyPath: m_Name
-      value: 2A - Signatures
+      value: 3A - Signatures
       objectReference: {fileID: 0}
     - target: {fileID: 2088498050847725811, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       propertyPath: m_LocalScale.x
@@ -881,6 +881,18 @@ PrefabInstance:
       value: UnityEvent RuneContainer
       objectReference: {fileID: 0}
     - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -890,7 +902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.813
+      value: -5.37
       objectReference: {fileID: 0}
     - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: m_LocalRotation.w
