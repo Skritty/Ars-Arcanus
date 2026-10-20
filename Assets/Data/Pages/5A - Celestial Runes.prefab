@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "To comprehend the true nature of the Ars Arcanus, you must first understand the medium in which your reality is expressed. The magic you see within this spellbook is merely the manipulation of that medium - of mana.\r\n\r\nMana is an invisible information that permeates the entirety of your realm and is the foundation of all things. Without the spellbook, mana tends towards its most natural inclinations, roaring chaotically or crystalizing into concrete forms. In order to harness it for spellcraft, you must command it with runes.\r\n\r\nLook at the night sky. Since the beginning of conscious existence, mortals have looked up at the stars and found patterns in the firmament. They have borne witness to fragments of their might, diluted through their fallible eyes and simple souls, and attached myriad stories and meanings to those structural anchors of existence and their vast cosmic chains. Through those meanings, you may grasp at a fraction of their power. \r\n\r\nA rune is nothing more than the projection of a constellation, a stellar conduit channeled into ink. These conduits can be chained together to direct, manipulate, and utilize mana to produce wondrous effects.\r\n"
+  m_text: "To comprehend the true nature of the Ars Arcanus, you must first understand the medium in which your reality is expressed. The magic you see within this spellbook is merely the manipulation of that medium - of mana.\r\n\r\nMana is an invisible information-storing energy that permeates the entirety of the realm and is the foundation of all things. Without the spellbook, mana tends towards its most natural inclinations, roaring chaotically or crystalizing into concrete forms. In order to harness it for spellcraft, you must command it with runes.\r\n\r\nLook at the night sky. Since the beginning of conscious existence, mortals have looked up at the stars and found patterns in the firmament. They have borne witness to fragments of their might, diluted through their fallible eyes and simple souls, and attached myriad stories and meanings to those structural anchors of existence and their vast cosmic chains. Through those meanings, you may grasp at a fraction of their power. \r\n\r\nA rune is nothing more than the projection of a constellation, a stellar conduit channeled into ink. These conduits can be chained together to direct, manipulate, and utilize mana to produce wondrous effects.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
   m_sharedMaterial: {fileID: -3591927391524570855, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
@@ -437,7 +437,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8115123967412490861}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000099003315}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0001}
   m_LocalScale: {x: 1.0188679, y: 1.018868, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -445,7 +445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00008255243, y: 1540.0004}
+  m_AnchoredPosition: {x: 0.00008255243, y: 1428}
   m_SizeDelta: {x: 2000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6200686807388787034
@@ -476,9 +476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Celestial Runes
-
-'
+  m_text: Mana and The Celestial Runes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
   m_sharedMaterial: {fileID: -3591927391524570855, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}

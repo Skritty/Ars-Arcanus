@@ -15,7 +15,7 @@ MonoBehaviour:
   chainSoundsInstead: 0
   sounds:
   - {fileID: 8300000, guid: 4684d0dfa891afc49beaad4b781f7092, type: 3}
-  volume: 1
+  volume: 0.5
   pitchVariance: {x: 0, y: 0}
   initialDelay: 0
   loop: 0
