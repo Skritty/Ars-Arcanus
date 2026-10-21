@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Diffuse is the primary mana flow geometry. While it lacks special properties, its type of flow is important to mastering spellcraft. Unlike imbue and extract, diffuse may have any number of geometrically stable parameters. Mana contained in the diffuse rune (the circle) flows evenly to each of its parameters, and then the mana within its parameters is merged and sent to the focus. Should no focus be present, mana will flow between the parameters, keeping a general balance across the system. As a perfect circle is a requirement, drawing the diffuse construction rune as seen below is required for their creation.
+  m_text: "Diffuse is the final structurally-necessary primary mana flow container. It is comparatively simple, without any inherent abilities aside from mana containment. However, unlike imbue and extract, diffuse may have any number of geometrically-stable parameters. Mana contained within the diffuse rune flows evenly to each of its parameters, which are all then merged and sent to the central focus. Should no focus be present, mana will flow between the parameters, keeping a general balance across the system. \r\nTo draw the perfect circle necessary for the rune\u2019s construction, one must invoke the Circinus constellation\u2013 representing the Drafting Compass\u2013 and use its conceptual tool to create the circular container.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
   m_sharedMaterial: {fileID: -3591927391524570855, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
@@ -936,7 +936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3862736618366045084, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.01899451
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3862736618366045084, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -944,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3862736618366045084, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.261
+      value: -3.64
       objectReference: {fileID: 0}
     - target: {fileID: 3862736618366045084, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: m_LocalRotation.w

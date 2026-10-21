@@ -202,9 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Any runic symbol that lacks inherent power can be given power through mana. Mana can be imbued into these symbols and is stored in the infinite beyond among the stars. This mana can later be extracted from any similar rune from anywhere else, allowing for the flow of mana between pages and locations where it would normally be impossible to reach. Variable runes are ultimately a blank slate, able to take on properties held within mana. This allows them a great deal of flexibility and advanced uses that will be detailed in future chapters.
-
-'
+  m_text: "Variable runes are symbolic placeholders that lack power on their own, but can be given power through mana. Once mana is imbued into these unique symbols, the information imparted within them is stored in the infinite beyond among the stars, waiting to be brought down again for their mana to be directed elsewhere. A variable rune\u2019s mana can then be extracted from any similar rune from anywhere else, allowing for the flow of mana between pages and locations where it would normally be impossible to reach. \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
   m_sharedMaterial: {fileID: -3591927391524570855, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
@@ -286,7 +284,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.786
+      value: 2.31
       objectReference: {fileID: 0}
     - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -294,7 +292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.47
+      value: -2.44
       objectReference: {fileID: 0}
     - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -383,7 +381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5199995
+      value: 4.0439997
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalPosition.y
@@ -391,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.5500004
+      value: -1.5199974
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalRotation.w
@@ -468,7 +466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1500001
+      value: 0.67400026
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalPosition.y
@@ -476,7 +474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.3800018
+      value: -1.3499987
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalRotation.w
@@ -741,7 +739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: 6aff739e124dec74abd1df94ce4ae419, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.79
+      value: 2.3140001
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: 6aff739e124dec74abd1df94ce4ae419, type: 3}
       propertyPath: m_LocalPosition.y
@@ -749,7 +747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: 6aff739e124dec74abd1df94ce4ae419, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.5
+      value: -2.469997
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: 6aff739e124dec74abd1df94ce4ae419, type: 3}
       propertyPath: m_LocalRotation.w
@@ -867,7 +865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.81
+      value: 2.334
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalPosition.y
@@ -875,7 +873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.420002
+      value: -4.3899994
       objectReference: {fileID: 0}
     - target: {fileID: 4266137491440542674, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
       propertyPath: m_LocalRotation.w
