@@ -123,8 +123,8 @@ public class WritingManager : ImmediateModeShapeDrawer
         rune.cannotBeDeleted = false;
         rune.updateTransformOnCreation = true;
         rune.gameObject.SetActive(true);
-        page.AddRune(rune);
         runeAddedSFX?.Play(rune.transform.position);
+        page.AddRune(rune);
 
         symbol.ScaleSymbol(new Vector3(1 / page.runeParent.transform.localScale.x, 1 / page.runeParent.transform.localScale.y, 1 / page.runeParent.transform.localScale.z));
 
@@ -174,7 +174,6 @@ public class WritingManager : ImmediateModeShapeDrawer
             {
                 if (rune == null || rune.cannotBeDeleted) continue;
                 page.RemoveRune(rune);
-                Destroy(rune.gameObject);
                 break;
             }
         }

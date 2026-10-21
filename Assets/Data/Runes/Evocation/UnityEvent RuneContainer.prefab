@@ -56,6 +56,7 @@ MonoBehaviour:
     elementalAlignment: {x: 0, y: 0, z: 0}
     deltaAlignment: {x: 0, y: 0, z: 0}
     voidAlignment: {x: 0, y: 0, z: 0}
+  drawSymbol: 1
   drawBounds: 0
   cannotBeDeleted: 1
   updateTransformOnCreation: 0

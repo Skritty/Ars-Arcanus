@@ -51,7 +51,7 @@ public class Rune_Container_Diffuse : Rune_Container
 
     public override bool TryAddParameters()
     {
-        if (parameters.Count >= 8) return false;
+        if (parameters.Count >= 6) return false;
         UpdateParameterSlots(parameters.Count + 1);
         return true;
     }

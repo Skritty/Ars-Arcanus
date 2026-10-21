@@ -38,6 +38,7 @@ public abstract class Rune : ImmediateModeShapeDrawer
         }
     }
     public Mana imbuedDebugReader;
+    public bool drawSymbol = true;
     public bool drawBounds;
     public bool cannotBeDeleted = true;
     public bool updateTransformOnCreation;
@@ -139,6 +140,7 @@ public abstract class Rune : ImmediateModeShapeDrawer
             shape.Color = symbolColor;
         }
 
+        if (!drawSymbol) return;
         Draw.Matrix = Matrix4x4.TRS(transform.position + transform.up * transform.lossyScale.y * 0.001f, transform.rotation * Quaternion.AngleAxis(90, Vector3.right), new Vector3(transform.lossyScale.x, transform.lossyScale.z, transform.lossyScale.y));
         foreach (Symbol.VertexPair line in associatedSymbol.vertexPairs)
         {

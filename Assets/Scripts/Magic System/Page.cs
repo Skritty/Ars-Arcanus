@@ -14,6 +14,8 @@ public class Page : MonoBehaviour
     public bool block;
     public Transform runeParent;
     public List<Rune> runes = new();
+    public Renderer pageRenderer;
+    public List<Texture> pageTextureVariants = new();
 
     private void Start()
     {
@@ -26,6 +28,10 @@ public class Page : MonoBehaviour
             rune.page = this;
             rune.Initialize();
         }
+
+        MaterialPropertyBlock property = new MaterialPropertyBlock();
+        property.SetTexture("_BaseMap", pageTextureVariants[Random.Range(0, pageTextureVariants.Count - 1)]);
+        pageRenderer.SetPropertyBlock(property);
     }
 
     private void AddInitialRunes(Transform scan)
@@ -91,6 +97,11 @@ public class Page : MonoBehaviour
             rune.parent.focus = null;
         }
         runes.Remove(rune);
+        DestroyImmediate(rune.gameObject);
+        for (int i = runes.Count - 1; i >= 0; i--)
+        {
+            if (runes[i] == null) runes.RemoveAt(i);
+        }
     }
 
     public void Lock(bool locked)
