@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Be cautious and take your time with the runic chains. Such power must be handled carefully if you don\u2019t wish to BURN out like a candle and be LEFT with nothing but ash.\r\n"
+  m_text: "Be cautious and take your time with the runic chains. Such power must be handled carefully if you don\u2019t wish to <color=white>burn</color> out like a candle and be <color=white>left</color> with nothing but ash.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
   m_sharedMaterial: {fileID: -8564381703319519963, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285146174
-  m_fontColor: {r: 0.24404131, g: 0.14228068, b: 0.41509432, a: 1}
+    rgba: 4281994782
+  m_fontColor: {r: 0.11764706, g: 0.05490196, b: 0.22745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Control runes form the basis of what are known as spells inside the Ars Arcanus, directing the flow of mana in the same way that channels may divert a stream towards a goal. The primary control runes\u2013 extract, imbue, and diffuse\u2013 form the foundation of these spells, but there are many more that await you further in this book, ready to be utilized to their full potential to achieve the impossible. \n\r\nThe specifics of these runic tools will be detailed in later chapters, but each manipulates the flow of the mana in unique ways to allow for more complex spells. As they grow in complexity, so too shall your control over mana be refined, to better manipulate the information contained within by converting, enhancing, or blocking elements, among other feats.\r\n"
+  m_text: "Control runes form the basis of what are known as spells inside the Ars Arcanus, directing the flow of mana in the same way that channels may divert a stream towards a goal. The primary control runes\u2013 extract, imbue, and diffuse\u2013 form the foundation of these spells, but there are many more that await you further in this book, ready to be utilized to their full potential to achieve the impossible. \n\r\nThe specifics of these runic tools will be detailed in later pages, but each manipulates the flow of the mana in unique ways to allow for more complex spells. As they grow in complexity, so too shall your control over mana be refined, to better manipulate the information contained within by converting, enhancing, or blocking elements, among other feats.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
   m_sharedMaterial: {fileID: -3591927391524570855, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}

@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 97930115880294456, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -285
+      value: -194
       objectReference: {fileID: 0}
     - target: {fileID: 180745229910761700, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_text
@@ -64,7 +64,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_text
-      value: "This book\u2026 going back to these first pages, I can see where my intellect used to SHINE. I must get to the BOTTOM of this\u2026 what is it doing to my mind?\r\n"
+      value: "This book\u2026 going back to these first pages, I can see where my intellect used to <color=white>shine</color>. I must get to the <color=white>bottom</color> of this\u2026 what is it doing to my mind?\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_margin.x
@@ -89,7 +89,6 @@ PrefabInstance:
     - target: {fileID: 4844587605343904853, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_text
       value: 'Light is the energetic half of the classical Aether, occupying the higher end of the Axis of Spirit. Luminosity is the closest mortals come to touching the stars, and as such it is often used as a magnifier, concentrating the four natural elements. The crystals of earth in particular, with its intrinsic stabilizing order, are useful for directing and focusing its energy.
-
 
 
         In small doses, light simply illuminates the world, showing things as they are with shining serenity, even that which cannot normally be seen. Truth so loves to be brought into the light, exposing falsehoods in its glow. In excess, light destabilizes into a bright prism of the natural elements, revealing their true origin and composition therein.

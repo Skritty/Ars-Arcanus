@@ -341,7 +341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Words have power; by naming the stars and the elements, we Invoke their might and allow them to channel through our ink and manifest DOWN on the EARTHLY plane.
+  m_text: Words have power; by naming the stars and the elements, we Invoke their might and allow them to channel through our ink and manifest <color=white>down</color> on the <color=white>earhtly</color> plane.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65097be9f0cabc24b8e85560dbfd4c07, type: 2}
   m_sharedMaterial: {fileID: -1946710547870008582, guid: 65097be9f0cabc24b8e85560dbfd4c07, type: 2}
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The universe consists of fundamental elements that form the basic structures of magic. In total, there are six elements: Fire, Water, Air, Earth, Light, and Dark.\r\n\nThey are divided into two categories of energy:\r\r\n- Elements of Chaos (High energy): Fire, Air, Light.\r\n- Elements of Order (Low energy): Water, Earth, Dark.\r\n\r\nAll elements are distributed across three fundamental axes of interaction:\r\r\n- Axis of Energy: Fire and Water.\r\n- Axis of Matter: Air and Earth.\r\n- Divine Axis: Light and Dark.\r\n\r\nElements located on the same axis are opposite to each other. Opposite elements neutralize one another and cannot exist simultaneously.\r\r\nThe Natural Plane is formed by the four base elements: Fire, Water, Air, and Earth.\r\n\r\n"
+  m_text: "The universe consists of fundamental elements that form the basic structures of magic. In total, there are six elements: Fire, Water, Air, Earth, Light, and Dark.\r\n\nThey are divided into two categories of energy:\r\r\n- <u>Elements of Chaos</u> (high energy): Fire, Air, Light.\r\n- <u>Elements of Order</u> (low energy): Water, Earth, Dark.\r\n\r\nAll elements are distributed across three fundamental axes of interaction:\r\r\n- Axis of Energy: Fire and Water.\r\n- Axis of Matter: Air and Earth.\r\n- Divine Axis: Light and Dark.\r\n\r\nElements located on the same axis are opposite to each other. Opposite elements neutralize one another and cannot exist simultaneously.\r\r\nThe Natural Plane is formed by the four base elements: Fire, Water, Air, and Earth.\r\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}
   m_sharedMaterial: {fileID: -3591927391524570855, guid: 0dbaabea45853494293403a1c4741dc3, type: 2}

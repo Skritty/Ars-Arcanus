@@ -84,9 +84,9 @@ MonoBehaviour:
   defaultVariableRune: {fileID: 4704188487205810552, guid: 2d4a976f491a08b40981e1db8f05f590, type: 3}
   runes:
   - {fileID: 7312403984855251692, guid: 8b01512f2a84d2244a1ae72d14275411, type: 3}
+  - {fileID: 1421184644633327763, guid: 6aff739e124dec74abd1df94ce4ae419, type: 3}
   - {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
   - {fileID: 8726811730358869363, guid: 72170aa202e3f0b47afd1b7e98cd98cf, type: 3}
-  - {fileID: 1421184644633327763, guid: 6aff739e124dec74abd1df94ce4ae419, type: 3}
   - {fileID: 5109421206410116376, guid: 5a72b1aee67d17f46a54ea5b01c8fb63, type: 3}
   - {fileID: 7265662870645210158, guid: e9e665d31a9ed4f48a6274ce292a7d34, type: 3}
   - {fileID: 4853298820584337797, guid: f75deb9e1e5fc8549aa560590dc52bb4, type: 3}
@@ -103,6 +103,7 @@ MonoBehaviour:
   - {fileID: 8022440639626252793, guid: d86047700c8fe184793084172a712863, type: 3}
   - {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
   - {fileID: 3808630012689334958, guid: e379a0dff291403449c2dfedffe30710, type: 3}
+  - {fileID: 296853846655958, guid: 7af46b59a260cb84dbf2614ee15c5639, type: 3}
   angleComparisonLeeway: 0.28
   writeSFX: {fileID: 11400000, guid: 7877fa6b08dec654db249d7b35f4e0f4, type: 2}
   runeAddedSFX: {fileID: 11400000, guid: dd496c171afb32f48872919523e9e39f, type: 2}

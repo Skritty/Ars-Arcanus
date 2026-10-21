@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'There are SECRETS BURIED in the binding of this accursed book, as you have well found. I can help you find them, and set things RIGHT.
+  m_text: 'There are <color=white>secrets buried</color> in the binding of this accursed book, as you have well found. I can help you find them, and set things <color=white>right</color>.
 
 '
   m_isRightToLeft: 0
@@ -76,8 +76,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285146174
-  m_fontColor: {r: 0.24404131, g: 0.14228068, b: 0.41509432, a: 1}
+    rgba: 4281994782
+  m_fontColor: {r: 0.11764706, g: 0.05490196, b: 0.22745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

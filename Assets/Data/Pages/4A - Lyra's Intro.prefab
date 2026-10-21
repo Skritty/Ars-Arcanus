@@ -613,7 +613,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hello. My name is Lyra. If you can read this, then I\u2019m afraid the Ars Arcanus has drawn you in with honey and dragged you DOWN into its snare like those who came before us. You should have heeded Vane\u2019s warning, but then again, I should have, too. I know I do not have the will to make it to the core of this book, but there must be someone out there who can. I hope it will be you. \n\r\nThis book holds many SECRETS and tricks, but you must KINDLE patience-tempered curiosity in your heart in order to go deeper than the others and find your salvation. I\u2019ll try my best to help you for as long as I can. Just try not to follow in poor Cassian\u2019s erratic footsteps.\r\n\r\n"
+  m_text: "Hello. My name is Lyra. If you can read this, then I\u2019m afraid the Ars Arcanus has drawn you in with honey and dragged you <color=white>down</color> into its snare like those who came before us. You should have heeded Vane\u2019s warning, but then again, I should have, too. I know I do not have the will to make it to the core of this book, but there must be someone out there who can. I hope it will be you. \n\r\nThis book holds many <color=white>secrets</color> and tricks, but you must <color=white>kindle</color> patience-tempered curiosity in your heart in order to go deeper than the others and find your salvation. I\u2019ll try my best to help you for as long as I can. Just try not to follow in poor Cassian\u2019s erratic footsteps.\r\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
   m_sharedMaterial: {fileID: -8564381703319519963, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
@@ -622,8 +622,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285146174
-  m_fontColor: {r: 0.24404131, g: 0.14228068, b: 0.41509432, a: 1}
+    rgba: 4281994782
+  m_fontColor: {r: 0.11764706, g: 0.05490196, b: 0.22745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
