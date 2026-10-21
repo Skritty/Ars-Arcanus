@@ -77,14 +77,21 @@ public struct Mana
     /// <summary>
     /// Find if the mana is aligned to all enabled flags
     /// </summary>
-    public bool IsAligned(Alignment alignment)
+    public bool IsAligned(Alignment alignment, bool exactMatch = false)
     {
         if (alignment.HasFlag(Alignment.None))
             if (elementalAlignment.magnitude != 0) return false;
+
+        // Energy
         if (alignment.HasFlag(Alignment.Fire))
+        {
             if (elementalAlignment.x <= 0) return false;
-        if (alignment.HasFlag(Alignment.Water))
+        }
+        else if (alignment.HasFlag(Alignment.Water))
+        {
             if (elementalAlignment.x >= 0) return false;
+        }
+            
         if (alignment.HasFlag(Alignment.Air))
             if (elementalAlignment.y <= 0) return false;
         if (alignment.HasFlag(Alignment.Earth))

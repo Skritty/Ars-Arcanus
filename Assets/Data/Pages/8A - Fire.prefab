@@ -102,6 +102,14 @@ PrefabInstance:
       propertyPath: m_text
       value: "Fire is the representation of power and heat, energetic and destructive. Flames lick hungrily at the air and radiate light, exemplifying their link to the other elements of chaos. When kept under close and careful watch, it is warm, passionate, and vital to survival. \r\n\r\nBe warned however; fire is the primordial catalyst of the Axis of Energy, equally as capable of being warming flames as becoming a catastrophic detonation. In excess, fire-aligned mana will emit heat and degrade ink, burning away runes and possibly even pages. Fire must be fueled and tended cautiously to avoid runaway reactions and terrible burns.\r\n\r\nThe Zodiac constellations commonly associated with Fire are Aries the Ram, Leo the Lion, and Sagittarius the Archer. \r\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 5885508988890218936, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: triggerOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5885508988890218936, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: triggerOnToggle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7818731809479512734, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_IsActive
       value: 1

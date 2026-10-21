@@ -99,6 +99,10 @@ public class Spellbook : MonoBehaviour
         if (i % 2 == 0) i--;
         if(i > 0) pages[i].accessible = accessable;
         if (pages.Count > i) pages[i+1].accessible = accessable;
+        if (accessable && Time.time > 1)
+        {
+            CurrentRHSBindingIndex = i / 2 + 2;
+        }
     }
 
     private void BindBook()

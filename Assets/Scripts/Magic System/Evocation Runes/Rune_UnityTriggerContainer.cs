@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class Rune_UnityTriggerContainer : Rune_Container
 {
     public UnityEvent OnActivated;
+    public UnityEvent OnDeactivated;
     public Mana invalidOutputMana;
     public Mana validOutputMana;
     public bool copyFocusManaInstead;
@@ -16,7 +17,9 @@ public class Rune_UnityTriggerContainer : Rune_Container
     public bool anyFocusRune;
     public bool setManaOnce;
     public bool triggerOnce = true;
+    public bool triggerOnToggle;
     private bool triggered;
+    private bool state;
     public override void Effect()
     {
         bool valid = true;
@@ -52,11 +55,20 @@ public class Rune_UnityTriggerContainer : Rune_Container
 
         if (!(triggerOnce && triggered))
         {
-            if (valid)
+            if(!(triggerOnToggle && state == valid))
             {
-                OnActivated.Invoke();
-                triggered = true;
+                state = valid;
+                if (valid)
+                {
+                    OnActivated?.Invoke();
+                    triggered = true;
+                }
+                else
+                {
+                    OnDeactivated?.Invoke();
+                }
             }
+            
         }
     }
 

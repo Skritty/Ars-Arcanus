@@ -8,24 +8,33 @@ public class Rune_ContentsCompare : Rune_Container
     public bool anyAlignment;
     public Rune requiredFocusRune;
     public bool anyFocusRune;
+    public bool reverseFlow;
+
     public override void Effect()
     {
+        Rune target = this;
+        Rune source = focus;
+        if (reverseFlow)
+        {
+            target = focus;
+            source = this;
+        }
         bool valid = true;
         if (anyFocusRune)
         {
-            if (focus == null) valid = false;
+            if (source == null) valid = false;
             
         }
-        else if(requiredFocusRune != focus) valid = false;
+        else if(requiredFocusRune != source) valid = false;
         if (!anyAlignment)
         {
-            if (focus == null && !anyAlignment) valid = false;
-            if (focus != null && !focus.StoredMana.IsAligned(requiredFocusAlignment)) valid = false;
+            if (source == null && !anyAlignment) valid = false;
+            if (source != null && !source.StoredMana.IsAligned(requiredFocusAlignment)) valid = false;
         }
         GameTick.Delay(() =>
         {
-            if (valid) StoredMana = validOutputMana;
-            else StoredMana = invalidOutputMana;
+            if (valid) target.StoredMana = validOutputMana;
+            else target.StoredMana = invalidOutputMana;
         });
     }
 

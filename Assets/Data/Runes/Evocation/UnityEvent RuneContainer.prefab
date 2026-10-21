@@ -2213,6 +2213,9 @@ MonoBehaviour:
   OnActivated:
     m_PersistentCalls:
       m_Calls: []
+  OnDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
   invalidOutputMana:
     elementalAlignment: {x: 0, y: 0, z: 0}
     deltaAlignment: {x: 0, y: 0, z: 0}
@@ -2228,6 +2231,7 @@ MonoBehaviour:
   anyFocusRune: 0
   setManaOnce: 0
   triggerOnce: 1
+  triggerOnToggle: 0
 --- !u!1 &4863042536836550716
 GameObject:
   m_ObjectHideFlags: 0

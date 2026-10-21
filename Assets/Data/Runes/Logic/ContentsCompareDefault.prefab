@@ -350,6 +350,7 @@ MonoBehaviour:
   anyAlignment: 1
   requiredFocusRune: {fileID: 0}
   anyFocusRune: 1
+  reverseFlow: 0
 --- !u!1 &1256483735441517107
 GameObject:
   m_ObjectHideFlags: 0

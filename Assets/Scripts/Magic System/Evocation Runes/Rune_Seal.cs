@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class Rune_Seal : Rune
 {
+    private bool state;
     public override void Effect()
     {
-        Spellbook.Instance.UpdatePageAccess(Spellbook.Instance.GetPageFromContainedRune(this), !StoredMana.IsAligned(Alignment.Dark));
+        bool newState = !StoredMana.IsAligned(Alignment.Dark);
+        if(newState != state) Spellbook.Instance.UpdatePageAccess(Spellbook.Instance.GetPageFromContainedRune(this), newState);
+        state = newState;
     }
 
     public override Mana Extract(float amountExtracted)

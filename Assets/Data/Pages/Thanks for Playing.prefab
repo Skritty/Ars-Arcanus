@@ -173,7 +173,6 @@ Transform:
   - {fileID: 1446951389888433965}
   - {fileID: 3216995522175182029}
   - {fileID: 6334470506603280343}
-  - {fileID: 5727617897760350429}
   m_Father: {fileID: 337014370206404701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2569200037893853896
@@ -1006,7 +1005,7 @@ PrefabInstance:
     - target: {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
       propertyPath: focus
       value: 
-      objectReference: {fileID: 6499962518573903169}
+      objectReference: {fileID: 0}
     - target: {fileID: 569100766503888026, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
       propertyPath: m_Name
       value: Extract (3)
@@ -1467,10 +1466,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9107666156672109120}
     m_Modifications:
-    - target: {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
-      propertyPath: focus
-      value: 
-      objectReference: {fileID: 6499962518573903169}
     - target: {fileID: 569100766503888026, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
       propertyPath: m_Name
       value: Extract (2)
@@ -1722,10 +1717,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9107666156672109120}
     m_Modifications:
-    - target: {fileID: 38356508959479989, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
-      propertyPath: focus
-      value: 
-      objectReference: {fileID: 6499962518573903169}
     - target: {fileID: 569100766503888026, guid: e3decace8e133e74aa69187e1ceb7d3d, type: 3}
       propertyPath: m_Name
       value: Extract (1)
@@ -1907,76 +1898,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14bd94292a0fe904cbd7960d68f9132b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rune_Container_Extract
---- !u!1001 &9169306314156156170
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 9107666156672109120}
-    m_Modifications:
-    - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5884415762721648880, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-      propertyPath: m_Name
-      value: Cepheus
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
---- !u!4 &5727617897760350429 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3477761477386618327, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-  m_PrefabInstance: {fileID: 9169306314156156170}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6499962518573903169 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2669344826406029387, guid: 031b17363fd81b842bcf1a0d79a2b3d8, type: 3}
-  m_PrefabInstance: {fileID: 9169306314156156170}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3894768fc752a8f47a9a68adb6af3426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Rune_Variable
