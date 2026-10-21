@@ -1,90 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &390952842063535588
+--- !u!1001 &3409341442461208450
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2127842040194719528, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_Name
-      value: 9A - Air
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844587605343904853, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_text
-      value: "Air is a capricious element, constantly changing and always in motion. It can range from a gentle breeze to a powerful gale in moments and is capable of great feats of movement. It flows over the earth as its chaotic counterpart on the Axis of Matter, carrying dust yet parted by mountains. \r\n\r\nAir is the great accelerant, speeding the flow of mana. Left unchecked, it can break the shackles of the runes and move the mana of its own accord, creating paths where there should be none. As such, air must be guided carefully along the proper channels lest it blow away your diligent chains.\r\n\r\nThe Zodiac constellations commonly associated with Air are Gemini the Twins, Libra the Scales, and Aquarius the Water Bearer. \r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5422127031761078480, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      propertyPath: m_text
-      value: The Element of Air
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1683577242609978198, guid: aadb2b42a8950914787643598a4db751, type: 3}
-    - {fileID: 5188243594459121498, guid: aadb2b42a8950914787643598a4db751, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6744874579183000494, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6271520192867956610}
-    - targetCorrespondingSourceObject: {fileID: 6744874579183000494, guid: aadb2b42a8950914787643598a4db751, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3809111079351673927}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aadb2b42a8950914787643598a4db751, type: 3}
---- !u!4 &6410427910404146762 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6744874579183000494, guid: aadb2b42a8950914787643598a4db751, type: 3}
-  m_PrefabInstance: {fileID: 390952842063535588}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6979483760488028323
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 6410427910404146762}
+    m_TransformParent: {fileID: 4181990746681652223}
     m_Modifications:
     - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: anyFocusRune
@@ -92,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: requiredFocusAlignment
-      value: 8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: validOutputMana.elementalAlignment.x
@@ -100,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: validOutputMana.elementalAlignment.y
-      value: 2
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3885036989043214787, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
       propertyPath: m_Name
@@ -151,18 +73,118 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
---- !u!4 &3809111079351673927 stripped
+--- !u!4 &8885844105307288422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-  m_PrefabInstance: {fileID: 6979483760488028323}
+  m_PrefabInstance: {fileID: 3409341442461208450}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7103258661443566622
+--- !u!1001 &7463574938690906193
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6410427910404146762}
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 97930115880294456, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 783
+      objectReference: {fileID: 0}
+    - target: {fileID: 97930115880294456, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -686
+      objectReference: {fileID: 0}
+    - target: {fileID: 180745229910761700, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_text
+      value: 'Invocations: Dirt, Ground, Bury, Soil, Stone
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 180745229910761700, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_margin.z
+      value: 533.61115
+      objectReference: {fileID: 0}
+    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127842040194719528, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_Name
+      value: 11B - Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844587605343904853, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_text
+      value: "Earth is the last of the classical elements in the Natural Plane. It is the ground beneath your feet, the sand within your glass, the crystals that focus your tools. The sturdy end of the Axis of Matter is an element that resists change and lays a solid foundation to build upon, so long as no fractures are introduced to the system.\r\n\r\nWith this solidity, earth preserves all things, aiding in keeping mana contained and controlled in a great deal of processes, as well as stabilizing the Axis of Spirit within its crystalline structure. Too much earth-aligned mana, however, will steadily buckle under its own pressure and weight, causing cracks and breaks to appear in the runic structure and changing the underlying strokes of ink.\r\n\r\nThe Zodiac constellations commonly associated with Earth are Taurus the Bull, Virgo the Virgin, and Capricornus the Sea Goat. \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5422127031761078480, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_text
+      value: The Element of Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818731809479512734, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 1683577242609978198, guid: aadb2b42a8950914787643598a4db751, type: 3}
+    - {fileID: 5188243594459121498, guid: aadb2b42a8950914787643598a4db751, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6744874579183000494, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5688091518043206966}
+    - targetCorrespondingSourceObject: {fileID: 6744874579183000494, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8885844105307288422}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aadb2b42a8950914787643598a4db751, type: 3}
+--- !u!4 &4181990746681652223 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6744874579183000494, guid: aadb2b42a8950914787643598a4db751, type: 3}
+  m_PrefabInstance: {fileID: 7463574938690906193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8893232006834077354
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4181990746681652223}
     m_Modifications:
     - target: {fileID: 442015435442104873, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: m_Name
@@ -186,11 +208,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[0].A.x
-      value: 0.3
+      value: -0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[0].A.y
@@ -198,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[0].B.x
-      value: -0.3
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[0].B.y
@@ -206,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[1].A.x
-      value: 0.15
+      value: -0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[1].A.y
@@ -214,23 +236,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[1].B.x
-      value: -0.15
+      value: -0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[1].B.y
-      value: 0
+      value: -0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[2].A.x
-      value: -0.15
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[2].A.y
-      value: 0
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[2].B.x
-      value: 0.15
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[2].B.y
@@ -238,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[3].A.x
-      value: 0.3
+      value: -0.037499987
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[3].A.y
@@ -246,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[3].B.x
-      value: -0.3
+      value: 0.3375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[3].B.y
@@ -325,8 +347,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
---- !u!4 &6271520192867956610 stripped
+--- !u!4 &5688091518043206966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3862736618366045084, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
-  m_PrefabInstance: {fileID: 7103258661443566622}
+  m_PrefabInstance: {fileID: 8893232006834077354}
   m_PrefabAsset: {fileID: 0}

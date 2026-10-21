@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6542566913167520
+--- !u!1001 &7634951116906122135
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,6 +8,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 97930115880294456, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 89
+      objectReference: {fileID: 0}
+    - target: {fileID: 97930115880294456, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -285
+      objectReference: {fileID: 0}
+    - target: {fileID: 180745229910761700, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_text
+      value: 'Invocations: Illuminate, Shine, Glow, Bright
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -48,43 +62,155 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_text
+      value: "This book\u2026 going back to these first pages, I can see where my intellect used to SHINE. I must get to the BOTTOM of this\u2026 what is it doing to my mind?\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_margin.x
+      value: -340.32397
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_margin.z
+      value: 256.55878
+      objectReference: {fileID: 0}
     - target: {fileID: 2127842040194719528, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_Name
-      value: 8B - Water
+      value: 12A - Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586159179928680928, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 607
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586159179928680928, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -486
       objectReference: {fileID: 0}
     - target: {fileID: 4844587605343904853, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_text
-      value: "Water takes many forms: swirling vapor, cooling liquid, piercing ice. However, although it occupies the lower energetic end of the Axis of Energy opposite fire, small streams can still become destructive tidal waves or freezing glaciers if left unregulated. Still waters run deep, so one must be cautious not to underestimate the flow of water lest they be trapped in hidden currents. \r\n\r\nWithin the effects of runes, water acts as a stabilizing substrate for the other natural elements, dampening their dangerous effects. It can be made to douse enthusiastic flames, erode the earth within its streams, and temper the air with the weight of rain. Should there be an excess of water-aligned mana however, the mana will slow to a halt and become unable to be transferred entirely, becoming frozen in place.\r\n\r\nThe Zodiac constellations commonly associated with Water are Cancer the Crab, Scorpio the Scorpion, and Pisces the Fishes. \r\n"
+      value: 'Light is the energetic half of the classical Aether, occupying the higher end of the Axis of Spirit. Luminosity is the closest mortals come to touching the stars, and as such it is often used as a magnifier, concentrating the four natural elements. The crystals of earth in particular, with its intrinsic stabilizing order, are useful for directing and focusing its energy.
+
+
+
+        In small doses, light simply illuminates the world, showing things as they are with shining serenity, even that which cannot normally be seen. Truth so loves to be brought into the light, exposing falsehoods in its glow. In excess, light destabilizes into a bright prism of the natural elements, revealing their true origin and composition therein.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 5422127031761078480, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_text
-      value: The Element of Water
+      value: The Element of Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818731809479512734, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8577496753035159247, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
-    - {fileID: 1683577242609978198, guid: aadb2b42a8950914787643598a4db751, type: 3}
     - {fileID: 5188243594459121498, guid: aadb2b42a8950914787643598a4db751, type: 3}
+    - {fileID: 1683577242609978198, guid: aadb2b42a8950914787643598a4db751, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6744874579183000494, guid: aadb2b42a8950914787643598a4db751, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4446113844833004603}
+      addedObject: {fileID: 5283321166204210814}
     - targetCorrespondingSourceObject: {fileID: 6744874579183000494, guid: aadb2b42a8950914787643598a4db751, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6464516227441216863}
+      addedObject: {fileID: 2913442527562008447}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aadb2b42a8950914787643598a4db751, type: 3}
---- !u!4 &6741226597426432782 stripped
+--- !u!4 &3778045267763957817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6744874579183000494, guid: aadb2b42a8950914787643598a4db751, type: 3}
-  m_PrefabInstance: {fileID: 6542566913167520}
+  m_PrefabInstance: {fileID: 7634951116906122135}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &587990786871502759
+--- !u!1001 &8966127354256849819
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6741226597426432782}
+    m_TransformParent: {fileID: 3778045267763957817}
+    m_Modifications:
+    - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: anyFocusRune
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: requiredFocusAlignment
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: validOutputMana.elementalAlignment.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: validOutputMana.elementalAlignment.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885036989043214787, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_Name
+      value: UnityEvent RuneContainer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+--- !u!4 &2913442527562008447 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
+  m_PrefabInstance: {fileID: 8966127354256849819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8991738913823229410
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3778045267763957817}
     m_Modifications:
     - target: {fileID: 442015435442104873, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: m_Name
@@ -107,52 +233,56 @@ PrefabInstance:
       value: 0.38364768
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
+      propertyPath: symbol.vertexPairs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[0].A.x
-      value: 0.1125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[0].A.y
-      value: 0.15
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[0].B.x
-      value: -0.037499987
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[0].B.y
-      value: 0.375
+      value: -0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[1].A.x
-      value: -0.037499987
+      value: -0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[1].A.y
-      value: 0.375
+      value: 0.1875
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[1].B.x
-      value: -0.3375
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[1].B.y
-      value: 0
+      value: -0.1875
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[2].A.x
-      value: -0.3375
+      value: -0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[2].A.y
-      value: 0
+      value: -0.1875
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[2].B.x
-      value: -0.037499987
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[2].B.y
-      value: -0.375
+      value: 0.1875
       objectReference: {fileID: 0}
     - target: {fileID: 754692925008102195, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
       propertyPath: symbol.vertexPairs.Array.data[3].A.x
@@ -243,82 +373,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
---- !u!4 &4446113844833004603 stripped
+--- !u!4 &5283321166204210814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3862736618366045084, guid: 3f9aec0a8d50b3749ac3ee0b9276657e, type: 3}
-  m_PrefabInstance: {fileID: 587990786871502759}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &988019611873849787
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 6741226597426432782}
-    m_Modifications:
-    - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: anyFocusRune
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: requiredFocusAlignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3190716495510998817, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: validOutputMana.elementalAlignment.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885036989043214787, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_Name
-      value: UnityEvent RuneContainer (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
---- !u!4 &6464516227441216863 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6053037838666956004, guid: b264b79925300b94da6df75a2cf93c20, type: 3}
-  m_PrefabInstance: {fileID: 988019611873849787}
+  m_PrefabInstance: {fileID: 8991738913823229410}
   m_PrefabAsset: {fileID: 0}

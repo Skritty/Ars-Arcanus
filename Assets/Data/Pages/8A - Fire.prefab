@@ -8,9 +8,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 97930115880294456, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 124
+      objectReference: {fileID: 0}
+    - target: {fileID: 97930115880294456, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -423
+      objectReference: {fileID: 0}
+    - target: {fileID: 180745229910761700, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_text
+      value: 'Invocations: Heat, Spark, Flame, Ignition, Burn
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.264
       objectReference: {fileID: 0}
     - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22,7 +36,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.00000004371139
       objectReference: {fileID: 0}
     - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_LocalRotation.x
@@ -34,7 +48,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 964349024324971190, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -48,13 +62,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_text
+      value: "Haha! I suppose the old man\u2019s memory must be failing if he must remind himself of these equivalent terms."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_margin.z
+      value: 220.38016
+      objectReference: {fileID: 0}
     - target: {fileID: 1683577242609978198, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2127842040194719528, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_Name
-      value: 7A - Fire
+      value: 8A - Fire
       objectReference: {fileID: 0}
     - target: {fileID: 2658298446220176099, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_LocalPosition.x
@@ -68,9 +90,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3586159179928680928, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 487
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586159179928680928, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -639
+      objectReference: {fileID: 0}
     - target: {fileID: 4844587605343904853, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_text
       value: "Fire is the representation of power and heat, energetic and destructive. Flames lick hungrily at the air and radiate light, exemplifying their link to the other elements of chaos. When kept under close and careful watch, it is warm, passionate, and vital to survival. \r\n\r\nBe warned however; fire is the primordial catalyst of the Axis of Energy, equally as capable of being warming flames as becoming a catastrophic detonation. In excess, fire-aligned mana will emit heat and degrade ink, burning away runes and possibly even pages. Fire must be fueled and tended cautiously to avoid runaway reactions and terrible burns.\r\n\r\nThe Zodiac constellations commonly associated with Fire are Aries the Ram, Leo the Lion, and Sagittarius the Archer. \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818731809479512734, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8577496753035159247, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
