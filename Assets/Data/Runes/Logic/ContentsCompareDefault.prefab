@@ -423,7 +423,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 1
   radiusSpace: 0
-  thickness: 0.001
+  thickness: 0.0015
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1
@@ -567,7 +567,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 2
   radiusSpace: 0
-  thickness: 0.0012
+  thickness: 0.0017
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1
@@ -710,7 +710,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 2
   radiusSpace: 0
-  thickness: 0.001
+  thickness: 0.0015
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1
@@ -853,7 +853,7 @@ MonoBehaviour:
   angRadiansEnd: 2.3561945
   radius: 1
   radiusSpace: 0
-  thickness: 0.0011
+  thickness: 0.0017
   thicknessSpace: 0
   arcEndCaps: 0
   matchDashSpacingToSize: 1
