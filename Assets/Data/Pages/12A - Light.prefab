@@ -67,12 +67,36 @@ PrefabInstance:
       value: "This book\u2026 going back to these first pages, I can see where my intellect used to <color=white>shine</color>. I must get to the <color=white>bottom</color> of this\u2026 what is it doing to my mind?\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_fontSize
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_margin.x
       value: -340.32397
       objectReference: {fileID: 0}
     - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_margin.z
       value: 256.55878
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: df2d99a72f117e847920adcb00e2025d, type: 2}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4717518142901997580, guid: df2d99a72f117e847920adcb00e2025d, type: 2}
+    - target: {fileID: 1275779201814411523, guid: aadb2b42a8950914787643598a4db751, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2127842040194719528, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_Name
@@ -84,7 +108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3586159179928680928, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -486
+      value: -384
       objectReference: {fileID: 0}
     - target: {fileID: 4844587605343904853, guid: aadb2b42a8950914787643598a4db751, type: 3}
       propertyPath: m_text

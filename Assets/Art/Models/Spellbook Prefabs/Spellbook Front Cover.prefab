@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpellbookFinal_FrontCover
       objectReference: {fileID: 0}
+    - target: {fileID: 7129933528655559631, guid: fcd078dea96cf3645b4755a67129acf9, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -8884601395282213589, guid: 48da4b0b4a4a4ee47803bde3a92a090e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
