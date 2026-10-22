@@ -208,7 +208,7 @@ public class Spellbook : MonoBehaviour
                         // Skip the page if it is inaccessable (we still have to animate it)
                         doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
                         updatedIndex++;
-                        targetBindingIndex++;
+                        if (updatedIndex >= targetBindingIndex) targetBindingIndex++;
                     }
                 }
             }
@@ -232,7 +232,7 @@ public class Spellbook : MonoBehaviour
                         }
                         // Skip the page if it is inaccessable (we still have to animate it)
                         updatedIndex--;
-                        targetBindingIndex--;
+                        if(updatedIndex <= targetBindingIndex) targetBindingIndex--;
                         doPageAnimations += FlipPageAnimation(updatedIndex, direction, flipTimePerPage);
                     }
                 }
