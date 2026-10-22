@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1301291927142161159
+--- !u!1 &1447922948631673148
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9156342460915241379}
-  - component: {fileID: 6501164126228447863}
-  - component: {fileID: 8348416643841748901}
+  - component: {fileID: 698638307479199690}
+  - component: {fileID: 1979721798361129590}
+  - component: {fileID: 629592669579027616}
   m_Layer: 5
   m_Name: Text - Lyra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &9156342460915241379
+  m_IsActive: 1
+--- !u!224 &698638307479199690
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301291927142161159}
+  m_GameObject: {fileID: 1447922948631673148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00009899959}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000099003315}
   m_LocalScale: {x: 1.0188679, y: 1.018868, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34,24 +34,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 569, y: 665}
+  m_AnchoredPosition: {x: 1284, y: -1171}
   m_SizeDelta: {x: 2000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6501164126228447863
+--- !u!222 &1979721798361129590
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301291927142161159}
+  m_GameObject: {fileID: 1447922948631673148}
   m_CullTransparentMesh: 1
---- !u!114 &8348416643841748901
+--- !u!114 &629592669579027616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301291927142161159}
+  m_GameObject: {fileID: 1447922948631673148}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "If only Cassiopeia had held her tongue on her daughter\u2019s beauty, she might not have unleashed such <color=white>chaos</color> on her family. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
   m_sharedMaterial: {fileID: -8564381703319519963, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285146174
-  m_fontColor: {r: 0.24404131, g: 0.14228068, b: 0.41509432, a: 1}
+    rgba: 4281994782
+  m_fontColor: {r: 0.11855767, g: 0.05482376, b: 0.2264151, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -331.5681, y: 432.61768, z: 160.31204, w: 391.28564}
+  m_margin: {x: -331.5681, y: 432.61768, z: 952.5412, w: 391.28564}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -171,7 +171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1135.0002, y: -1551.9993}
+  m_AnchoredPosition: {x: 384, y: -870}
   m_SizeDelta: {x: 2000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8457520676911160541
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "It can\u2019t...\r\n"
+  m_text: "It can\u2019t. Don't do this.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: df2d99a72f117e847920adcb00e2025d, type: 2}
   m_sharedMaterial: {fileID: 4717518142901997580, guid: df2d99a72f117e847920adcb00e2025d, type: 2}
@@ -755,7 +755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 178, y: -1206}
+  m_AnchoredPosition: {x: 215, y: 59}
   m_SizeDelta: {x: 2000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2813631454337286294
@@ -854,7 +854,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -331.5681, y: 432.61768, z: 693.856, w: 391.28564}
+  m_margin: {x: -331.5681, y: 432.61768, z: 1292.4974, w: 391.28564}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1036,7 +1036,7 @@ PrefabInstance:
       addedObject: {fileID: 6960436632232699566}
     - targetCorrespondingSourceObject: {fileID: 3372809422913011360, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9156342460915241379}
+      addedObject: {fileID: 698638307479199690}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2c7c90cbe7fe53488121f1565ed2315, type: 3}
 --- !u!224 &4564253025122405605 stripped

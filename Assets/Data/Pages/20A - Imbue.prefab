@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9156342460915241379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cassian\u2019s notes are scattered, going back and forth with his <color=white>dark</color> mutterings. How long had he held this book, flipping through its pages left and <color=white>right</color>?\r\n"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
   m_sharedMaterial: {fileID: -8564381703319519963, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
@@ -466,7 +466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &97930115880294456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 164, y: -169}
+  m_AnchoredPosition: {x: 399, y: -1559}
   m_SizeDelta: {x: 2000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &577079413834815255
@@ -514,7 +514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Imbue operator is your pen and ink for working with Variable Runes. Everything merged into the triangle will become the new rule for the target rune.
+  m_text: "Andromeda\u2019s mother, Queen Cassiopeia, boasted that her daughter was more beautiful than the Nereids, drawing the ire of the God of the <color=white>Sea</color>. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65097be9f0cabc24b8e85560dbfd4c07, type: 2}
   m_sharedMaterial: {fileID: -1946710547870008582, guid: 65097be9f0cabc24b8e85560dbfd4c07, type: 2}
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

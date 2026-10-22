@@ -428,7 +428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &97930115880294456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 306, y: -1233}
+  m_AnchoredPosition: {x: 306, y: -1301}
   m_SizeDelta: {x: 2000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &577079413834815255
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You have reached the end of the introductory course. If all previous exercises were completed correctly, the obtained keys will fit into the seal slots without the slightest resistance.
+  m_text: "In her <color=white>darkest</color> hour, the hero Perseus came to her rescue, slaying the beast with the head of Medusa. \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65097be9f0cabc24b8e85560dbfd4c07, type: 2}
   m_sharedMaterial: {fileID: -1946710547870008582, guid: 65097be9f0cabc24b8e85560dbfd4c07, type: 2}
