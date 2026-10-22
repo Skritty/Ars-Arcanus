@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9156342460915241379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301291927142161159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00009899959}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0001}
   m_LocalScale: {x: 1.0188679, y: 1.018868, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 569, y: 665}
+  m_AnchoredPosition: {x: -10, y: -1335}
   m_SizeDelta: {x: 2000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6501164126228447863
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: The seal here is hidden. You will have to manifest the imbuement circle onto the page yourself to reveal it using the tools you've learned.  Imbue the seals of the royal family with the right mana and listen to the <color=white>three elements</color> of their tale to break through the lock.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
   m_sharedMaterial: {fileID: -8564381703319519963, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285146174
-  m_fontColor: {r: 0.24404131, g: 0.14228068, b: 0.41509432, a: 1}
+    rgba: 4281994782
+  m_fontColor: {r: 0.11764706, g: 0.05490196, b: 0.22745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -331.5681, y: 432.61768, z: 160.31204, w: 391.28564}
+  m_margin: {x: -331.5681, y: 432.61768, z: -368.4155, w: 391.28564}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -428,7 +428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &97930115880294456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In her <color=white>darkest</color> hour, the hero Perseus came to her rescue, slaying the beast with the head of Medusa. \r\n"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65097be9f0cabc24b8e85560dbfd4c07, type: 2}
   m_sharedMaterial: {fileID: -1946710547870008582, guid: 65097be9f0cabc24b8e85560dbfd4c07, type: 2}
