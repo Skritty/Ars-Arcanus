@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: -1335}
+  m_AnchoredPosition: {x: 77, y: -1217}
   m_SizeDelta: {x: 2000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6501164126228447863
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The seal here is hidden. You will have to manifest the imbuement circle onto the page yourself to reveal it using the tools you've learned.  Imbue the seals of the royal family with the right mana and listen to the <color=white>three elements</color> of their tale to break through the lock.
+  m_text: The seal here is hidden. You will have to manifest the imbuement circle onto the page yourself to reveal it using the tools you've learned. Imbue the seals of the royal family with the right mana, listen to the <color=white>three elements</color> of their tale, and inscribe the symbol of the <color=white>sea monster</color> to break through the lock and slay the beast.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
   m_sharedMaterial: {fileID: -8564381703319519963, guid: 78735ed0cfb76f247a16e80b43adb87e, type: 2}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -331.5681, y: 432.61768, z: -368.4155, w: 391.28564}
+  m_margin: {x: -331.5681, y: 432.61768, z: -190.69345, w: 391.28564}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
